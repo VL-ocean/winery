@@ -1,131 +1,393 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# WINERY [(*Live site*)]()
 
-Welcome USER_NAME,
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Introduction 
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+. 
 
-## Gitpod Reminders
+![start screen responsive](./README-images/)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
+## Table of contents
 
-A blue button should appear to click: _Make Public_,
+- [Live site](#winery)
+  - [Introduction](#introduction)
+  - [Table of contents](#table-of-contents)
+  - [Project Rationale](#project-rationale)
+    - [Website Goals and Objectives](#website-goals-and-objectives)
+    - [Target Audience](#target-audience)
+  - [E-Commerce Business Model](#e-commerce-business-model)
+  - [Marketing Strategies](#marketing-strategies)
+    - [Search Engine Optimisation](#search-engine-optimisation)
+    - [SEO Strategies Implemented](#seo-strategies-implemented)
+    - [Social Media](#social-media)
+    - [Newsletter Marketing](#newsletter-marketing)
+  - [Agile methodology](#agile-methodology)
+    - [Overview](#overview)
+    - [MoSCoW Prioritization](#moscow-prioritization)
+    - [GitHub Projects](#github-projects)
+    - [EPICs](#epics)
+    - [User Stories](#user-stories)
+  - [UX/UI design](#uxui-design)
+    - [Wireframe](#wireframe)
+    - [Structure \& Logical Flow (database design)](#structure--logical-flow-database-design)
+    - [Colour Scheme](#colour-scheme)
+    - [Fonts](#fonts)
+    - [Responsiveness (media queries)](#responsiveness)
+  - [Security Measures and Protective Design](#security-measures-and-protective-design)
+    - [User Authentication](#user-authentication)
+    - [Password Management](#password-management)
+    - [Form Validation](#form-validation)
+    - [Database Security](#database-security)
+  - [Features](#features)
+    - [Header](#header)
+    - [Future Features](#future-features)
+  - [Technologies Used](#technologies-used)
+    - [Coding languages used](#coding-languages-used)
+    - [Frameworks and Libraries used](#frameworks-and-libraries-used)
+  - [Testing](#testing)
+  - [Deployment](#deployment)
+    - [To deploy the project to Heroku](#to-deploy-the-project-to-heroku)
+    - [To fork the project](#to-fork-the-project)
+    - [To clone the project](#to-clone-the-project)
+  - [Credits](#credits)
+    - [Project Inspiration](#project-inspiration)
+    - [Content](#content)
+    - [Colour Theme](#colour-theme)
+    - [Media](#media)
+    - [Tools](#tools)
+  - [Acknowledgements](#acknowledgements)
 
-Another blue button should appear to click: _Open Browser_.
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+## Project Rationale
 
-A blue button should appear to click: _Make Public_,
+### Website Goals and Objectives
 
-Another blue button should appear to click: _Open Browser_.
+### Target Audience
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
-To log into the Heroku toolbelt CLI:
+## E-Commerce Business Model
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+## Marketing Strategies
 
-### Connecting your Mongo database
+### Search Engine Optimisation
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+### SEO Strategies Implemented
 
-------
+### Social Media
 
-## Release History
+### Newsletter Marketing
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
 
-**June 18, 2024,** Add Mongo back into template
+## Agile Methodology
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+### Overview
 
-**May 28 2024:** Fix Mongo and Links installs
+Agile methodology is a project management approach that emphasizes flexibility, collaboration, and iterative progress towards a well-defined goal. It is particularly effective in software development where requirements and solutions evolve through the collaborative effort of self-organizing cross-functional teams. Agile methodologies aim to deliver small, incremental changes in a product to improve quality and adaptability to changing needs.
 
-**April 26 2024:** Update node version to 16
+### MoSCoW Prioritization
 
-**September 20 2023:** Update Python version to 3.9.17.
+The MoSCoW prioritization technique is used to determine the importance of various features and tasks in a project. This method categorizes features into four groups: Must Have, Should Have, Could Have, and Won't Have. This helps in effective time management and ensures that the most critical functionalities are delivered first.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+### GitHub Projects
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+Using GitHub Projects, tasks are managed and progress tracked through project boards. Each board represents status of the User Story (Epic, To Do, In Progress, Done, Future features). Issue labels include the user story persona, prioritization and iterations (milestones).
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+[Link to the project board](https://github.com/users/VL-ocean/projects/4/views/1) & [Link to the project table](https://github.com/users/VL-ocean/projects/4/views/2)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+<details>
+<summary>Iteration 1</summary>
+<hr>
+<b>Board</b>
+<img src="./README-images/iteration-1-board.png">
+<hr>
+<b>Table</b>
+<img src="./README-images/iteration-1-table.png">
+</details>
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+<details>
+<summary>Milestones Progress</summary>
+<hr>
+<b>Overall view</b>
+<img src="./README-images/milestone-progress.png">
+<hr>
+<b>The completed milestones are closed</b>
+<img src="./README-images/1-2-milestones-closed.png">
+<hr>
+<b>The milestones to complete are in open status</b>
+<img src="./README-images/3-4-milestones-in-progress.png">
+</details>
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+<details>
+<summary>Issue sample (iteration 2)</summary>
+<hr>
+<b>Issue Sample</b>
+<img src="./README-images/issue-sample-iter-2.png">
+</details>
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### EPICs
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+Epic is a large body of work that is broken down into user stories. Each Epic in this project represents a key aspect of the platform's development and ensures comprehensive coverage of the required functionalities.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+### User Stories
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+With an emphasis on delivering a seamless user experience, the goal of this project is to provide a comprehensive platform that serves both visitors and registered users. The platform will allow for the development and maintenance of content, present developer profiles, and provide opportunities for interaction. The following user stories outline the essential functionalities and the rationale behind them.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+#### Developer
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+- 
 
-------
+#### Site Visitor
 
-## FAQ about the uptime script
+- 
 
-**Why have you added this script?**
+#### Registered User
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+- 
 
-**How will this affect me?**
+#### Site Admin
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+- 
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+## UX/UI design
 
-**So….?**
+### Wireframe
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+The original layouts look different from the finished blog as some changes were made during the development process.
 
-**Can I opt out?**
+<details>
+<summary>Home</summary>
+<img src="./README-images/">
+</details>
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
 
-**Anything more?**
+### Structure & Logical Flow (database design)
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+The database schema outlines the structure and relationships between key tables for the platform. The User table stores basic user information and authentication details. The Profile table 
 
----
+The database model diagram was designed using Lucidchart:
 
-Happy coding!
+![Screenshot of flowchart](./README-images/)
+
+### Colour Scheme
+
+The colours were mostly taken from bootstrap colour palette. They are:
+- `#212529` - text colour 
+
+Custom colours:
+- `#e99767` - border accent colour 
+
+![Custom colour palette](./README-images/)
+
+### Fonts
+
+- 
+
+![Fonts](./README-images/)
+
+
+### Responsiveness
+
+The website is responsive to different layouts depending on the size of the viewport based on the Bootstrap media queries.
+
+![media queries](./README-images/)
+
+
+## Security Measures and Protective Design
+
+### User Authentication
+
+- Django's LoginRequiredMixin is used to ensure that any requests to access secure pages by non-authenticated users are redirected to the login page.
+- Django's UserPassesTestMixin is used to limit access based on certain permissions, ensuring users can only edit/delete content they authored. If the user doesn't pass the test, they are shown an HTTP 403 Forbidden error.
+
+### Password Management
+
+- Use Django's built-in password management tools to ensure passwords are hashed and stored securely.
+- Enforce strong password policies to enhance user account security.
+
+### Form Validation
+
+- If incorrect or empty data is added to a form, the form won't submit, and a warning will appear to the user informing them which field raised the error.
+
+### Database Security
+
+- The database URL and secret key are stored in the env.py file to prevent unwanted connections to the database. This setup was implemented before the first push to GitHub.
+- Cross-Site Request Forgery (CSRF) tokens are used on all forms throughout the site to enhance security.
+
+
+## Features
+
+### Header
+
+*Visitor view*
+
+![Visitor view](./README-images/)
+
+*User View*
+
+![User view](./README-images/)
+
+The header 
+
+
+
+### Future Features
+
+- 
+
+
+## Technologies Used
+
+### Coding languages used
+
+* HTML
+* CSS
+* Python
+* JavaScript
+
+### Frameworks and Libraries used
+
+**Django**
+* Framework used to build this project. Provides a built in admin panel and includes many helper template tags that make writing code quick and efficient.
+
+**Django-Allauth**
+* Used for User authenticaion (register, login and logout).
+
+**Django Crispy Forms**
+* Used to control rendering of Django forms.
+
+**PostgreSQL**
+* The database used by the deployed project on Heroku.
+  
+**psycopg2**
+* PostgreSQL database adapter for the Python programming language.
+
+**Gunicorn**
+* Python HTTP server for WSGI applications.
+
+**WhiteNoise**
+* Designed to serve static files for Django applications.
+
+**Django RichTextField**
+* A Django model field and widget that renders a customizable rich text/WYSIWYG widget.
+
+**Django Resized**
+* Resizes image origin to specified size.
+
+**Cloudinary**
+* The cloud platform used to store static media files.
+
+**Balsamic**
+* Used for the wireframes
+
+**Git**
+* Used for version control.
+
+**GitHub**
+* Used to store the project's code after being pushed from Git.
+
+**GitPod**
+* Used as a platform to develop code in a ready-to-code developer environment.
+
+**Heroku**
+* The cloud platform used to deploy the project in the live environment.
+
+**Bootstrap**
+* The front end development framework used for styling along with custom CSS.
+  
+**Lucidchart**
+* Used for the entity relationship diagram
+
+
+## Testing
+
+The website underwent an extensive testing process to ensure its functionality, accessibility, and performance. This involved validating the code, assessing accessibility, conducting performance tests, performing cross-device testing, verifying browser compatibility, evaluating user stories, and incorporating user feedback to improve the overall user experience. 
+
+Testing summary and results can be found in [TESTING.md](TESTING.md) file.
+
+
+## Deployment
+
+### To deploy the project to Heroku
+
+Follow these steps to deploy your Django project to Heroku from VS Code:
+| |
+| --- |
+| **Step 1** Create a New Heroku App |
+| - Access the Heroku Dashboard: Log in to your Heroku account and access the dashboard. |
+| - Create a New App: Click on the New button in the top-right corner of the dashboard and select Create new app from the dropdown menu. |
+| - App Name and Region: Enter a unique name for your app and choose a region closest to you (EU or USA). Click Create App to create the app. |
+| **Step 2** Configure Environment Variables |
+| - Reveal Config Vars: From the new app Settings, click Reveal Config Vars. |
+| - Set Environment Variables: Set your environment variables as follows: |
+|   - `CLOUDINARY_URL`: Insert your own Cloudinary API key here. |
+|   - `DATABASE_URL`: Insert your own ElephantSQL database URL here. |
+|   - `DISABLE_COLLECTSTATIC`: Set to 1 for temporary purposes, and remove it for the final deployment. |
+|   - `SECRET_KEY`: This can be any random secret key. |
+| **Step 3** Prepare the Project for Deployment |
+| - Create a `requirements.txt` File: This file lists all the dependencies required by your project. You can install the project's requirements using `pip3 install -r requirements.txt`. If you have your own packages installed, update the `requirements.txt` file using `pip3 freeze --local > requirements.txt`. |
+| - Create a `Procfile`: This file specifies the commands Heroku should run to start your app. Create the Procfile using `echo web: gunicorn app_name.wsgi > Procfile`. Replace `app_name` with the name of your primary Django app, which is the folder where `settings.py` is located. |
+| **Step 4** Connect Your GitHub Repository to Heroku |
+| - Automatic Deployment: Select Automatic Deployment from the Heroku app settings to automatically deploy your app whenever you push changes to your GitHub repository. |
+| - Manual Deployment: Alternatively, you can connect your GitHub repository to Heroku manually using the Terminal/CLI: |
+|   - Login to Heroku: Run `heroku login -i` to log in to your Heroku account. |
+|   - Set the Remote for Heroku: Run `heroku git:remote -a app_name` to set the remote for Heroku. Replace `app_name` with your app name. |
+|   - Push to Heroku: After performing the standard Git add, commit, and push to GitHub, you can now type `git push heroku main` to deploy your app. |
+| **Step 5**  Verify Your Deployment |
+| - Open App: Once your app is deployed, you can open it by clicking on the Open App button in the Heroku dashboard. This will open your app in a web browser. |
+| - Verify App: Verify that your app is running correctly by checking for any errors or issues. |
+
+### To fork the project
+
+Forking the **GitHub** repository allows you to create a duplicate of a local repository. This is done so that modifications to the copy can be performed without compromising the original repository.
+
+- Log in to **GitHub**.
+- Locate the repository.
+- Click to open it.
+- The fork button is located on the right side of the repository menu.
+- To copy the repository to your **GitHub** account, click the button.
+
+### To clone the project
+
+- Log in to **GitHub**.
+- Navigate to the main page of the repository and click **Code**.
+- Copy the **URL** for the repository.
+- Open your local **IDE**.
+- Change the current working directory to the location where you want the cloned directory.
+- Type git clone, and then paste the **URL** you copied earlier.
+- Press **Enter** to create your local clone.
+
+
+## Credits
+
+### Project Inspiration
+
+- 
+
+### Content
+
+- 
+
+### Colour Theme
+
+- 
+
+### Media
+
+- [Coffee and Chocolate photo](https://www.pexels.com/)
+
+### Tools
+
+- [Abobe Colour](https://color.adobe.com/create/color-wheel)
+- [FontJoy](https://fontjoy.com/)
+
+
+## Acknowledgements
+
+  - [Cohort Facilitator - Marko Tot](https://github.com/tmarkec) for support in the classroom and guidance through the course.
+  - [Mentor - Dick Vlaanderen](https://github.com/dickvla) for support throughout the project, ideas and advice.

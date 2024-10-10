@@ -66,8 +66,13 @@
 ### Target Audience
 
 
+[Back to top](#table-of-contents)
+
 ## E-Commerce Business Model
 
+
+
+[Back to top](#table-of-contents)
 
 ## Marketing Strategies
 
@@ -79,6 +84,8 @@
 
 ### Newsletter Marketing
 
+
+[Back to top](#table-of-contents)
 
 ## Agile Methodology
 
@@ -145,7 +152,7 @@ Summary: Covers the user experience design process and development environment s
     - [USER STORY: Password Reset](https://github.com/VL-ocean/winery/issues/9)
     - [USER STORY: Profile Management](https://github.com/VL-ocean/winery/issues/10)
 
-Summary: It encompasses user-related functionalities focusing on managing user accounts effectively within the system.
+Summary: It encompasses user-related functionalities focusing on managing user accounts effectively within the system
 
 
 ### User Stories
@@ -168,6 +175,7 @@ With an emphasis on delivering a seamless user experience, the goal of this proj
 
 - 
 
+[Back to top](#table-of-contents)
 
 ## UX/UI design
 
@@ -214,6 +222,8 @@ The website is responsive to different layouts depending on the size of the view
 ![media queries](./README-images/)
 
 
+[Back to top](#table-of-contents)
+
 ## Security Measures and Protective Design
 
 ### User Authentication
@@ -236,6 +246,8 @@ The website is responsive to different layouts depending on the size of the view
 - Cross-Site Request Forgery (CSRF) tokens are used on all forms throughout the site to enhance security.
 
 
+[Back to top](#table-of-contents)
+
 ## Features
 
 ### Header
@@ -256,6 +268,8 @@ The header
 
 - 
 
+
+[Back to top](#table-of-contents)
 
 ## Technologies Used
 
@@ -320,6 +334,8 @@ The header
 * Used for the entity relationship diagram
 
 
+[Back to top](#table-of-contents)
+
 ## Testing
 
 The website underwent an extensive testing process to ensure its functionality, accessibility, and performance. This involved validating the code, assessing accessibility, conducting performance tests, performing cross-device testing, verifying browser compatibility, evaluating user stories, and incorporating user feedback to improve the overall user experience. 
@@ -327,71 +343,314 @@ The website underwent an extensive testing process to ensure its functionality, 
 Testing summary and results can be found in [TESTING.md](TESTING.md) file.
 
 
+[Back to top](#table-of-contents)
+
 ## Deployment
 
-### To deploy the project to Heroku
+### AWS Cloud Service
 
-Follow these steps to deploy your Django project to Heroku from VS Code:
-| |
-| --- |
-| **Step 1** Create a New Heroku App |
-| - Access the Heroku Dashboard: Log in to your Heroku account and access the dashboard. |
-| - Create a New App: Click on the New button in the top-right corner of the dashboard and select Create new app from the dropdown menu. |
-| - App Name and Region: Enter a unique name for your app and choose a region closest to you (EU or USA). Click Create App to create the app. |
-| **Step 2** Configure Environment Variables |
-| - Reveal Config Vars: From the new app Settings, click Reveal Config Vars. |
-| - Set Environment Variables: Set your environment variables as follows: |
-|   - `CLOUDINARY_URL`: Insert your own Cloudinary API key here. |
-|   - `DATABASE_URL`: Insert your own ElephantSQL database URL here. |
-|   - `DISABLE_COLLECTSTATIC`: Set to 1 for temporary purposes, and remove it for the final deployment. |
-|   - `SECRET_KEY`: This can be any random secret key. |
-| **Step 3** Prepare the Project for Deployment |
-| - Create a `requirements.txt` File: This file lists all the dependencies required by your project. You can install the project's requirements using `pip3 install -r requirements.txt`. If you have your own packages installed, update the `requirements.txt` file using `pip3 freeze --local > requirements.txt`. |
-| - Create a `Procfile`: This file specifies the commands Heroku should run to start your app. Create the Procfile using `echo web: gunicorn app_name.wsgi > Procfile`. Replace `app_name` with the name of your primary Django app, which is the folder where `settings.py` is located. |
-| **Step 4** Connect Your GitHub Repository to Heroku |
-| - Automatic Deployment: Select Automatic Deployment from the Heroku app settings to automatically deploy your app whenever you push changes to your GitHub repository. |
-| - Manual Deployment: Alternatively, you can connect your GitHub repository to Heroku manually using the Terminal/CLI: |
-|   - Login to Heroku: Run `heroku login -i` to log in to your Heroku account. |
-|   - Set the Remote for Heroku: Run `heroku git:remote -a app_name` to set the remote for Heroku. Replace `app_name` with your app name. |
-|   - Push to Heroku: After performing the standard Git add, commit, and push to GitHub, you can now type `git push heroku main` to deploy your app. |
-| **Step 5**  Verify Your Deployment |
-| - Open App: Once your app is deployed, you can open it by clicking on the Open App button in the Heroku dashboard. This will open your app in a web browser. |
-| - Verify App: Verify that your app is running correctly by checking for any errors or issues. |
+Teacup Tales uses Amazon Web Services (AWS) to store static and media files securely in the cloud, ensuring fast and reliable access for our users.
+
+**To integrate AWS, follow steps:**
+
+#### **1. Create and Configure an S3 Bucket**
+
+1.  **Access AWS:**
+    
+    -   Go to [aws.amazon.com](https://aws.amazon.com/) and log in to your AWS Management Console.
+2.  **Create an S3 Bucket:**
+    
+    -   Search for "S3" in the AWS Management Console and create a new bucket.
+    -   Name the bucket to match your Heroku app name and select the region closest to your target audience.
+3.  **Set Public Access and Ownership:**
+    
+    -   Uncheck the "Block all public access" option and acknowledge that the bucket will be public (required for compatibility with Heroku).
+    -   Under "Object Ownership," ensure "ACLs enabled" and "Bucket owner preferred" are selected.
+4.  **Enable Static Website Hosting:**
+    
+    -   In the "Properties" tab, enable static website hosting.
+    -   Set `index.html` as the index document and `error.html` as the error document, then click "Save."
+5.  **Configure CORS (Cross-Origin Resource Sharing):**
+    
+    -   In the "Permissions" tab, add the following CORS configuration:
+    
+    json
+    
+    Copy code
+    
+    `[
+      {
+        "AllowedHeaders": ["Authorization"],
+        "AllowedMethods": ["GET"],
+        "AllowedOrigins": ["*"],
+        "ExposeHeaders": []
+      }
+    ]` 
+    
+    -   Copy your bucket's **ARN** (Amazon Resource Name).
+6.  **Add a Bucket Policy:**
+    
+    -   Go to the "Bucket Policy" tab and click on the "Policy Generator" link.
+    -   Configure the policy:
+        -   **Policy Type:** S3 Bucket Policy
+        -   **Effect:** Allow
+        -   **Principal:** *
+        -   **Actions:** `s3:GetObject`
+        -   **ARN:** Paste your bucket's ARN
+    -   Click "Add Statement" and "Generate Policy."
+    -   Copy the generated policy and paste it into the "Bucket Policy Editor":
+    
+    json
+    
+    Copy code
+    
+    `{
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Principal": "*",
+          "Action": "s3:GetObject",
+          "Resource": "arn:aws:s3:::your-bucket-name/*"
+        }
+      ]
+    }` 
+    
+    -   Ensure the `Resource` field ends with `/*` and click "Save."
+7.  **Adjust Access Control List (ACL):**
+    
+    -   In the "Access Control List" (ACL) section, click "Edit" and enable "List" for Everyone (public access). Accept the warning prompt.
+    -   If the edit option is disabled, ensure the "Object Ownership" settings have ACLs enabled.
+
+#### **2. Configure IAM (Identity and Access Management):**
+
+1.  **Create a User Group:**
+    
+    -   Navigate to the IAM service and select "User Groups."
+    -   Click "Create New Group," and name it appropriately (e.g., `group-teacup-tales`).
+2.  **Attach Policies to the Group:**
+    
+    -   Select the newly created group and go to the "Permissions" tab.
+    -   Click "Add Permissions" > "Attach Policies."
+    -   In the "JSON" tab, click "Import Managed Policy" and search for `AmazonS3FullAccess`.
+    -   Import the policy and modify it to limit access to your specific bucket:
+    
+    json
+    
+    Copy code
+    
+    `{
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Action": "s3:*",
+          "Resource": [
+            "arn:aws:s3:::your-bucket-name",
+            "arn:aws:s3:::your-bucket-name/*"
+          ]
+        }
+      ]
+    }` 
+    
+    -   Click "Review Policy" and name it (e.g., `policy-teacup-tales`), then click "Create Policy."
+3.  **Add Users and Assign Permissions:**
+    
+    -   Go back to "User Groups," select your group, and click "Attach Policy."
+    -   Select your custom policy (e.g., `policy-teacup-tales`) and attach it.
+    -   Click "Add User" and name it appropriately (e.g., `user-teacup-tales`).
+    -   Select "Programmatic Access" and add the user to your group.
+    -   Download the CSV file containing the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.
+
+#### **3. Final AWS Setup and Heroku Integration:**
+
+1.  **Update Heroku Configurations:**
+    
+    -   Remove `DISABLE_COLLECTSTATIC` from Heroku Config Vars to enable AWS management of static files.
+2.  **Create Media Directory:**
+    
+    -   Within your S3 bucket, create a new folder named `media`.
+    -   Upload your media files into this folder and set "Public read access."
+3.  **Security Reminder:**
+    
+    -   Ensure all sensitive information (like AWS credentials) is securely stored and not hard-coded into your source code.
+
+----------
+
+***Summary***
+
+These steps integrate AWS S3 with your Heroku-hosted application, enabling efficient management of static and media files in a secure and scalable cloud environment. Proper configuration ensures that your content is readily accessible while adhering to best practices in cloud security and management.
+
+### Stripe
+
+Teacup Tales utilizes Stripe as its primary payment gateway to securely process e-commerce transactions. Stripe provides a reliable and scalable solution for handling payments, ensuring a seamless checkout experience for our customers.
+
+#### **Steps for Stripe Integration:**
+
+1.  **Create a Stripe Account:**
+    
+    -   Go to [stripe.com](https://stripe.com) and create an account. Log in to your Stripe dashboard.
+2.  **Obtain API Keys:**
+    
+    -   From your Stripe dashboard, locate the "API Keys" section under "Developers."
+    -   Retrieve the following keys:
+        -   **STRIPE_PUBLIC_KEY**: Your Publishable Key (starts with `pk`)
+        -   **STRIPE_SECRET_KEY**: Your Secret Key (starts with `sk`)
+    -   These keys will be used to authenticate your application with Stripe.
+3.  **Configure Webhooks for Payment Events:**
+    
+    -   To handle scenarios where a user may close the payment page prematurely, set up Stripe Webhooks to receive real-time payment updates.
+    -   In your Stripe dashboard:
+        -   Navigate to "Developers" and select "Webhooks."
+        -   Click "Add Endpoint."
+        -   Enter your endpoint URL (e.g., `https://teacup-tales.herokuapp.com/checkout/wh/`).
+        -   Select "Receive all events" to capture all relevant payment events.
+        -   Click "Add Endpoint" to complete the process.
+    -   This will generate a new key:
+        -   **STRIPE_WH_SECRET**: Your Webhook Signing Secret (starts with `wh`).
+
+#### **Testing Stripe Payments:**
+
+1.  **Test Mode:**
+    
+    -   Stripe provides a test mode to simulate payment transactions.
+    -   Use the following test card details for interactive testing:
+        -   **Card Number:** `4242 4242 4242 4242`
+        -   **Expiry Date:** Any valid future date (e.g., `12/34`)
+        -   **CVC:** Any three-digit number (or four digits for American Express)
+        -   **Other Fields:** Use any value for other fields.
+2.  **Security Reminder:**
+    
+    -   Ensure all Stripe API keys and Webhook Signing Secrets are stored securely, and never hard-code them in your source code.
+
+----------
+
+***Summary:***
+
+By integrating Stripe with Teacup Tales, we provide a secure and user-friendly payment solution. This setup will handle all e-commerce transactions, improve the user experience, and offer flexibility in managing payment events and ensuring payment security.
+
+### GMAIL 
+
+Teacup Tales uses Gmail to manage email communications with users, including account verifications and purchase order confirmations. Integrating Gmail ensures reliable and secure delivery of transactional emails to enhance the customer experience.
+
+#### **Steps for Gmail Integration:**
+
+1.  **Create and Access Gmail Account:**
+    
+    -   Ensure you have an active Gmail (Google) account. Log in to your account.
+2.  **Enable Two-Factor Authentication (2FA):**
+    
+    -   Go to your Google Account by clicking on your profile icon in the top-right corner and selecting "Manage Your Google Account."
+    -   Navigate to the **Security** tab on the left sidebar.
+    -   Under the "Signing in to Google" section, enable **2-Step Verification**. Follow the prompts to verify your password and activate 2FA.
+3.  **Generate an App Password:**
+    
+    -   After enabling 2FA, stay on the **Security** page and select **App passwords**.
+    -   Re-enter your password if prompted.
+    -   Choose **Mail** as the app type and select **Other (Custom name)** for the device type. Enter a relevant name (e.g., "Teacup Tales Django App").
+    -   Click **Generate** to create a 16-character app password (API key). **Note:** This password will only be displayed once, so save it securely.
+4.  **Configure Email Settings in Your Application:**
+    
+    -   Update your application's email settings with the following credentials:
+        -   **EMAIL_HOST_USER**: Your Gmail address (e.g., `your-email@gmail.com`)
+        -   **EMAIL_HOST_PASSWORD**: The 16-character app password generated from Gmail.
+
+#### **Security and Compliance:**
+
+-   Ensure that your Gmail credentials, especially the app password, are stored securely and not hard-coded in your source code. Consider using environment variables or a secure secrets manager for this purpose.
+
+----------
+
+***Summary:***
+
+By integrating Gmail, Teacup Tales can send secure and reliable emails for account verifications and purchase confirmations, enhancing communication with users and supporting overall customer engagement and satisfaction
+
+### Deployment Process with Heroku
+
+1.  Navigate to the [Heroku website](https://www.heroku.com/) and either [log in](https://id.heroku.com/login) to your existing account or [sign up](https://signup.heroku.com/) for a new account.
+2.  From the dashboard, click the "New" button in the upper right corner and select "Create new App" from the drop-down menu.
+3.  Provide a unique name for your application in the "App name" field.
+    -   Heroku will indicate the name's availability with a green checkmark.
+4.  Select the appropriate region ("United States" or "Europe") from the "Choose a region" dropdown, based on your target user base.
+5.  Click the "Create app" button to proceed.
+6.  On the next screen, navigate to the "Settings" tab located at the top center of the page.
+7.  In the "Config Vars" section, click on the "Reveal config Vars" button to display the environment variable configuration interface.
+8.  Input the necessary environment variables typically stored in your local `env.py` file. For this deployment, you will need to configure the following variables:
+    -   **SECRET_KEY**: Django secret key.
+    -   **AWS_ACCESS_KEY_ID**: Amazon AWS access key.
+    -   **AWS_SECRET_ACCESS_KEY**: Amazon AWS secret access key.
+    -   **AWS_STORAGE_BUCKET_NAME**: Name of your Amazon AWS S3 bucket.
+    -   **EMAIL_HOST_PASS**: Password for your email service.
+    -   **EMAIL_HOST_USER**: Email address used for outbound communications.
+    -   **DATABASE_URL**: Link for database.
+    -   **STRIPE_PUBLIC_KEY**: Stripe public key
+    -   **STRIPE_SECRET_KEY**: Stripe secret key value
+    -   **STRIPE_WH_SECRET**: Stripe wh value
+    -   **USE_AWS**: True
+
+9.  Enter each variable name in the "KEY" field and its corresponding value in the "VALUE" field.
+10.  Return to the top of the page and select the "Deploy" tab.
+11.  In the "Deployment method" section, choose "GitHub."
+12.  Under "Connect to GitHub," click the "Search" button, locate your project repository, and click "Connect."
+13.  Scroll down and click the "Deploy Branch" button to initiate the deployment.
+14.  Consider enabling the automatic deployment option to allow Heroku to deploy your app automatically with each push to the GitHub repository.
+15.  A build log will appear at the bottom of the screen. Upon successful deployment, a link to your application will be provided.
+
+**Important!**: Ensure that your Heroku app URL is added to the `ALLOWED_HOSTS` setting in the `settings.py` file. Additionally, verify that the `DEBUG` setting is set to `False`, and the `requirements.txt` and `Procfile` are up to date and committed to GitHub.
+
 
 ### To fork the project
 
 Forking the **GitHub** repository allows you to create a duplicate of a local repository. This is done so that modifications to the copy can be performed without compromising the original repository.
 
+
 - Log in to **GitHub**.
+
 - Locate the repository.
+
 - Click to open it.
+
 - The fork button is located on the right side of the repository menu.
+
 - To copy the repository to your **GitHub** account, click the button.
 
+  
 ### To clone the project
 
 - Log in to **GitHub**.
-- Navigate to the main page of the repository and click **Code**.
-- Copy the **URL** for the repository.
-- Open your local **IDE**.
-- Change the current working directory to the location where you want the cloned directory.
-- Type git clone, and then paste the **URL** you copied earlier.
-- Press **Enter** to create your local clone.
 
+- Navigate to the main page of the repository and click **Code**.
+
+- Copy the **URL** for the repository.
+
+- Open your local **IDE**.
+
+- Change the current working directory to the location where you want the cloned directory.
+
+- Type git clone, and then paste the **URL** you copied earlier.
+
+- Press **Enter** to create your local clone.
+  
+
+_Any changes required to the website, they can be made, committed and pushed to GitHub._
+
+[Back to top](#table-of-contents)
 
 ## Credits
 
 ### Project Inspiration
 
-- 
+- [Teacup Tales Bookshop](https://teacup-tales-books-a6b4f7a8b35f.herokuapp.com/)
+- [Craggy Range](https://craggyrange.com/)
+- [Trius Winery](https://www.triuswines.com/)
 
 ### Content
 
 - 
 
-### Colour Theme
+### Tutorials & Codebase
 
-- 
+- [teacup-tales-bookshop](https://github.com/Indre-V/teacup-tales-bookshop)
 
 ### Media
 
@@ -403,7 +662,11 @@ Forking the **GitHub** repository allows you to create a duplicate of a local re
 - [FontJoy](https://fontjoy.com/)
 
 
+[Back to top](#table-of-contents)
+
 ## Acknowledgements
 
   - [Cohort Facilitator - Marko Tot](https://github.com/tmarkec) for support in the classroom and guidance through the course.
   - [Mentor - Dick Vlaanderen](https://github.com/dickvla) for support throughout the project, ideas and advice.
+
+[Back to top](#table-of-contents)

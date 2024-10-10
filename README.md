@@ -130,6 +130,22 @@ Using GitHub Projects, tasks are managed and progress tracked through project bo
 
 Epic is a large body of work that is broken down into user stories. Each Epic in this project represents a key aspect of the platform's development and ensures comprehensive coverage of the required functionalities.
 
+- [**EPIC 1: Project Planning**](https://github.com/VL-ocean/winery/issues/6)
+    - [USER STORY: Agile Methodology](https://github.com/VL-ocean/winery/issues/1)
+    - [USER STORY: Design Database Schema](https://github.com/VL-ocean/winery/issues/2)
+    - [USER STORY: Design Website Visuals](https://github.com/VL-ocean/winery/issues/3)
+    - [USER STORY: Create Wireframes](https://github.com/VL-ocean/winery/issues/4)
+    - [USER STORY: Create Django Project](https://github.com/VL-ocean/winery/issues/5)
+
+Summary: Covers the user experience design process and development environment setup
+
+- [**EPIC 2: Registration and User Account Management**](https://github.com/VL-ocean/winery/issues/11)
+    - [USER STORY: User Registration](https://github.com/VL-ocean/winery/issues/7)
+    - [USER STORY: User Login and Logout Features](https://github.com/VL-ocean/winery/issues/8)
+    - [USER STORY: Password Reset](https://github.com/VL-ocean/winery/issues/9)
+    - [USER STORY: Profile Management](https://github.com/VL-ocean/winery/issues/10)
+
+Summary: It encompasses user-related functionalities focusing on managing user accounts effectively within the system.
 
 
 ### User Stories

@@ -171,6 +171,28 @@ Summary: The goal is to streamline the process of adding, editing and displaying
 
 Summary: This epic encompasses a range of features and improvements designed to streamline product selection, simplify the addition of items to the cart, ensure secure payment processing, and facilitate a seamless purchase completion. The aim is to make the shopping and checkout experience both convenient and user-friendly
 
+- [**EPIC 5: User Engagement**](https://github.com/VL-ocean/winery/issues/27)
+  - [USER STORY: Product rating](https://github.com/VL-ocean/winery/issues/23)
+  - [USER STORY: Wishlist](https://github.com/VL-ocean/winery/issues/24)
+  - [USER STORY: Add a Review](https://github.com/VL-ocean/winery/issues/25)
+  - [USER STORY: Manage Reviews](https://github.com/VL-ocean/winery/issues/26)
+
+Summary: Registered user content management
+
+- [**EPIC 6: User Experience Optimization**](https://github.com/VL-ocean/winery/issues/32)
+  - [USER STORY: Implement Navigation Experience](https://github.com/VL-ocean/winery/issues/28)
+  - [USER STORY: Visual Consistency](https://github.com/VL-ocean/winery/issues/29)
+  - [USER STORY: Accessibility Enhancement](https://github.com/VL-ocean/winery/issues/30)
+  - [USER STORY: Performance Optimization](https://github.com/VL-ocean/winery/issues/31)
+
+Summary: The epic aims to optimize the user experience and interface design of the platform to maximize user satisfaction, engagement, and usability
+
+- [**EPIC 7:**]()
+  - #
+
+Summary:
+
+
 ### User Stories
 
 With an emphasis on delivering a seamless user experience, the goal of this project is to provide a comprehensive platform that serves both visitors and registered users. The platform will allow for the development and maintenance of content, present developer profiles, and provide opportunities for interaction. The following user stories outline the essential functionalities and the rationale behind them.

@@ -154,6 +154,22 @@ Summary: Covers the user experience design process and development environment s
 
 Summary: It encompasses user-related functionalities focusing on managing user accounts effectively within the system
 
+- [**EPIC 3: Admin and Store Management**](https://github.com/VL-ocean/winery/issues/16)
+   - [USER STORY: Add Products to the Store](https://github.com/VL-ocean/winery/issues/12)
+   - [USER STORY: Update Product Details in the Store](https://github.com/VL-ocean/winery/issues/13)
+   - [USER STORY: Delete Products from the Store](https://github.com/VL-ocean/winery/issues/14)
+   - [USER STORY: Administration Content CRUD](https://github.com/VL-ocean/winery/issues/15)
+
+Summary: The goal is to streamline the process of adding, editing and displaying products, allowing admins to efficiently manage the store's inventory and ensure accurate and up-to-date information for customers
+
+- [**EPIC 4: Seamless Checkout Experience**](https://github.com/VL-ocean/winery/issues/22)
+   - [USER STORY: Simplify Product Selection](https://github.com/VL-ocean/winery/issues/17)
+   - [USER STORY: Streamline Adding Products to Cart](https://github.com/VL-ocean/winery/issues/18)
+   - [USER STORY: Secure and Efficient Checkout](https://github.com/VL-ocean/winery/issues/19)
+   - [USER STORY: Integrate User Account Features into the Checkout Process](https://github.com/VL-ocean/winery/issues/20)
+   - [USER STORY: Discount Codes](https://github.com/VL-ocean/winery/issues/21)
+
+Summary: This epic encompasses a range of features and improvements designed to streamline product selection, simplify the addition of items to the cart, ensure secure payment processing, and facilitate a seamless purchase completion. The aim is to make the shopping and checkout experience both convenient and user-friendly
 
 ### User Stories
 

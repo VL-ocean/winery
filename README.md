@@ -187,31 +187,78 @@ Summary: Registered user content management
 
 Summary: The epic aims to optimize the user experience and interface design of the platform to maximize user satisfaction, engagement, and usability
 
-- [**EPIC 7:**]()
-  - #
+- [**EPIC 7: SEO & Marketing**](https://github.com/VL-ocean/winery/issues/36)
+  - [USER STORY: Facebook Marketing](https://github.com/VL-ocean/winery/issues/33)
+  - [ USER STORY: SEO](https://github.com/VL-ocean/winery/issues/34)
+  - [USER STORY: Newsletter Subscription](https://github.com/VL-ocean/winery/issues/35)
 
-Summary:
+Summary: This epic focuses on optimizing the website's search engine visibility and enhancing marketing efforts to increase traffic and engagement
+
+- [**EPIC 8: Quality Assurance and Documentation**](https://github.com/VL-ocean/winery/issues/42)
+  - [USER STORY: Code Validation](https://github.com/VL-ocean/winery/issues/37)
+  - [USER STORY: Performance and Accessibility Testing](https://github.com/VL-ocean/winery/issues/38)
+  - [USER STORY: User Story Testing](https://github.com/VL-ocean/winery/issues/39)
+  - [USER STORY: Heroku Deployment](https://github.com/VL-ocean/winery/issues/40)
+  - [USER STORY: Comprehensive Project Documentation](https://github.com/VL-ocean/winery/issues/41)
+
+Summary: Testing and validation are necessary to ensure the quality and reliability of the project
 
 
 ### User Stories
 
-With an emphasis on delivering a seamless user experience, the goal of this project is to provide a comprehensive platform that serves both visitors and registered users. The platform will allow for the development and maintenance of content, present developer profiles, and provide opportunities for interaction. The following user stories outline the essential functionalities and the rationale behind them.
+With an emphasis on delivering a seamless user experience, the goal of this project is to provide a comprehensive platform that serves all users. The platform will allow for the development and maintenance of content, and provide opportunities for interaction. The following user stories outline the essential functionalities and the rationale behind them.
 
 #### Developer
 
-- 
+- As a Developer I want to use Agile so that I can deliver high quality product that meets the user needs
+- As a Developer I want to design a database schema so that I can efficiently store and manage platform content, ensuring optimal performance, scalability, and flexibility
+- As a Developer I want to create visually engaging and responsive designs so that users can easily navigate the website and access relevant information
+- As a Developer I want to create wireframes so that I can visually represent the layout and structure of the application
+- As a Developer I want to install and add basic configurations to Django so that I can create a working application
+- As a Developer I want to ensure consistent visual elements across the platform so that users can have a cohesive and pleasant user interface experience
+- As a Developer I want to improve accessibility features so that all users have equal access to the website features, including those with disabilities
+- As a Developer I want to improve the platform load speed and response to user interactions so that users can have a seamless experience
+- As a Developer I want to be able to share the business on Facebook so that I can reach and market to a larger audience
+- As a Developer I want to improve the website's search engine optimization (SEO) so that the website can rank higher in search engine results and attract more traffic
+- As a Developer I want to ensure that all syntax errors are identified and resolved during the code validation process so that the code is free from syntax-related issues
+- As a Developer I want to ensure that application meets performance and accessibility standards so that it provides a seamless experience for all users and performs optimally
+- As a Developer I want to ensure that user stories are thoroughly tested so that the acceptance criteria are met and the application delivers the expected functionality
+- As a Developer I want to deploy the application to Heroku so that it is accessible to users online
+- As a Developer I want to maintain thorough documentation so that the code can be maintained seamlessly in future
 
 #### Site Visitor
 
-- 
+- As a Site Visitor I want to be able to register an account so that I can create an account and access the features of a registered user
+- As a Site Visitor I want to be able to navigate through the platform effortlessly so that I can find relevant sections and features intuitively
+- As a Site Visitor I want to be able to subscribe to a newsletter so that I can receive updates, promotions, and valuable content directly to my inbox
 
 #### Registered User
 
-- 
+- As a Registered User I want to be able to log in and out of my account so that I can access my personal account information
+- As a Registered User I want to be able to recover my password in case I forgot it so that I can recover access to my account
+- As a Registered User I want to have a personalized profile so that I can manage my profile information
+
+#### Customer
+
+- As a Customer I want to be able to select products in an intuitive and efficient way so that I can easily find and choose the items I want to purchase
+- As a Customer I want to be able to add products to my cart quickly and easily so that I can efficiently manage my selected items before proceeding to checkout
+- As a Customer I want to have a secure and efficient checkout process so that I can complete my purchase confidently and without unnecessary delays
+- As a Customer I want to be able to apply discount codes during checkout so that I can receive a discount on my purchase
+
+#### Registered Customer
+
+- As a Registered Customer I want my account information to be seamlessly integrated into the purchasing and checkout process so that I can enjoy a personalized and efficient shopping experience
+- As a Registered Customer I want to be able to rate a product so that I can express my opinion
+- As a Registered Customer I want to be able to add product to my wishlist so that I may keep an eye on its price and purchase it at a later date
+- As a Registered Customer I want to be able to comment on products so that I can provide feedback
+- As a Registered Customer I want to be able to delete and edit reviews so that I can control my engagement on the platform
 
 #### Site Admin
 
-- 
+- As a Site Admin I want to be able to add new products to my store so that I can keep my inventory up-to-date
+- As a Site Admin I want to be able to update product details, including prices, descriptions, images, and other attributes so that I can ensure that product information remains accurate and relevant on the store's website
+- As a Site Admin I want to be able to remove products from the store so that the inventory is relevant and any outdated or discontinued items are eliminated
+- As a Site Admin I want to be able to perform all CRUD (Create, Read, Update, Delete) operations so that I can manually manage, control and edit content
 
 [Back to top](#table-of-contents)
 

@@ -10,7 +10,7 @@
 
 ## Table of contents
 
-- [Live site](#winery)
+- [WINERY (*Live site*)](#winery-live-site)
   - [Introduction](#introduction)
   - [Table of contents](#table-of-contents)
   - [Project Rationale](#project-rationale)
@@ -22,18 +22,24 @@
     - [SEO Strategies Implemented](#seo-strategies-implemented)
     - [Social Media](#social-media)
     - [Newsletter Marketing](#newsletter-marketing)
-  - [Agile methodology](#agile-methodology)
+  - [Agile Methodology](#agile-methodology)
     - [Overview](#overview)
     - [MoSCoW Prioritization](#moscow-prioritization)
     - [GitHub Projects](#github-projects)
     - [EPICs](#epics)
     - [User Stories](#user-stories)
+      - [Developer](#developer)
+      - [Site Visitor](#site-visitor)
+      - [Registered User](#registered-user)
+      - [Customer](#customer)
+      - [Registered Customer](#registered-customer)
+      - [Site Admin](#site-admin)
   - [UX/UI design](#uxui-design)
     - [Wireframe](#wireframe)
     - [Structure \& Logical Flow (database design)](#structure--logical-flow-database-design)
     - [Colour Scheme](#colour-scheme)
     - [Fonts](#fonts)
-    - [Responsiveness (media queries)](#responsiveness)
+    - [Responsiveness](#responsiveness)
   - [Security Measures and Protective Design](#security-measures-and-protective-design)
     - [User Authentication](#user-authentication)
     - [Password Management](#password-management)
@@ -47,13 +53,23 @@
     - [Frameworks and Libraries used](#frameworks-and-libraries-used)
   - [Testing](#testing)
   - [Deployment](#deployment)
-    - [To deploy the project to Heroku](#to-deploy-the-project-to-heroku)
+    - [AWS Cloud Service](#aws-cloud-service)
+      - [**1. Create and Configure an S3 Bucket**](#1-create-and-configure-an-s3-bucket)
+      - [**2. Configure IAM (Identity and Access Management):**](#2-configure-iam-identity-and-access-management)
+      - [**3. Final AWS Setup and Heroku Integration:**](#3-final-aws-setup-and-heroku-integration)
+    - [Stripe](#stripe)
+      - [**Steps for Stripe Integration:**](#steps-for-stripe-integration)
+      - [**Testing Stripe Payments:**](#testing-stripe-payments)
+    - [GMAIL](#gmail)
+      - [**Steps for Gmail Integration:**](#steps-for-gmail-integration)
+      - [**Security and Compliance:**](#security-and-compliance)
+    - [Deployment Process with Heroku](#deployment-process-with-heroku)
     - [To fork the project](#to-fork-the-project)
     - [To clone the project](#to-clone-the-project)
   - [Credits](#credits)
     - [Project Inspiration](#project-inspiration)
     - [Content](#content)
-    - [Colour Theme](#colour-theme)
+    - [Tutorials \& Codebase](#tutorials--codebase)
     - [Media](#media)
     - [Tools](#tools)
   - [Acknowledgements](#acknowledgements)
@@ -95,35 +111,62 @@ Agile methodology is a project management approach that emphasizes flexibility, 
 
 ### MoSCoW Prioritization
 
-The MoSCoW prioritization technique is used to determine the importance of various features and tasks in a project. This method categorizes features into four groups: Must Have, Should Have, Could Have, and Won't Have. This helps in effective time management and ensures that the most critical functionalities are delivered first.
+The MoSCoW prioritization technique is used to determine the importance of various features and tasks in a project. This method categorizes features into four groups: Must Have, Should Have, Could Have, and Won't Have. This helps in effective time management and ensures that the most critical functionalities are delivered first. The recommended percentage of items is no more than 60% in Must, 20% in Should, and 20% in Could.
 
 ### GitHub Projects
 
-Using GitHub Projects, tasks are managed and progress tracked through project boards. Each board represents status of the User Story (Epic, To Do, In Progress, Done, Future features). Issue labels include the user story persona, prioritization and iterations (milestones).
+Using GitHub Projects, tasks are managed and progress tracked through project boards. Three middle boards represent status of the User Story (To Do, In Progress, Done). First board displays EPICs and the last board displays issues that were labled as WON'T HAVE and are due to implement in future, along with discovered bugs. Each user story issue has labels that show the user story persona, MoSCoW priority category, order, Epic and iteration (milestone) it belongs to. 
 
 [Link to the project board](https://github.com/users/VL-ocean/projects/4/views/1) & [Link to the project table](https://github.com/users/VL-ocean/projects/4/views/2)
 
 <details>
 <summary>Iteration 1</summary>
 <hr>
-<b>Board</b>
-<img src="./README-images/iteration-1-board.png">
+<b>Table view at planning stage</b>
+<img src="./README-images/iteration-1-plan.png">
 <hr>
-<b>Table</b>
-<img src="./README-images/iteration-1-table.png">
+<b>Mid-time iteration view</b>
+<img src="./README-images">
 </details>
 
 <details>
-<summary>Milestones Progress</summary>
+<summary>Iteration 2</summary>
 <hr>
-<b>Overall view</b>
-<img src="./README-images/milestone-progress.png">
+<b>Table view at planning stage</b>
+<img src="./README-images/iteration-2-plan.png">
 <hr>
-<b>The completed milestones are closed</b>
-<img src="./README-images/1-2-milestones-closed.png">
+<b>Mid-time iteration view</b>
+<img src="./README-images">
+</details>
+
+<details>
+<summary>Iteration 3</summary>
 <hr>
-<b>The milestones to complete are in open status</b>
-<img src="./README-images/3-4-milestones-in-progress.png">
+<b>Table view at planning stage</b>
+<img src="./README-images/iteration-3-plan.png">
+<hr>
+<b>Mid-time iteration view</b>
+<img src="./README-images">
+</details>
+
+<details>
+<summary>Iteration 4</summary>
+<hr>
+<b>Table view at planning stage</b>
+<img src="./README-images/iteration-4-plan.png">
+<hr>
+<b>Mid-time iteration view</b>
+<img src="./README-images">
+</details>
+
+<details>
+<summary>Iteration 5</summary>
+<hr>
+<b>Table view at planning stage</b>
+<img src="./README-images/iteration-5-plan.png">
+<hr>
+<b>Mid-time iteration view</b>
+<img src="./README-images">
 </details>
 
 <details>

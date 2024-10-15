@@ -123,19 +123,39 @@ Using GitHub Projects, tasks are managed and progress tracked through project bo
 <summary>Iteration 1</summary>
 <hr>
 <b>Table view at planning stage</b>
+<br/><br/>
 <img src="./README-images/iteration-1-plan.png">
 <hr>
-<b>Mid-time iteration view</b>
-<img src="./README-images">
+<b>Table view at mid-time iteration</b>
+<br/><br/>
+<img src="./README-images/iteration-1-progress-table.png">
+<hr>
+<b>Board view at mid-time iteration</b>
+<br/><br/>
+<img src="./README-images/iteration-1-progress-board.png">
+<hr>
+<b>Issue Sample #4</b>
+<br/><br/>
+<img src="./README-images/issue-sample-4.png">
 </details>
 
 <details>
 <summary>Iteration 2</summary>
 <hr>
 <b>Table view at planning stage</b>
+<br/><br/>
 <img src="./README-images/iteration-2-plan.png">
 <hr>
-<b>Mid-time iteration view</b>
+<b>Table view at mid-time iteration</b>
+<br/><br/>
+<img src="./README-images">
+<hr>
+<b>Board view at mid-time iteration</b>
+<br/><br/>
+<img src="./README-images">
+<hr>
+<b>Issue Sample #</b>
+<br/><br/>
 <img src="./README-images">
 </details>
 
@@ -143,9 +163,19 @@ Using GitHub Projects, tasks are managed and progress tracked through project bo
 <summary>Iteration 3</summary>
 <hr>
 <b>Table view at planning stage</b>
+<br/><br/>
 <img src="./README-images/iteration-3-plan.png">
 <hr>
-<b>Mid-time iteration view</b>
+<b>Table view at mid-time iteration</b>
+<br/><br/>
+<img src="./README-images">
+<hr>
+<b>Board view at mid-time iteration</b>
+<br/><br/>
+<img src="./README-images">
+<hr>
+<b>Issue Sample #</b>
+<br/><br/>
 <img src="./README-images">
 </details>
 
@@ -153,9 +183,19 @@ Using GitHub Projects, tasks are managed and progress tracked through project bo
 <summary>Iteration 4</summary>
 <hr>
 <b>Table view at planning stage</b>
+<br/><br/>
 <img src="./README-images/iteration-4-plan.png">
 <hr>
-<b>Mid-time iteration view</b>
+<b>Table view at mid-time iteration</b>
+<br/><br/>
+<img src="./README-images">
+<hr>
+<b>Board view at mid-time iteration</b>
+<br/><br/>
+<img src="./README-images">
+<hr>
+<b>Issue Sample #</b>
+<br/><br/>
 <img src="./README-images">
 </details>
 
@@ -163,18 +203,22 @@ Using GitHub Projects, tasks are managed and progress tracked through project bo
 <summary>Iteration 5</summary>
 <hr>
 <b>Table view at planning stage</b>
+<br/><br/>
 <img src="./README-images/iteration-5-plan.png">
 <hr>
-<b>Mid-time iteration view</b>
+<b>Table view at mid-time iteration</b>
+<br/><br/>
+<img src="./README-images">
+<hr>
+<b>Board view at mid-time iteration</b>
+<br/><br/>
+<img src="./README-images">
+<hr>
+<b>Issue Sample #</b>
+<br/><br/>
 <img src="./README-images">
 </details>
 
-<details>
-<summary>Issue sample (iteration 2)</summary>
-<hr>
-<b>Issue Sample</b>
-<img src="./README-images/issue-sample-iter-2.png">
-</details>
 
 ### EPICs
 
@@ -253,55 +297,55 @@ With an emphasis on delivering a seamless user experience, the goal of this proj
 
 #### Developer
 
-- As a Developer I want to use Agile so that I can deliver high quality product that meets the user needs
-- As a Developer I want to design a database schema so that I can efficiently store and manage platform content, ensuring optimal performance, scalability, and flexibility
-- As a Developer I want to create visually engaging and responsive designs so that users can easily navigate the website and access relevant information
-- As a Developer I want to create wireframes so that I can visually represent the layout and structure of the application
-- As a Developer I want to install and add basic configurations to Django so that I can create a working application
-- As a Developer I want to ensure consistent visual elements across the platform so that users can have a cohesive and pleasant user interface experience
-- As a Developer I want to improve accessibility features so that all users have equal access to the website features, including those with disabilities
-- As a Developer I want to improve the platform load speed and response to user interactions so that users can have a seamless experience
-- As a Developer I want to be able to share the business on Facebook so that I can reach and market to a larger audience
-- As a Developer I want to improve the website's search engine optimization (SEO) so that the website can rank higher in search engine results and attract more traffic
-- As a Developer I want to ensure that all syntax errors are identified and resolved during the code validation process so that the code is free from syntax-related issues
-- As a Developer I want to ensure that application meets performance and accessibility standards so that it provides a seamless experience for all users and performs optimally
-- As a Developer I want to ensure that user stories are thoroughly tested so that the acceptance criteria are met and the application delivers the expected functionality
-- As a Developer I want to deploy the application to Heroku so that it is accessible to users online
-- As a Developer I want to maintain thorough documentation so that the code can be maintained seamlessly in future
+- As a Developer I want to use Agile so that I can deliver high quality product that meets the user needs [( _link_ )](https://github.com/VL-ocean/winery/issues/1)
+- As a Developer I want to design a database schema so that I can efficiently store and manage platform content, ensuring optimal performance, scalability, and flexibility [( _link_ )](https://github.com/VL-ocean/winery/issues/2)
+- As a Developer I want to create visually engaging and responsive designs so that users can easily navigate the website and access relevant information [( _link_ )](https://github.com/VL-ocean/winery/issues/3)
+- As a Developer I want to create wireframes so that I can visually represent the layout and structure of the application [( _link_ )](https://github.com/VL-ocean/winery/issues/4)
+- As a Developer I want to install and add basic configurations to Django so that I can create a working application [( _link_ )](https://github.com/VL-ocean/winery/issues/5)
+- As a Developer I want to ensure consistent visual elements across the platform so that users can have a cohesive and pleasant user interface experience [( _link_ )](https://github.com/VL-ocean/winery/issues/29)
+- As a Developer I want to improve accessibility features so that all users have equal access to the website features, including those with disabilities [( _link_ )](https://github.com/VL-ocean/winery/issues/30)
+- As a Developer I want to improve the platform load speed and response to user interactions so that users can have a seamless experience [( _link_ )](https://github.com/VL-ocean/winery/issues/31)
+- As a Developer I want to be able to share the business on Facebook so that I can reach and market to a larger audience [( _link_ )](https://github.com/VL-ocean/winery/issues/33)
+- As a Developer I want to improve the website's search engine optimization (SEO) so that the website can rank higher in search engine results and attract more traffic [( _link_ )](https://github.com/VL-ocean/winery/issues/34)
+- As a Developer I want to ensure that all syntax errors are identified and resolved during the code validation process so that the code is free from syntax-related issues [( _link_ )](https://github.com/VL-ocean/winery/issues/37)
+- As a Developer I want to ensure that application meets performance and accessibility standards so that it provides a seamless experience for all users and performs optimally [( _link_ )](https://github.com/VL-ocean/winery/issues/38)
+- As a Developer I want to ensure that user stories are thoroughly tested so that the acceptance criteria are met and the application delivers the expected functionality [( _link_ )](https://github.com/VL-ocean/winery/issues/39)
+- As a Developer I want to deploy the application to Heroku so that it is accessible to users online [( _link_ )](https://github.com/VL-ocean/winery/issues/40)
+- As a Developer I want to maintain thorough documentation so that the code can be maintained seamlessly in future [( _link_ )](https://github.com/VL-ocean/winery/issues/41)
 
 #### Site Visitor
 
-- As a Site Visitor I want to be able to register an account so that I can create an account and access the features of a registered user
-- As a Site Visitor I want to be able to navigate through the platform effortlessly so that I can find relevant sections and features intuitively
-- As a Site Visitor I want to be able to subscribe to a newsletter so that I can receive updates, promotions, and valuable content directly to my inbox
+- As a Site Visitor I want to be able to register an account so that I can create an account and access the features of a registered user [( _link_ )](https://github.com/VL-ocean/winery/issues/7)
+- As a Site Visitor I want to be able to navigate through the platform effortlessly so that I can find relevant sections and features intuitively [( _link_ )](https://github.com/VL-ocean/winery/issues/28)
+- As a Site Visitor I want to be able to subscribe to a newsletter so that I can receive updates, promotions, and valuable content directly to my inbox [( _link_ )](https://github.com/VL-ocean/winery/issues/35)
 
 #### Registered User
 
-- As a Registered User I want to be able to log in and out of my account so that I can access my personal account information
-- As a Registered User I want to be able to recover my password in case I forgot it so that I can recover access to my account
-- As a Registered User I want to have a personalized profile so that I can manage my profile information
+- As a Registered User I want to be able to log in and out of my account so that I can access my personal account information [( _link_ )](https://github.com/VL-ocean/winery/issues/8)
+- As a Registered User I want to be able to recover my password in case I forgot it so that I can recover access to my account [( _link_ )](https://github.com/VL-ocean/winery/issues/9)
+- As a Registered User I want to have a personalized profile so that I can manage my profile information [( _link_ )](https://github.com/VL-ocean/winery/issues/10)
 
 #### Customer
 
-- As a Customer I want to be able to select products in an intuitive and efficient way so that I can easily find and choose the items I want to purchase
-- As a Customer I want to be able to add products to my cart quickly and easily so that I can efficiently manage my selected items before proceeding to checkout
-- As a Customer I want to have a secure and efficient checkout process so that I can complete my purchase confidently and without unnecessary delays
-- As a Customer I want to be able to apply discount codes during checkout so that I can receive a discount on my purchase
+- As a Customer I want to be able to select products in an intuitive and efficient way so that I can easily find and choose the items I want to purchase [( _link_ )](https://github.com/VL-ocean/winery/issues/17)
+- As a Customer I want to be able to add products to my cart quickly and easily so that I can efficiently manage my selected items before proceeding to checkout [( _link_ )](https://github.com/VL-ocean/winery/issues/18)
+- As a Customer I want to have a secure and efficient checkout process so that I can complete my purchase confidently and without unnecessary delays [( _link_ )](https://github.com/VL-ocean/winery/issues/19)
+- As a Customer I want to be able to apply discount codes during checkout so that I can receive a discount on my purchase [( _link_ )](https://github.com/VL-ocean/winery/issues/21)
 
 #### Registered Customer
 
-- As a Registered Customer I want my account information to be seamlessly integrated into the purchasing and checkout process so that I can enjoy a personalized and efficient shopping experience
-- As a Registered Customer I want to be able to rate a product so that I can express my opinion
-- As a Registered Customer I want to be able to add product to my wishlist so that I may keep an eye on its price and purchase it at a later date
-- As a Registered Customer I want to be able to comment on products so that I can provide feedback
-- As a Registered Customer I want to be able to delete and edit reviews so that I can control my engagement on the platform
+- As a Registered Customer I want my account information to be seamlessly integrated into the purchasing and checkout process so that I can enjoy a personalized and efficient shopping experience [( _link_ )](https://github.com/VL-ocean/winery/issues/20)
+- As a Registered Customer I want to be able to rate a product so that I can express my opinion [( _link_ )](https://github.com/VL-ocean/winery/issues/23)
+- As a Registered Customer I want to be able to add product to my wishlist so that I may keep an eye on its price and purchase it at a later date [( _link_ )](https://github.com/VL-ocean/winery/issues/24)
+- As a Registered Customer I want to be able to comment on products so that I can provide feedback [( _link_ )](https://github.com/VL-ocean/winery/issues/25)
+- As a Registered Customer I want to be able to delete and edit reviews so that I can control my engagement on the platform [( _link_ )](https://github.com/VL-ocean/winery/issues/26)
 
 #### Site Admin
 
-- As a Site Admin I want to be able to add new products to my store so that I can keep my inventory up-to-date
-- As a Site Admin I want to be able to update product details, including prices, descriptions, images, and other attributes so that I can ensure that product information remains accurate and relevant on the store's website
-- As a Site Admin I want to be able to remove products from the store so that the inventory is relevant and any outdated or discontinued items are eliminated
-- As a Site Admin I want to be able to perform all CRUD (Create, Read, Update, Delete) operations so that I can manually manage, control and edit content
+- As a Site Admin I want to be able to add new products to my store so that I can keep my inventory up-to-date [( _link_ )](https://github.com/VL-ocean/winery/issues/12)
+- As a Site Admin I want to be able to update product details, including prices, descriptions, images, and other attributes so that I can ensure that product information remains accurate and relevant on the store's website [( _link_ )](https://github.com/VL-ocean/winery/issues/13)
+- As a Site Admin I want to be able to remove products from the store so that the inventory is relevant and any outdated or discontinued items are eliminated [( _link_ )](https://github.com/VL-ocean/winery/issues/14)
+- As a Site Admin I want to be able to perform all CRUD (Create, Read, Update, Delete) operations so that I can manually manage, control and edit content [( _link_ )](https://github.com/VL-ocean/winery/issues/15)
 
 [Back to top](#table-of-contents)
 
@@ -771,6 +815,7 @@ _Any changes required to the website, they can be made, committed and pushed to 
 - [Teacup Tales Bookshop](https://teacup-tales-books-a6b4f7a8b35f.herokuapp.com/)
 - [Craggy Range](https://craggyrange.com/)
 - [Trius Winery](https://www.triuswines.com/)
+- [Wine Mine](https://www.wine-mine.com/)
 
 ### Content
 

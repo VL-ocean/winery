@@ -353,14 +353,20 @@ With an emphasis on delivering a seamless user experience, the goal of this proj
 
 ### Wireframe
 
-The original layouts look different from the finished blog as some changes were made during the development process.
+The wireframes provide a visual representation of the layout and structure of the application. They outline the placement of key elements such as navigation menus, user profiles, content areas, and interactive features. The wireframes ensure a cohesive and intuitive user interface, guiding the design and development process. After the extensive testing was conducted, naturally there are some deviations from wireframes in the live version of the platform.
 
-<details>
-<summary>Home</summary>
-<img src="./README-images/">
-</details>
+Tool: Balsamiq  
+Format: PDF
 
-
+- [All Wireframes](./README-images/wireframes/winestore.pdf)
+- [Base Template](./README-images/wireframes/base-template.pdf)
+- [Home page](./README-images/wireframes/home.pdf)
+- [About Us](./README-images/wireframes/about-us.pdf)
+- [Contact Us](./README-images/wireframes/contact-us.pdf)
+- [Shop Wine](./README-images/wireframes/shop-wine.pdf)
+- [Promotions](./README-images/wireframes/promotions.pdf)
+- [Product View](./README-images/wireframes/product-view.pdf)
+- [Shopping Cart](./README-images/wireframes/cart.pdf)
 
 ### Structure & Logical Flow (database design)
 

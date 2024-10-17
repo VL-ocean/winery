@@ -364,11 +364,11 @@ The original layouts look different from the finished blog as some changes were 
 
 ### Structure & Logical Flow (database design)
 
-The database schema outlines the structure and relationships between key tables for the platform. The User table stores basic user information and authentication details. The Profile table 
+The database schema describes the structure and relationships between the key tables of the platform. The User table stores basic user information and authentication data. The UserProfile table stores the default address, which allows the site to pre-populate the order delivery address for the user. The Order table stores all order details. The OrderLineItem table stores information about each bag line and makes it easy to calculate the total order value at checkout. The Product table stores all product information. It connects to several smaller tables such as Category, Variety, Vintage, Country, Brand, BottleSize. The Review table stores product reviews and ratings. Wishlist table stores the user's favourite products. The Coupon table stores the necessary information about the coupon and whether it has been used.
 
 The database model diagram was designed using Lucidchart:
 
-![Screenshot of flowchart](./README-images/)
+![Screenshot of flowchart](./README-images/database-diagram-pp5.png)
 
 ### Colour Scheme
 
@@ -819,15 +819,16 @@ _Any changes required to the website, they can be made, committed and pushed to 
 
 ### Content
 
-- 
+- [Your Wine Store](https://www.yourwinestore.com/)
 
 ### Tutorials & Codebase
 
+- [Boutique Ado](https://github.com/Code-Institute-Solutions/boutique_ado_v1)
 - [teacup-tales-bookshop](https://github.com/Indre-V/teacup-tales-bookshop)
 
 ### Media
 
-- [Coffee and Chocolate photo](https://www.pexels.com/)
+- [photo](https://www.pexels.com/)
 
 ### Tools
 

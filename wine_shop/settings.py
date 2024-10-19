@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     # allauth
     "allauth",
     "allauth.account",
+    # apps
+    "home",
 ]
 
 MIDDLEWARE = [
@@ -68,7 +70,10 @@ ROOT_URLCONF = 'wine_shop.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        "DIRS": [
+            os.path.join(BASE_DIR, "templates"),
+            os.path.join(BASE_DIR, "templates", "allauth_main"),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

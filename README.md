@@ -38,7 +38,7 @@
     - [Wireframe](#wireframe)
     - [Structure \& Logical Flow (database design)](#structure--logical-flow-database-design)
     - [Colour Scheme](#colour-scheme)
-    - [Fonts](#fonts)
+    - [Typography](#typography)
     - [Responsiveness](#responsiveness)
   - [Security Measures and Protective Design](#security-measures-and-protective-design)
     - [User Authentication](#user-authentication)
@@ -386,11 +386,15 @@ Custom colours:
 
 ![Custom colour palette](./README-media/)
 
-### Fonts
+### Typography
 
-- 
+- **Rubik** was chosen as the primary font. Rubik is a sans serif font family with slightly rounded corners. It is a 5 weight family with Roman and Italic styles, that accompanies Rubik Mono One, a monospaced variation of the Black roman design. Rubik provides a friendly and approachable appearance while maintaining excellent readability on both screens and printed materials.
 
-![Fonts](./README-media/)
+- **Alegreya Sans SC** was chosen as the primary title font. Alegreya Sans SC is a Small Caps companion family to Alegreya Sans, a humanist sans serif family with a calligraphic feeling that conveys a dynamic and varied rhythm. This gives a pleasant feeling to readers of long texts. The Alegreya type system is a "super family", originally intended for literature, and includes sans and serif sibling families. The family follows humanist proportions and principles, and achieves a ludic and harmonious paragraph through elements carefully designed in an atmosphere of diversity. The italics bring a strong emphasis to the roman styles.
+
+- **Nunito** was chosen as the subtitle font. It is a well balanced sans serif typeface superfamily. Nunito was created as a rounded terminal sans serif for display typography.
+
+![Fonts](./README-media/fonts.png)
 
 
 ### Responsiveness
@@ -840,6 +844,7 @@ _Any changes required to the website, they can be made, committed and pushed to 
 
 - [Abobe Colour](https://color.adobe.com/create/color-wheel)
 - [FontJoy](https://fontjoy.com/)
+- [Google Fonts](https://fonts.google.com/)
 
 
 [Back to top](#table-of-contents)

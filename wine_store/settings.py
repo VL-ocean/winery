@@ -65,7 +65,7 @@ MIDDLEWARE = [
     "allauth.account.middleware.AccountMiddleware",
 ]
 
-ROOT_URLCONF = 'wine_shop.urls'
+ROOT_URLCONF = 'wine_store.urls'
 
 TEMPLATES = [
     {
@@ -106,7 +106,7 @@ ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = "/accounts/login/"
 LOGIN_REDIRECT_URL = "/"
 
-WSGI_APPLICATION = 'wine_shop.wsgi.application'
+WSGI_APPLICATION = 'wine_store.wsgi.application'
 
 
 # Database

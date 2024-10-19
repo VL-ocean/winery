@@ -5,7 +5,7 @@
 
 . 
 
-![start screen responsive](./README-images/)
+![start screen responsive]()
 
 
 ## Table of contents
@@ -124,19 +124,19 @@ Using GitHub Projects, tasks are managed and progress tracked through project bo
 <hr>
 <b>Table view at planning stage</b>
 <br/><br/>
-<img src="./README-images/iteration-1-plan.png">
+<img src="./README-media/github-projects/iteration-1-plan.png">
 <hr>
 <b>Table view at mid-time iteration</b>
 <br/><br/>
-<img src="./README-images/iteration-1-progress-table.png">
+<img src="./README-media/github-projects/iteration-1-progress-table.png">
 <hr>
 <b>Board view at mid-time iteration</b>
 <br/><br/>
-<img src="./README-images/iteration-1-progress-board.png">
+<img src="./README-media/github-projects/iteration-1-progress-board.png">
 <hr>
 <b>Issue Sample #4</b>
 <br/><br/>
-<img src="./README-images/issue-sample-4.png">
+<img src="./README-media/github-projects/issue-sample-4.png">
 </details>
 
 <details>
@@ -144,19 +144,19 @@ Using GitHub Projects, tasks are managed and progress tracked through project bo
 <hr>
 <b>Table view at planning stage</b>
 <br/><br/>
-<img src="./README-images/iteration-2-plan.png">
+<img src="./README-media/github-projects/iteration-2-plan.png">
 <hr>
 <b>Table view at mid-time iteration</b>
 <br/><br/>
-<img src="./README-images">
+<img src="./README-media/github-projects/">
 <hr>
 <b>Board view at mid-time iteration</b>
 <br/><br/>
-<img src="./README-images">
+<img src="./README-media/github-projects/">
 <hr>
 <b>Issue Sample #</b>
 <br/><br/>
-<img src="./README-images">
+<img src="./README-media/github-projects/">
 </details>
 
 <details>
@@ -164,19 +164,19 @@ Using GitHub Projects, tasks are managed and progress tracked through project bo
 <hr>
 <b>Table view at planning stage</b>
 <br/><br/>
-<img src="./README-images/iteration-3-plan.png">
+<img src="./README-media/github-projects/iteration-3-plan.png">
 <hr>
 <b>Table view at mid-time iteration</b>
 <br/><br/>
-<img src="./README-images">
+<img src="./README-media/github-projects/">
 <hr>
 <b>Board view at mid-time iteration</b>
 <br/><br/>
-<img src="./README-images">
+<img src="./README-media/github-projects/">
 <hr>
 <b>Issue Sample #</b>
 <br/><br/>
-<img src="./README-images">
+<img src="./README-media/github-projects/">
 </details>
 
 <details>
@@ -184,19 +184,19 @@ Using GitHub Projects, tasks are managed and progress tracked through project bo
 <hr>
 <b>Table view at planning stage</b>
 <br/><br/>
-<img src="./README-images/iteration-4-plan.png">
+<img src="./README-media/github-projects/iteration-4-plan.png">
 <hr>
 <b>Table view at mid-time iteration</b>
 <br/><br/>
-<img src="./README-images">
+<img src="./README-media/github-projects/">
 <hr>
 <b>Board view at mid-time iteration</b>
 <br/><br/>
-<img src="./README-images">
+<img src="./README-media/github-projects/">
 <hr>
 <b>Issue Sample #</b>
 <br/><br/>
-<img src="./README-images">
+<img src="./README-media/github-projects/">
 </details>
 
 <details>
@@ -204,19 +204,19 @@ Using GitHub Projects, tasks are managed and progress tracked through project bo
 <hr>
 <b>Table view at planning stage</b>
 <br/><br/>
-<img src="./README-images/iteration-5-plan.png">
+<img src="./README-media/github-projects/iteration-5-plan.png">
 <hr>
 <b>Table view at mid-time iteration</b>
 <br/><br/>
-<img src="./README-images">
+<img src="./README-media/github-projects/">
 <hr>
 <b>Board view at mid-time iteration</b>
 <br/><br/>
-<img src="./README-images">
+<img src="./README-media/github-projects/">
 <hr>
 <b>Issue Sample #</b>
 <br/><br/>
-<img src="./README-images">
+<img src="./README-media/github-projects/">
 </details>
 
 
@@ -356,17 +356,17 @@ With an emphasis on delivering a seamless user experience, the goal of this proj
 The wireframes provide a visual representation of the layout and structure of the application. They outline the placement of key elements such as navigation menus, user profiles, content areas, and interactive features. The wireframes ensure a cohesive and intuitive user interface, guiding the design and development process. After the extensive testing was conducted, naturally there are some deviations from wireframes in the live version of the platform.
 
 Tool: Balsamiq  
-Format: PDF
+Format: PDF 
 
-- [All Wireframes](./README-images/wireframes/winestore.pdf)
-- [Base Template](./README-images/wireframes/base-template.pdf)
-- [Home page](./README-images/wireframes/home.pdf)
-- [About Us](./README-images/wireframes/about-us.pdf)
-- [Contact Us](./README-images/wireframes/contact-us.pdf)
-- [Shop Wine](./README-images/wireframes/shop-wine.pdf)
-- [Promotions](./README-images/wireframes/promotions.pdf)
-- [Product View](./README-images/wireframes/product-view.pdf)
-- [Shopping Cart](./README-images/wireframes/cart.pdf)
+- [All Wireframes](./README-media/wireframes/winestore.pdf)
+- [Base Template](./README-media/wireframes/base-template.pdf)
+- [Home page](./README-media/wireframes/home.pdf)
+- [About Us](./README-media/wireframes/about-us.pdf)
+- [Contact Us](./README-media/wireframes/contact-us.pdf)
+- [Shop Wine](./README-media/wireframes/shop-wine.pdf)
+- [Promotions](./README-media/wireframes/promotions.pdf)
+- [Product View](./README-media/wireframes/product-view.pdf)
+- [Shopping Cart](./README-media/wireframes/cart.pdf)
 
 ### Structure & Logical Flow (database design)
 
@@ -374,7 +374,7 @@ The database schema describes the structure and relationships between the key ta
 
 The database model diagram was designed using Lucidchart:
 
-![Screenshot of flowchart](./README-images/database-diagram-pp5.png)
+![Screenshot of flowchart](./README-media/database-diagram-pp5.png)
 
 ### Colour Scheme
 
@@ -384,20 +384,20 @@ The colours were mostly taken from bootstrap colour palette. They are:
 Custom colours:
 - `#e99767` - border accent colour 
 
-![Custom colour palette](./README-images/)
+![Custom colour palette](./README-media/)
 
 ### Fonts
 
 - 
 
-![Fonts](./README-images/)
+![Fonts](./README-media/)
 
 
 ### Responsiveness
 
 The website is responsive to different layouts depending on the size of the viewport based on the Bootstrap media queries.
 
-![media queries](./README-images/)
+![media queries](./README-media/)
 
 
 [Back to top](#table-of-contents)
@@ -681,7 +681,7 @@ Teacup Tales utilizes Stripe as its primary payment gateway to securely process 
     -   In your Stripe dashboard:
         -   Navigate to "Developers" and select "Webhooks."
         -   Click "Add Endpoint."
-        -   Enter your endpoint URL (e.g., `https://teacup-tales.herokuapp.com/checkout/wh/`).
+        -   Enter your endpoint URL (e.g., `https://wine-shop.herokuapp.com/checkout/wh/`).
         -   Select "Receive all events" to capture all relevant payment events.
         -   Click "Add Endpoint" to complete the process.
     -   This will generate a new key:

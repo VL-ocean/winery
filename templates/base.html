@@ -60,102 +60,98 @@
 
 <body>
 
-    
-    <header class="container-fluid fixed-top">
-        <div class="row">
-            <div class="col text-center mt-2">
-                <p class="mb-0">More than a store, we're an experience.</p>
+    <header>
+        <div class="row bg-success text-white p-1">
+            <div class="col text-center my-1">
+                <p class="m-0">More than a store, we're an experience.</p>
             </div>
         </div>
-        <div class="row pt-lg-2 d-none d-lg-flex mx-4">
-            <div class="col-12 col-lg-6 py-1 ps-lg-3 text-center text-lg-start">
-                <a href="{% url 'home' %}" class="nav-link">
-                    <h2 class="text-black my-0"><strong>WineStore</strong></h2>
-                </a>
-            </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <form class="form" method="GET" action="">
-                    <div class="input-group w-100">
-                        <input class="form-control border border-black rounded-0" type="text" name="q"
-                            placeholder="Search wine">
-                        <div class="input-group-append">
-                            <button class="form-control btn btn-black border border-black rounded-0" type="submit">
-                                <span class="icon">
-                                    <i class="fas fa-search"></i>
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="col-12 col-lg-2 my-auto py-1 py-lg-0">
-                <ul class="list-inline list-unstyled text-lg-end my-0">
-                    <li class="list-inline-item dropdown my-3">
-                        <a class="text-black nav-link" href="#" id="user-options" data-bs-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <div><i class="fas fa-user fa-lg"></i></div>
-                            </div>
-                        </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                            {% if request.user.is_authenticated %}
-                            {% if request.user.is_superuser %}
-                            <a href="" class="dropdown-item">Product Management</a>
-                            {% endif %}
-                            <a href="" class="dropdown-item">My Profile</a>
-                            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                            {% else %}
-                            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                            {% endif %}
-                        </div>
-                    </li>
-                    <li class="list-inline-item my-3">
-                        <a class="text-black nav-link"
-                            href="">
-                            <div class="text-center">
-                                <div><i class="fas fa-heart fa-lg"></i></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="list-inline-item my-3">
-                        <a class="{% if grand_total %}text-info fw-bold{% else %}text-black{% endif %} nav-link"
-                            href="">
-                            <div class="text-center">
-                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="row bg-white">
-            <nav class="navbar navbar-expand-lg w-100">
-                <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"
-                    aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg sticky-top">
+            <div class="container-fluid py-2">
+                <a class="navbar-brand" href="#">WineStore <i class="fa-solid fa-wine-glass"></i></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="d-flex justify-content-between w-75">
-                    <a href="{% url 'home' %}" class="nav-link ps-2 d-block d-lg-none">
-                        <h2 class="text-black my-0"><strong>WineStore</strong></h2>
-                    </a>
-                    {% include 'includes/main-nav.html' %}
-                    {% include 'includes/mobile-top-header.html' %}
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item d-block d-lg-none">
+                            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">HOME</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                SHOP WINE
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="#">RED WINE</a></li>
+                                <li><a class="dropdown-item" href="#">WHITE WINE</a></li>
+                                <li><a class="dropdown-item" href="#">ROSÈ WINE</a></li>
+                                <li><a class="dropdown-item" href="#">SPARKLING WINE</a></li>
+                                <li><a class="dropdown-item" href="#">SPARKLING ROSÈ</a></li>
+                                <li>
+                                    <hr class="dropdown-divider text-bg-light">
+                                </li>
+                                <li><a class="dropdown-item" href="#">ALL WINE</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">PROMOTIONS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">ABOUT US</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">CONTACT US</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                MY ACCOUNT
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                {% if request.user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                <li><a class="dropdown-item" href="#">PRODUCT MANAGEMENT</a></li>
+                                {% endif %}
+                                <li><a class="dropdown-item" href="#">MY PROFILE</a></li>
+                                <li><a class="dropdown-item" href="#">WISHLIST</a></li>
+                                <li>
+                                    <hr class="dropdown-divider text-bg-light">
+                                </li>
+                                <li><a class="dropdown-item" href="{% url 'account_logout' %}">LOGOUT</a></li>
+                                {% else %}
+                                <li><a class="dropdown-item" href="{% url 'account_signup' %}">REGISTER</a></li>
+                                <li><a class="dropdown-item" href="{% url 'account_login' %}">LOGIN</a></li>
+                                {% endif %}
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    </form>
                 </div>
-            </nav>
-        </div>
-        <div id="delivery-banner" class="row text-center">
-            <div class="col">
-                <h4 class="logo-font my-1"></h4>
+            </div>
+        </nav>
+        {% block banner %}
+        <div id="promotion-banner" class="row px-3 text-bg-info text-center">
+            <div class="col p-1">
+                <h4 class="my-1">EVERY FRIDAY FREE SHIPPING FOR ORDERS ABOVE 20 EUR</h4>
             </div>
         </div>
+        {% endblock %}
     </header>
 
 
     {% if messages %}
     <div class="message-container">
         {% for message in messages %}
-
+            <div class="alert alert-warning alert-dismissible fade show text-center message-box py-2" role="alert">
+                <p class="mb-0">{{ message }}</p>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
         {% endfor %}
     </div>
     {% endif %}

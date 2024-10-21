@@ -58,110 +58,34 @@
     <title>WineStore {% block extra_title %}{% endblock %}</title>
 </head>
 
-<body>
+<body class="min-vh-100 d-flex flex-column">
 
-    <header>
-        <div class="row bg-success text-white p-1">
-            <div class="col text-center my-1">
-                <p class="m-0">More than a store, we're an experience.</p>
-            </div>
-        </div>
-        <nav class="navbar navbar-dark bg-dark navbar-expand-lg sticky-top">
-            <div class="container-fluid py-2">
-                <a class="navbar-brand" href="#">WineStore <i class="fa-solid fa-wine-glass"></i></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item d-block d-lg-none">
-                            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">HOME</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                SHOP WINE
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="#">RED WINE</a></li>
-                                <li><a class="dropdown-item" href="#">WHITE WINE</a></li>
-                                <li><a class="dropdown-item" href="#">ROSÈ WINE</a></li>
-                                <li><a class="dropdown-item" href="#">SPARKLING WINE</a></li>
-                                <li><a class="dropdown-item" href="#">SPARKLING ROSÈ</a></li>
-                                <li>
-                                    <hr class="dropdown-divider text-bg-light">
-                                </li>
-                                <li><a class="dropdown-item" href="#">ALL WINE</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">PROMOTIONS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">ABOUT US</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">CONTACT US</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                MY ACCOUNT
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-dark">
-                                {% if request.user.is_authenticated %}
-                                {% if request.user.is_superuser %}
-                                <li><a class="dropdown-item" href="#">PRODUCT MANAGEMENT</a></li>
-                                {% endif %}
-                                <li><a class="dropdown-item" href="#">MY PROFILE</a></li>
-                                <li><a class="dropdown-item" href="#">WISHLIST</a></li>
-                                <li>
-                                    <hr class="dropdown-divider text-bg-light">
-                                </li>
-                                <li><a class="dropdown-item" href="{% url 'account_logout' %}">LOGOUT</a></li>
-                                {% else %}
-                                <li><a class="dropdown-item" href="{% url 'account_signup' %}">REGISTER</a></li>
-                                <li><a class="dropdown-item" href="{% url 'account_login' %}">LOGIN</a></li>
-                                {% endif %}
-                            </ul>
-                        </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-light" type="submit">Search</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
-        {% block banner %}
-        <div id="promotion-banner" class="row px-3 text-bg-info text-center">
-            <div class="col p-1">
-                <h4 class="my-1">EVERY FRIDAY FREE SHIPPING FOR ORDERS ABOVE 20 EUR</h4>
-            </div>
-        </div>
-        {% endblock %}
-    </header>
+    {% include 'includes/header.html' %}
 
 
-    {% if messages %}
-    <div class="message-container">
-        {% for message in messages %}
+    <main class="flex-grow-1 flex-shrink-0">
+        {% if messages %}
+        <div class="message-container">
+            {% for message in messages %}
             <div class="alert alert-warning alert-dismissible fade show text-center message-box py-2" role="alert">
                 <p class="mb-0">{{ message }}</p>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
-        {% endfor %}
-    </div>
-    {% endif %}
+            {% endfor %}
+        </div>
+        {% endif %}
 
-    {% block page_header %}
-    {% endblock %}
+        {% block page_header %}
+        {% endblock %}
 
-    {% block content %}
-    {% endblock %}
+        {% block content %}
+        {% endblock %}
 
+    </main>
+
+    {% include 'includes/footer.html' %}
+
+    
     {% block postloadjs %}
     <script type="text/javascript">
     </script>

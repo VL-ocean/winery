@@ -1,52 +1,76 @@
 {% load static %}
-<footer class="flex-shrink-0">
-    <div class="container-fluid text-bg-success">
+<footer class="flex-shrink-0 text-bg-dark">
+    <div class="container-fluid pb-3">
         <div class="row p-3">
-            <div class="col-12 col-md-6 col-lg-3">
+            <div class="col-12 col-md-6 col-lg-3 my-2 p-2">
                 <h5 class="border-bottom border-warning border-2 pb-2">CONTACT US</h5>
                 <p>Need help? Don't keep your questions bottled up.</p>
-                <a class="btn btn-outline-light" href="#" role="button">WRITE US</a>
-                <div class="d-flex flex-row justify-content-evenly mt-2">
-                    <a class="link-light fs-3" href="https://www.facebook.com/" target="_blank" rel="noopener"
+                <a class="btn btn-success" href="#" role="button">WRITE US</a>
+                <div class="d-flex flex-row justify-content-evenly my-3">
+                    <a class="link-light fs-3 social-icon" href="https://www.facebook.com/" target="_blank" rel="noopener"
                         aria-label="Visit our Facebook page - Opens in a new tab">
                         <i class="fa-brands fa-square-facebook"></i>
                     </a>
-                    <a class="link-light fs-3" href="https://www.instagram.com/" target="_blank" rel="noopener"
+                    <a class="link-light fs-3 social-icon" href="https://www.instagram.com/" target="_blank" rel="noopener"
                         aria-label="Visit our Instagram page - Opens in a new tab">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
-                    <a class="link-light fs-3" href="https://x.com/" target="_blank" rel="noopener"
+                    <a class="link-light fs-3 social-icon" href="https://x.com/" target="_blank" rel="noopener"
                         aria-label="Visit our Twitter page - Opens in a new tab">
                         <i class="fa-brands fa-square-twitter"></i>
                     </a>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-3">
+            <div class="col-12 col-md-6 col-lg-3 my-2 p-2">
                 <h5 class="border-bottom border-warning border-2 pb-2">OUR LOCATION</h5>
-                <p class="mb-0">107 Kesh Rd., Glanmire</p>
-                <p class="mb-0">County Kerry, Ireland</p>
-                <br/>
-                <p class="mb-0"><i class="fa-solid fa-phone"></i> (012) 345 6789</p>
-                <p class="mb-0">Mon-Fri: 9AM – 5PM</p>
+                <div class="row">
+                    <div class="col-5 position-relative justify-content-center">
+                        <img class="image-fluid w-100" src="media/map.webp" alt="">
+                        <a href="https://maps.app.goo.gl/y6csEroQLoYnfHvK6" class="stretched-link" target="_blank"
+                            rel="noopener" aria-label="Find location in Google map - Opens in a new tab"></a>
+                    </div>
+                    <div class="col-7">
+                        <p class="mb-0">107 Kesh Rd., Glanmire</p>
+                        <p class="mb-0">County Kerry, Ireland</p>
+                        <br />
+                        <p class="mb-0"><i class="fa-solid fa-phone"></i> (012) 345 6789</p>
+                        <p class="mb-0">Mon-Fri: 9AM – 5PM</p>
+                    </div>
+                </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-3">
+            <div class="col-12 col-md-6 col-lg-3 my-2 p-2">
                 <h5 class="border-bottom border-warning border-2 pb-2">HELPFUL LINKS</h5>
-                <ul class="navbar-nav">
+                <ul class="navbar-nav" style="--bs-navbar-hover-color: #ffc107">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Shipping Information</a>
+                        <a class="nav-link p-1" href="#">Shipping Information</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Returns & Refunds</a>
+                        <a class="nav-link p-1" href="#">Returns & Refunds</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-1" href="#">Terms & Conditions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-1" href="#">Privacy Policy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-1" href="#">Site Map</a>
                     </li>
                 </ul>
             </div>
-            <div class="col-12 col-md-6 col-lg-3">
+            <div class="col-12 col-md-6 col-lg-3 my-2 p-2">
                 <h5 class="border-bottom border-warning border-2 pb-2">STAY CONNECTED</h5>
+                <p>Subscribe to our newsletter for staying updated with WineStore, future releases and events.</p>
+                <div class="mb-3">
+                    <label for="subscribe-email" class="visually-hidden">Email address</label>
+                    <input type="email" class="form-control mb-1" id="subscribe-email" placeholder="Enter your email address *">
+                    <button type="submit" class="btn btn-success">SUBSCRIBE</button>
+                </div>
             </div>
         </div>
     </div>
-    <div class="text-center pb-3 w-100 text-bg-dark">
-        <p class="m-0">&copy; Copyright 2024 <strong>WineStore</strong> | For educational purposes <a class="link-light"
+    <div class="text-center pb-3 w-100">
+        <p class="m-0">&copy; Copyright 2024 <strong>WineStore</strong> | For educational purposes <a class="link-light social-icon"
                 href="https://github.com/VL-ocean" target="_blank" rel="noopener"
                 aria-label="Visit my GitHub page - Opens in a new tab"><i
                     class="fa-brands fa-square-github fa-lg"></i></a></p>

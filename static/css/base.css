@@ -61,3 +61,25 @@ body {
     right: 0;
     z-index: 99;
 }
+
+/* ~~~~~~~~~~ Product card ~~~~~~~~~~ */
+
+.product-card {
+    max-width: 350px;
+}
+
+.product-img-box .product-img {
+    height: 300px;
+}
+
+.quantity-btn {
+    width: 30px;
+}
+
+.form-control.quantity-input:focus {
+    box-shadow: none;
+}
+
+.quantity-input {
+    width: 50px;
+}

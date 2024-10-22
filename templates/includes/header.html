@@ -5,14 +5,14 @@
     </div>
     <nav class="navbar navbar-dark bg-dark navbar-expand-lg sticky-top">
         <div class="container-fluid py-2">
-            <a class="navbar-brand" href="#">WineStore <i class="fa-solid fa-wine-glass"></i></a>
+            <a class="navbar-brand title-font" href="#">WineStore <i class="fa-solid fa-wine-glass"></i></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 menu-font">
                     <li class="nav-item d-block d-lg-none">
                         <a class="nav-link active" aria-current="page" href="{% url 'home' %}">HOME</a>
                     </li>
@@ -66,15 +66,15 @@
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <input class="form-control me-2 custom-focus" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-light" type="submit">Search</button>
                 </form>
             </div>
         </div>
     </nav>
     {% block banner %}
-    <div id="promotion-banner" class="px-3 text-bg-info text-center p-1">
-        <h4 class="my-1">EVERY FRIDAY FREE SHIPPING FOR ORDERS ABOVE 20 EUR</h4>
+    <div id="promotion-banner" class="px-3 bg-danger text-center p-1">
+        <h4 class="my-1 text-white">EVERY FRIDAY FREE SHIPPING FOR ORDERS ABOVE 20 EUR</h4>
     </div>
     {% endblock %}
 </header>

@@ -1,18 +1,64 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block page_header %}
-<div class="container header-container">
+{% block content %}
+
+<div class="welcome-banner">
+    <div class="overlay"></div>
+    <div class="banner-content p-5 text-center text-dark">
+        <h1 class="title-font fw-bold">DISCOVER WINES AT BEST PRICE</h1>
+        <h2 class="subtitle-font fw-bold">Start browsing our collection of incredible wines</h2>
+        <a class="btn btn-danger btn-lg my-2" href="#" role="button">SHOP NOW</a>
+    </div>
+</div>
+<div class="container mt-3">
     <div class="row">
-        <div class="col text-center mt-3">
-            <h1>Home page title</h1>
+        <div class="col text-center">
+            <h3 class="subtitle-font fw-bold">Best Sellers</h3>
+            <p>Sip into satisfaction with these crowd-pleasers.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center text-md-end me-4">
+            <a class="btn btn-dark my-2 mb-3" href="#" role="button">SEE MORE >></a>
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col text-center">
+            <h3 class="subtitle-font fw-bold">Four Reasons to Buy Wine Online From Us</h3>
+            <p>Because finding great wine should be simple and fun.</p>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-12 col-md-6 col-lg-3 p-2">
+            <div class="p-2 d-flex flex-column text-center card border-dark shadow">
+                <img src="/media/icon-shipping-box.webp" alt="shipping box icon" class="img-fluid w-50 align-self-center">
+                <h4 class="subtitle-font text-center">Fast Shipping for Faster Sipping</h4>
+                <p>Savor your wine sooner! Orders are processed and shipped within 1-2 business days for speedy delivery.</p>                
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 p-2">
+            <div class="p-2 d-flex flex-column text-center card border-dark shadow">
+                <img src="/media/icon-wine-bottle.webp" alt="wine bottle icon" class="img-fluid w-50 align-self-center">
+                <h4 class="subtitle-font">Shop Hundreds of Wines</h4>
+                <p>Choose from 250+ premium wines from 45+ wineries worldwide, known for their consistent acclaim.</p>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 p-2">
+            <div class="p-2 d-flex flex-column text-center card border-dark shadow">
+                <img src="/media/icon-leaf.webp" alt="leaf icon" class="img-fluid w-50 align-self-center">
+                <h4 class="subtitle-font">Support Sustainable Wines</h4>
+                <p>Enjoy wines made with eco-friendly methods that support a healthier planet. Sip well. Feel good.</p>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 p-2">
+            <div class="p-2 d-flex flex-column text-center card border-dark shadow">
+                <img src="/media/icon-cheers.webp" alt="two glasses cheers icon" class="img-fluid w-50 align-self-center">
+                <h4 class="subtitle-font">Confidence in Every Cart</h4>
+                <p>We back our wines with a 100% satisfaction guarantee. If you're not happy, we'll make it right.</p>
+            </div>
         </div>
     </div>
 </div>
-{% endblock %}
-
-{% block content %}
-
-    <div class="container text-bg-light"></div>
 
 {% endblock %}

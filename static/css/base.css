@@ -1,7 +1,63 @@
+/* ~~~~~~~~~~ General styles ~~~~~~~~~~ */
 
+body {
+    font-family: "Rubik", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    box-sizing: border-box;
 
-/* Footer */
+}
+
+.title-font {
+    font-family: "Alegreya Sans SC", sans-serif;
+}
+
+.menu-font {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.subtitle-font {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: oblique;
+}
+
+.form-control.custom-focus:focus {
+    border-color: #fff;
+    box-shadow: 0 0 0 .25rem #4bff008a;
+}
+  
+/* ~~~~~~~~~~ Footer ~~~~~~~~~~ */
 
 .social-icon .fa-brands:hover {
     color: #ffc107;
+}
+
+/* ~~~~~~~~~~ Home page ~~~~~~~~~~ */
+
+.welcome-banner {
+    height: 300px;
+    background: url('/media/welcome-banner.webp') no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    opacity: .4;
+}
+
+.banner-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
 }

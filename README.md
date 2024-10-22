@@ -838,7 +838,7 @@ _Any changes required to the website, they can be made, committed and pushed to 
 
 ### Media
 
-- [photo](https://www.pexels.com/)
+- [Close-up Photo of Wine Bottles With Cork](https://www.pexels.com/photo/close-up-photo-of-wine-bottles-with-cork-2647933/)
 
 ### Tools
 

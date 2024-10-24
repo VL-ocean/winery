@@ -5,24 +5,6 @@ from .models import Product
 
 
 # Create your views here.
-# def all_products(request):
-#     """A view to show all products, including sorting and search queries"""
-
-#     products = Product.objects.all()
-
-#     paginator = Paginator(products, 12)  # Show 12 products per page.
-
-#     page_number = request.GET.get("page")
-#     page_obj = paginator.get_page(page_number)
-
-#     context = {
-#         "products": products,
-#         "page_obj": page_obj,
-#     }
-
-#     return render(request, "products/products.html", context)
-
-
 class ProductListView(ListView):
     """A view to show all products, including sorting and search queries"""
 

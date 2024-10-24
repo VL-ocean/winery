@@ -1,0 +1,114 @@
+[
+    {
+        "pk": 1,
+        "model": "products.variety",
+        "fields": {
+            "name": "pinot_noir",
+            "friendly_name": "Pinot Noir"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.variety",
+        "fields": {
+            "name": "red_blend",
+            "friendly_name": "Red Blend"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.variety",
+        "fields": {
+            "name": "grenache",
+            "friendly_name": "Grenache"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.variety",
+        "fields": {
+            "name": "merlot",
+            "friendly_name": "Merlot"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.variety",
+        "fields": {
+            "name": "cabernet_sauvignon",
+            "friendly_name": "Cabernet Sauvignon"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.variety",
+        "fields": {
+            "name": "zinfandel",
+            "friendly_name": "Zinfandel"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.variety",
+        "fields": {
+            "name": "barbera",
+            "friendly_name": "Barbera"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.variety",
+        "fields": {
+            "name": "cabernet_shiraz",
+            "friendly_name": "Cabernet Shiraz"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.variety",
+        "fields": {
+            "name": "chardonnay",
+            "friendly_name": "Chardonnay"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "products.variety",
+        "fields": {
+            "name": "riesling",
+            "friendly_name": "Riesling"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "products.variety",
+        "fields": {
+            "name": "sauvignon_blanc",
+            "friendly_name": "Sauvignon Blanc"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "products.variety",
+        "fields": {
+            "name": "viognier",
+            "friendly_name": "Viognier"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "products.variety",
+        "fields": {
+            "name": "sangiovese",
+            "friendly_name": "Sangiovese"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "products.variety",
+        "fields": {
+            "name": "brut_rose",
+            "friendly_name": "Brut Rosé"
+        }
+    }
+]

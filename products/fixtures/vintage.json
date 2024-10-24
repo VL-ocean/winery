@@ -1,0 +1,107 @@
+[
+    {
+        "pk": 1,
+        "model": "products.vintage",
+        "fields": {
+            "name": "2010"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.vintage",
+        "fields": {
+            "name": "2011"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.vintage",
+        "fields": {
+            "name": "2012"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.vintage",
+        "fields": {
+            "name": "2013"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.vintage",
+        "fields": {
+            "name": "2014"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.vintage",
+        "fields": {
+            "name": "2015"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.vintage",
+        "fields": {
+            "name": "2016"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.vintage",
+        "fields": {
+            "name": "2017"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.vintage",
+        "fields": {
+            "name": "2018"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "products.vintage",
+        "fields": {
+            "name": "2019"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "products.vintage",
+        "fields": {
+            "name": "2020"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "products.vintage",
+        "fields": {
+            "name": "2021"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "products.vintage",
+        "fields": {
+            "name": "2022"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "products.vintage",
+        "fields": {
+            "name": "2023"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "products.vintage",
+        "fields": {
+            "name": "2024"
+        }
+    }
+]

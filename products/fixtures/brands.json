@@ -1,0 +1,170 @@
+[
+    {
+        "pk": 1,
+        "model": "products.brand",
+        "fields": {
+            "name": "carmel_road",
+            "friendly_name": "Carmel Road"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.brand",
+        "fields": {
+            "name": "chateau_lassegue",
+            "friendly_name": "Château Lassègue"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.brand",
+        "fields": {
+            "name": "tenuta_di_arceno",
+            "friendly_name": "Tenuta di Arceno"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.brand",
+        "fields": {
+            "name": "yangarra_estate_vineyard",
+            "friendly_name": "Yangarra Estate Vineyard"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.brand",
+        "fields": {
+            "name": "freemark_abbey_winery",
+            "friendly_name": "Freemark Abbey Winery"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.brand",
+        "fields": {
+            "name": "murphy_goode",
+            "friendly_name": "Murphy-Goode"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.brand",
+        "fields": {
+            "name": "tenuta_l_illuminata",
+            "friendly_name": "Tenuta L'Illuminata"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.brand",
+        "fields": {
+            "name": "hickinbotham_clarendon_vineyard",
+            "friendly_name": "Hickinbotham Clarendon Vineyard"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.brand",
+        "fields": {
+            "name": "anakota",
+            "friendly_name": "Anakota"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "products.brand",
+        "fields": {
+            "name": "la_crema",
+            "friendly_name": "La Crema"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "products.brand",
+        "fields": {
+            "name": "galerie",
+            "friendly_name": "Galerie"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "products.brand",
+        "fields": {
+            "name": "crowded_house",
+            "friendly_name": "Crowded House"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "products.brand",
+        "fields": {
+            "name": "arrowood",
+            "friendly_name": "Arrowood"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "products.brand",
+        "fields": {
+            "name": "capensis",
+            "friendly_name": "Capensis"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "products.brand",
+        "fields": {
+            "name": "liberated",
+            "friendly_name": "Liberated"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "products.brand",
+        "fields": {
+            "name": "copain_wines",
+            "friendly_name": "Copain Wines"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "products.brand",
+        "fields": {
+            "name": "capture",
+            "friendly_name": "Captûre"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "products.brand",
+        "fields": {
+            "name": "cambria",
+            "friendly_name": "Cambria"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "products.brand",
+        "fields": {
+            "name": "benvolio",
+            "friendly_name": "Benvolio"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "products.brand",
+        "fields": {
+            "name": "gran_moraine",
+            "friendly_name": "Gran Moraine"
+        }
+    },
+    {
+        "pk": 21,
+        "model": "products.brand",
+        "fields": {
+            "name": "matanzas_creek",
+            "friendly_name": "Matanzas Creek"
+        }
+    }
+]

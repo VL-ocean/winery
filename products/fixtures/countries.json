@@ -1,0 +1,50 @@
+[
+    {
+        "pk": 1,
+        "model": "products.country",
+        "fields": {
+            "name": "usa",
+            "friendly_name": "USA"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.country",
+        "fields": {
+            "name": "france",
+            "friendly_name": "France"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.country",
+        "fields": {
+            "name": "italy",
+            "friendly_name": "Italy"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.country",
+        "fields": {
+            "name": "australia",
+            "friendly_name": "Australia"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.country",
+        "fields": {
+            "name": "new_zealand",
+            "friendly_name": "New Zealand"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.country",
+        "fields": {
+            "name": "south_africa",
+            "friendly_name": "South Africa"
+        }
+    }
+]

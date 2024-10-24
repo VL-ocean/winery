@@ -104,3 +104,14 @@ body {
     top: 5px;
     right: 5px;
 }
+
+/* ~~~~~~~~~~ Products view ~~~~~~~~~~ */
+
+.sort-drop .dropdown-toggle::after {
+    display: none;
+}
+
+.page-link:hover,
+.page-link:focus {
+    color: #0d6efd !important;
+}

@@ -115,3 +115,33 @@ body {
 .page-link:focus {
     color: #0d6efd !important;
 }
+
+/* ~~~~~~~~~~ Allauth forms ~~~~~~~~~~ */
+
+.allauth-inner-content form .form-text {
+    color: #000000;
+}
+
+/* ~~~~~~~~~~ Filter ~~~~~~~~~~ */
+
+.filter-form > div {
+    flex: 0 0 auto;
+    width: auto;
+    padding: .5rem;
+    margin-right: auto;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.filter-form .form-label {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: oblique;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    border-bottom: 2px solid #0d6efd;
+}
+
+.filter-form .form-check > .form-check-label {
+    text-transform: capitalize;
+}

@@ -51,6 +51,9 @@ INSTALLED_APPS = [
     "allauth.account",
     # other
     'django_summernote',
+    'django_filters',
+    "crispy_forms",
+    "crispy_bootstrap5",
 
     # apps
     "home",
@@ -71,6 +74,9 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "wine_store.urls"
 
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
+
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
@@ -85,6 +91,10 @@ TEMPLATES = [
                 "django.template.context_processors.request",  # `allauth` needs this from django
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+            ],
+            "builtins": [
+                "crispy_forms.templatetags.crispy_forms_tags",
+                "crispy_forms.templatetags.crispy_forms_field",
             ],
         },
     },

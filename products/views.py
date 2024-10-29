@@ -12,3 +12,15 @@ class ProductListView(ListView):
     template_name = 'products/products.html'
     context_object_name = 'products'
     paginate_by = 12
+
+
+def product_detail(request, product_id):
+    """ A view to show individual product details """
+
+    product = get_object_or_404(Product, pk=product_id)
+
+    context = {
+        'product': product,
+    }
+
+    return render(request, 'products/product_detail.html', context)

@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block page_header %}
+{% endblock %}
+{% block content %}
+
+<div class="container pb-5">
+    <div class="row m-3">
+        <div class="col-12 col-lg-6 d-flex flex-column position-relative">
+            <div class="p-2 align-self-center product-img-box position-relative">
+                {% if product.image %}
+                <img src="{{ product.image.url }}" class="img-fluid" alt="{{ product.name }}">
+                <a href="{{ product.image.url }}" class="stretched-link" target="_blank"></a>
+                {% else %}
+                <img src="{{ MEDIA_URL }}no-image-sm.webp" class="img-fluid" alt="{{ product.name }}">
+                <a href="" class="stretched-link"></a>
+                {% endif %}
+            </div>
+            {% if product.sale_price and product.sale_price < product.price %}
+            <div class="rounded-circle text-bg-danger discount-indicator position-absolute d-flex flex-column justify-content-center align-items-center">
+                <i class="fa-solid fa-percent fs-3"></i>
+            </div>
+            {% endif %}
+            <div
+                class="text-danger wishlist-plus position-absolute d-flex flex-column justify-content-center align-items-center">
+                <a href="#" class="link-danger" data-bs-toggle="tooltip" data-bs-placement="right"
+                    data-bs-title="Add to Wishlist">
+                    <i class="fa-solid fa-heart-circle-plus fs-2"></i>
+                </a>
+            </div>
+            <div
+                class="text-danger wishlist-minus position-absolute d-flex flex-column justify-content-center align-items-center d-none">
+                <a href="#" class="link-danger" data-bs-toggle="tooltip" data-bs-placement="right"
+                    data-bs-title="Remove from Wishlist">
+                    <i class="fa-solid fa-heart-circle-minus fs-2"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-12 col-lg-6">
+            <div class="p-4">
+                <p class="text-uppercase opacity-75 m-1">{{ product.brand.friendly_name }}</p>
+                <h4 class="menu-font text-uppercase fs-5 m-1 fw-bold">{{ product.name }} {{product.variety.friendly_name}}</h4>
+                <p class="opacity-75 m-1 text-capitalize">{{product.vintage}} | {{ product.origin }}</p>
+                <p class="m-1 text-capitalize">{{ product.bottle_size }}</p>
+                <p class="m-1 text-capitalize">{{ product.category.friendly_name }}</p>
+                <h5 class="product-price fs-4 m-2">
+                    {% if product.sale_price and product.sale_price < product.price %}
+                        <!-- Sale price exists and is less than regular price -->
+                        <span class="text-decoration-line-through fs-5 text-muted">€ {{ product.price }}</span>
+                        <span class="text-danger">€ {{ product.sale_price }}</span>
+                    {% else %}
+                        <!-- Regular price only -->
+                        € {{ product.price }}
+                    {% endif %}
+                </h5>
+                <div class="row my-3">
+                    <div class="col-6">
+                        <div class="input-group">
+                            <button class="btn btn-outline-dark fw-bold fs-5 p-1 quantity-btn"
+                                type="button">+</button>
+                            <input type="number" class="form-control border border-dark quantity-input fw-bold"
+                                value="1" aria-label="Product quantity">
+                            <button class="btn btn-outline-dark fw-bold fs-5 p-1 quantity-btn"
+                                type="button">-</button>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <a class="btn btn-dark text-uppercase" href="#" role="button">Add to cart</a>
+                    </div>
+                </div>
+                <div class="row my-2">
+                    <div class="col-auto p-2">
+                        <p>{{ product.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col m-2 p-3">
+            <h5 class="text-capitalize subtitle-font"><i class="fa-solid fa-wine-bottle"></i> Tasting notes</h5>
+            <p>{{product.tasting_notes}}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 m-2 p-3">
+            <h5 class="text-capitalize subtitle-font"><i class="fa-solid fa-star"></i> Reviews</h5>
+        </div>
+        <div class="col-12 mx-2 px-3 my-1 py-1">
+            <h6 class="text-capitalize"><i class="fa-regular fa-user"></i> username</h6>
+            <p> review text</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

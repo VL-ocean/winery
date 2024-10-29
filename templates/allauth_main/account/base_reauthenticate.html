@@ -1,13 +1,18 @@
 {% extends "account/base_entrance.html" %}
 {% load allauth %}
 {% load i18n %}
-{% block head_title %}
+
+{% block extra_title %}
     {% trans "Confirm Access" %}
-{% endblock head_title %}
-{% block content %}
+{% endblock extra_title %}
+
+{% block page_header_text %}
     {% element h1 %}
         {% trans "Confirm Access" %}
     {% endelement %}
+{% endblock page_header_text %}
+
+{% block inner_content %}
     {% element p %}
         {% blocktranslate %}Please reauthenticate to safeguard your account.{% endblocktranslate %}
     {% endelement %}
@@ -26,4 +31,4 @@
             {% endfor %}
         {% endelement %}
     {% endif %}
-{% endblock content %}
+{% endblock inner_content %}

@@ -1,13 +1,18 @@
 {% extends "account/base_entrance.html" %}
 {% load i18n %}
 {% load allauth account %}
-{% block head_title %}
+
+{% block extra_title %}
     {% translate "Sign In" %}
-{% endblock head_title %}
-{% block content %}
+{% endblock extra_title %}
+
+{% block page_header_text %}
     {% element h1 %}
         {% translate "Enter Sign-In Code" %}
     {% endelement %}
+{% endblock page_header_text %}
+
+{% block inner_content %}
     {% setvar email_link %}
         <a href="mailto:{{ email }}">{{ email }}</a>
     {% endsetvar %}
@@ -15,6 +20,7 @@
         {% blocktranslate %}We’ve sent a code to {{ email_link }}. The code expires shortly, so please enter it soon.{% endblocktranslate %}
     {% endelement %}
     {% url 'account_confirm_login_code' as login_url %}
+    <div class="row text-start">
     {% element form form=form method="post" action=login_url tags="entrance,login" %}
         {% slot body %}
             {% csrf_token %}
@@ -23,11 +29,14 @@
             {{ redirect_field }}
         {% endslot %}
         {% slot actions %}
+            <div class="d-flex justify-content-center">
             {% element button type="submit" tags="prominent,login" %}
                 {% translate "Sign In" %}
             {% endelement %}
+            </div>
         {% endslot %}
     {% endelement %}
+    </div>
     {% element button type="submit" form="logout-from-stage" tags="link" %}
         {% translate "Cancel" %}
     {% endelement %}
@@ -37,4 +46,4 @@
         <input type="hidden" name="next" value="{% url 'account_login' %}">
         {% csrf_token %}
     </form>
-{% endblock content %}
+{% endblock inner_content %}

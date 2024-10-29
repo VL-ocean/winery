@@ -2,13 +2,18 @@
 {% load i18n %}
 {% load account %}
 {% load allauth %}
-{% block head_title %}
+
+{% block extra_title %}
     {% trans "Confirm Email Address" %}
-{% endblock head_title %}
-{% block content %}
+{% endblock extra_title %}
+
+{% block page_header_text %}
     {% element h1 %}
         {% trans "Confirm Email Address" %}
     {% endelement %}
+{% endblock page_header_text %}
+
+{% block inner_content %}
     {% if confirmation %}
         {% user_display confirmation.email_address.user as user_display %}
         {% if can_confirm %}
@@ -36,4 +41,4 @@
             {% blocktrans %}This email confirmation link expired or is invalid. Please <a href="{{ email_url }}">issue a new email confirmation request</a>.{% endblocktrans %}
         {% endelement %}
     {% endif %}
-{% endblock content %}
+{% endblock inner_content %}

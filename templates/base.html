@@ -68,8 +68,8 @@
         <div class="message-container">
             {% for message in messages %}
             <div class="alert alert-warning alert-dismissible fade show text-center message-box py-2 m-0" role="alert">
-                <p class="mb-0">{{ message }}</p>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                <p class="m-1">{{ message }}</p>
+                <button type="button" class="btn-close p-3" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
             {% endfor %}
         </div>
@@ -85,6 +85,8 @@
 
     {% include 'includes/footer.html' %}
 
+    {% block extra_body %}
+    {% endblock extra_body %}
     
     {% block postloadjs %}
     <script type="text/javascript">

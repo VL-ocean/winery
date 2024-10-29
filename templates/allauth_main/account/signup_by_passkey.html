@@ -1,12 +1,17 @@
 {% extends "account/base_entrance.html" %}
 {% load allauth i18n %}
-{% block head_title %}
+
+{% block extra_title %}
     {% trans "Signup" %}
-{% endblock head_title %}
-{% block content %}
+{% endblock extra_title %}
+
+{% block page_header_text %}
     {% element h1 %}
         {% trans "Passkey Sign Up" %}
     {% endelement %}
+{% endblock page_header_text %}
+
+{% block inner_content %}
     {% setvar link %}
         <a href="{{ login_url }}">
         {% endsetvar %}
@@ -17,6 +22,7 @@
         {% blocktranslate %}Already have an account? Then please {{ link }}sign in{{ end_link }}.{% endblocktranslate %}
     {% endelement %}
     {% url 'account_signup_by_passkey' as action_url %}
+    <div class="row text-start">
     {% element form form=form method="post" action=action_url tags="entrance,signup" %}
         {% slot body %}
             {% csrf_token %}
@@ -25,14 +31,17 @@
             {{ redirect_field }}
         {% endslot %}
         {% slot actions %}
+            <div class="d-flex justify-content-center">
             {% element button tags="prominent,signup" type="submit" %}
                 {% trans "Sign Up" %}
             {% endelement %}
+            </div>
         {% endslot %}
     {% endelement %}
+    </div>
     {% element hr %}
     {% endelement %}
     {% element button href=signup_url tags="prominent,signup,outline,primary" %}
         {% trans "Other options" %}
     {% endelement %}
-{% endblock content %}
+{% endblock inner_content %}

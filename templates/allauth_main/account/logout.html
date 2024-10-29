@@ -1,12 +1,17 @@
 {% extends "account/base_manage.html" %}
 {% load allauth i18n %}
-{% block head_title %}
+
+{% block extra_title %}
     {% trans "Sign Out" %}
-{% endblock head_title %}
-{% block content %}
+{% endblock extra_title %}
+
+{% block page_header_text %}
     {% element h1 %}
         {% trans "Sign Out" %}
     {% endelement %}
+{% endblock page_header_text %}
+
+{% block inner_content %}
     {% element p %}
         {% trans 'Are you sure you want to sign out?' %}
     {% endelement %}
@@ -20,6 +25,7 @@
             {% element button type="submit" %}
                 {% trans 'Sign Out' %}
             {% endelement %}
+            <a class="btn btn-dark m-2" role="button" href="{% url 'home' %}">Cancel</a>
         {% endslot %}
     {% endelement %}
-{% endblock content %}
+{% endblock inner_content %}

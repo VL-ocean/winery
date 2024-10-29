@@ -1,12 +1,17 @@
 {% extends "account/base_entrance.html" %}
 {% load allauth i18n %}
-{% block head_title %}
+
+{% block extra_title %}
     {% trans "Signup" %}
-{% endblock head_title %}
-{% block content %}
+{% endblock extra_title %}
+
+{% block page_header_text %}
     {% element h1 %}
         {% trans "Sign Up" %}
     {% endelement %}
+{% endblock page_header_text %}
+
+{% block inner_content %}
     {% setvar link %}
         <a href="{{ login_url }}">
         {% endsetvar %}
@@ -18,6 +23,7 @@
     {% endelement %}
     {% if not SOCIALACCOUNT_ONLY %}
         {% url 'account_signup' as action_url %}
+        <div class="row text-start">
         {% element form form=form method="post" action=action_url tags="entrance,signup" %}
             {% slot body %}
                 {% csrf_token %}
@@ -26,11 +32,14 @@
                 {{ redirect_field }}
             {% endslot %}
             {% slot actions %}
-                {% element button tags="prominent,signup" type="submit" %}
-                    {% trans "Sign Up" %}
-                {% endelement %}
+                <div class="d-flex justify-content-center">
+                    {% element button tags="prominent,signup" type="submit" %}
+                        {% trans "Sign Up" %}
+                    {% endelement %}
+                </div>
             {% endslot %}
         {% endelement %}
+        </div>
     {% endif %}
     {% if PASSKEY_SIGNUP_ENABLED %}
         {% element hr %}
@@ -42,4 +51,4 @@
     {% if SOCIALACCOUNT_ENABLED %}
         {% include "socialaccount/snippets/login.html" with page_layout="entrance" %}
     {% endif %}
-{% endblock content %}
+{% endblock inner_content %}

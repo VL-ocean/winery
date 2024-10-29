@@ -1,17 +1,23 @@
 {% extends "account/base_manage_email.html" %}
 {% load i18n %}
 {% load allauth %}
-{% block head_title %}
+
+{% block extra_title %}
     {% trans "Email Address" %}
-{% endblock head_title %}
-{% block content %}
+{% endblock extra_title %}
+
+{% block page_header_text %}
     {% element h1 %}
         {% trans "Email Address" %}
     {% endelement %}
+{% endblock page_header_text %}
+
+{% block inner_content %}
     {% if not emailaddresses %}
         {% include "account/snippets/warn_no_email.html" %}
     {% endif %}
     {% url 'account_email' as action_url %}
+    <div class="row text-start">
     {% element form method="post" action=action_url %}
         {% slot body %}
             {% csrf_token %}
@@ -51,11 +57,14 @@
             {% endelement %}
         {% endslot %}
         {% slot actions %}
+            <div class="d-flex justify-content-center">
             {% element button name="action_add" type="submit" %}
                 {% trans "Change Email" %}
             {% endelement %}
+            </div>
         {% endslot %}
     {% endelement %}
+    </div>
     {% if new_emailaddress %}
         <form style="display: none"
               id="pending-email"
@@ -65,4 +74,4 @@
             <input type="hidden" name="email" value="{{ new_emailaddress.email }}">
         </form>
     {% endif %}
-{% endblock content %}
+{% endblock inner_content %}

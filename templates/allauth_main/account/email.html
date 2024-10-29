@@ -1,17 +1,23 @@
 {% extends "account/base_manage_email.html" %}
 {% load allauth i18n %}
-{% block head_title %}
+
+{% block extra_title %}
     {% trans "Email Addresses" %}
-{% endblock head_title %}
-{% block content %}
+{% endblock extra_title %}
+
+{% block page_header_text %}
     {% element h1 %}
         {% trans "Email Addresses" %}
     {% endelement %}
+{% endblock page_header_text %}
+
+{% block inner_content %}
     {% if emailaddresses %}
         {% element p %}
             {% trans 'The following email addresses are associated with your account:' %}
         {% endelement %}
         {% url 'account_email' as email_url %}
+        <div class="row text-start">
         {% element form form=form action=email_url method="post" tags="email,list" %}
             {% slot body %}
                 {% csrf_token %}
@@ -40,6 +46,7 @@
                 {% endfor %}
             {% endslot %}
             {% slot actions %}
+                <div class="d-flex justify-content-center">
                 {% element button type="submit" name="action_primary" %}
                     {% trans 'Make Primary' %}
                 {% endelement %}
@@ -49,8 +56,10 @@
                 {% element button tags="danger,delete" type="submit" name="action_remove" %}
                     {% trans 'Remove' %}
                 {% endelement %}
+                </div>
             {% endslot %}
         {% endelement %}
+        </div>
     {% else %}
         {% include "account/snippets/warn_no_email.html" %}
     {% endif %}
@@ -72,7 +81,8 @@
             {% endslot %}
         {% endelement %}
     {% endif %}
-{% endblock content %}
+{% endblock inner_content %}
+
 {% block extra_body %}
     <script>
 (function() {

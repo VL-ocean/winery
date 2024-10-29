@@ -2,12 +2,12 @@
 {% load crispy_forms_tags %}
 
 
-<form method="get" action="{% url 'product_search' %}" role="search">
+<form method="get" action="{% url 'product_filter' %}" role="search">
     <div class="filter-form row flex-row">
         {{ filter.form|crispy }}
     </div>
     <div class="d-flex justify-content-center">
-        <button type="submit" class="btn btn-dark m-2">Search</button>
+        <button type="submit" class="btn btn-dark m-2">Apply</button>
         <a href="{% url 'all_products' %}" class="btn btn-dark m-2">Reset</a>
     </div>
 </form>

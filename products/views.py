@@ -9,7 +9,7 @@ from .mixins import SortingMixin
 
 # Create your views here.
 class ProductListView(SortingMixin, ListView):
-    """A view to show all products, including sorting and search queries"""
+    """A view to show all products, including sorting and filtering functionality"""
 
     model = Product
     template_name = 'products/products.html'

@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load query_transform %}
+{% load widget_tweaks %}
 {% load static %}
 
 {% block page_header %}
@@ -20,23 +21,7 @@
             </div>
         </div>
         <div class="col-6 d-flex flex-row justify-content-end">
-            <div class="dropdown-center sort-drop">
-                <a href="" class="link-dark text-decoration-none dropdown-toggle d-flex flex-row" role="button"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    <h2 class="subtitle-font text-uppercase me-2 fs-5">Sort by</h2>
-                    <i class="fa-solid fa-sort-down fs-5"></i>
-                </a>
-                <ul class="dropdown-menu subtitle-font text-uppercase">
-                    <li><a class="dropdown-item active" aria-current="true" href="#">Sort by</a></li>
-                    <li><a class="dropdown-item" href="#">Price: low to high</a></li>
-                    <li><a class="dropdown-item" href="#">Price: high to low</a></li>
-                    <li><a class="dropdown-item" href="#">Name: A to Z</a></li>
-                    <li><a class="dropdown-item" href="#">Name: Z to A</a></li>
-                    <li><a class="dropdown-item" href="#">Vintage: old to new</a></li>
-                    <li><a class="dropdown-item" href="#">Vintage: new to old</a></li>
-                    <li><a class="dropdown-item" href="#">Newest</a></li>
-                </ul>
-            </div>
+            {% include 'components/sort-by.html' %}
         </div>
     </div>
     <div class="row">

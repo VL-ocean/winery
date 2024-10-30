@@ -124,6 +124,10 @@ body {
 
 /* ~~~~~~~~~~ Filter ~~~~~~~~~~ */
 
+.filter-btn-container {
+    padding: 0.5rem 1rem;
+}
+
 .filter-form > div {
     flex: 0 0 auto;
     width: auto;
@@ -144,4 +148,34 @@ body {
 
 .filter-form .form-check > .form-check-label {
     text-transform: capitalize;
+}
+
+/* ~~~~~~~~~~ Sorting form ~~~~~~~~~~ */
+
+#sort-form {
+    min-width: 250px;
+}
+
+.sort-select {
+    width: 100%;
+    text-transform: uppercase;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: oblique;
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    border: 1px solid #f8f9fa;
+    border-radius: 0.25rem;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.sort-select:focus {
+    border-color: #f8f9fa;
+    box-shadow: 0 0 5px #f8f9fa;
+    outline: none;
+}
+
+.sort-select option {
+    font-size: 16px;
 }

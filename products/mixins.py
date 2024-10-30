@@ -44,12 +44,6 @@ class SortingMixin:
                 queryset = queryset.order_by(name_field)
             elif sort_option == 'name_desc':
                 queryset = queryset.order_by(f'-{name_field}')
-            elif sort_option == 'vintage_asc':
-                queryset = queryset.order_by(vintage_field)
-            elif sort_option == 'vintage_desc':
-                queryset = queryset.order_by(f'-{vintage_field}')
-            elif sort_option == 'added_desc':
-                queryset = queryset.order_by(f'-{added_field}')
 
         return queryset
 

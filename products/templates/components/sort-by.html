@@ -1,0 +1,15 @@
+{% load widget_tweaks %}
+{% load static %}
+
+
+<!-- Sort By Dropdown aligned right -->
+<form method="get" id="sort-form">
+    <!-- Include all current GET parameters as hidden inputs -->
+    {% for key, value in request.GET.items %}
+        {% if key != 'sort_by' %}
+            <input type="hidden" name="{{ key }}" value="{{ value }}">
+        {% endif %}
+    {% endfor %}
+
+    {{ sort_form.sort_by|add_class:"sort-select text-bg-light"|attr:"aria-label:Sort by" }}
+</form>

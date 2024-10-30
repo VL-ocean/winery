@@ -13,9 +13,6 @@ class SortForm(forms.Form):
         ('price_desc', 'Price: high to low'),
         ('name_asc', 'Name: A to Z'),
         ('name_desc', 'Name: Z to A'),
-        ('vintage_asc', 'Vintage: old to new'),
-        ('vintage_desc', 'Vintage: new to old'),
-        ('added_desc', 'Newest'),
     ]
 
     sort_by = forms.ChoiceField(

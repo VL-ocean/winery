@@ -53,6 +53,7 @@
                             {% endif %}
                             <li><a class="dropdown-item" href="#">MY PROFILE</a></li>
                             <li><a class="dropdown-item" href="#">WISHLIST</a></li>
+                            <li><a class="dropdown-item" href="{% url 'view_bag' %}">BAG</a></li>
                             <li>
                                 <hr class="dropdown-divider text-bg-light">
                             </li>
@@ -60,6 +61,7 @@
                             {% else %}
                             <li><a class="dropdown-item" href="{% url 'account_signup' %}">REGISTER</a></li>
                             <li><a class="dropdown-item" href="{% url 'account_login' %}">LOGIN</a></li>
+                            <li><a class="dropdown-item" href="{% url 'view_bag' %}">BAG</a></li>
                             {% endif %}
                         </ul>
                     </li>

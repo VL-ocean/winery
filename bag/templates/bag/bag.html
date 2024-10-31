@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load bag_tools %}
 
 {% block page_header %}
 <div class="container header-container">
@@ -13,8 +14,138 @@
 <div class="container mb-4">
     <div class="row">
         <div class="col my-4 text-center">
-            <h2 class="title-font">Shopping Bag</h2>
+            <h2 class="title-font">Your Cart</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {% if bag_items %}
+            <div class="d-block d-lg-none">
+                <div class="row">
+                    <div class="col m-2">
+                        {% include "bag/bag-total.html" %}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        {% include "bag/checkout-buttons.html" %}
+                        <p class="text-body-secondary text-center p-1 my-3">A summary of your bag contents is below</p>
+                    </div>
+                </div>
+                {% for item in bag_items %}
+                <div class="card border border-dark my-2 p-2">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 mb-2 d-flex justify-content-center">
+                            {% include "bag/product-image.html" %}
+                        </div>
+                        <div class="col-12 col-sm-6 mb-2">
+                            {% include "bag/product-info.html" %}
+                            <p class="m-1 fs-5 mt-3">Price: € {{ item.product.price }}</p>
+                            <p class="m-1 fs-5"><strong>Subtotal: </strong>
+                                € {{ item.product.price | calc_subtotal:item.quantity }}</p>
+                        </div>
+                        <div class="col-12 col-sm-6 mb-2">
+                            {% include "bag/quantity-form.html" %}
+                        </div>
+                        <div class="col-12 col-sm-6 mb-2 text-center">
+                            <a class="btn btn-danger remove-item" id="remove_{{ item.item_id }}">Remove
+                                <i class="fa-solid fa-trash fs-5 ps-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="table-responsive rounded d-none d-lg-block">
+                <table class="table table-sm table-borderless">
+                    <thead class="subtitle-font fs-4">
+                        <tr>
+                            <th scope="col">Item</th>
+                            <th scope="col"></th>
+                            <th scope="col">Price</th>
+                            <th scope="col"></th>
+                            <th scope="col">Subtotal</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+
+                    {% for item in bag_items %}
+                    <tr>
+                        <td class="p-3 w-25">
+                            <div class="bg-white d-flex justify-content-center border border-dark rounded">
+                                {% include "bag/product-image.html" %}
+                            </div>
+                        </td>
+                        <td class="py-3">
+                            {% include "bag/product-info.html" %}
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0">${{ item.product.price }}</p>
+                        </td>
+                        <td class="py-3 w-25">
+                            {% include "bag/quantity-form.html" %}
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
+                        </td>
+                        <td class="py-3">
+                            <a class="btn link-danger remove-item" id="remove_{{ item.item_id }}"
+                                data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Remove"><i
+                                    class="fa-solid fa-trash fs-5"></i></a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    <tr>
+                        <td colspan="5" class="pt-5 text-end">
+                            {% include "bag/bag-total.html" %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="text-end">
+                            {% include "bag/checkout-buttons.html" %}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            {% else %}
+            <div class="text-center">
+                <p class="lead mb-5">Your bag is empty.</p>
+            </div>
+            <a href="{% url 'all_products' %}" class="btn btn-dark btn-lg">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="text-uppercase">Keep Shopping</span>
+            </a>
+            {% endif %}
         </div>
     </div>
 </div>
-{% endblock content %}
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'products/includes/quantity_input_script.html' %}
+
+<script type="text/javascript">
+    // Update quantity on click
+    $('.update-link').click(function (e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
+
+    // Remove item and reload on click
+    $('.remove-item').click(function (e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var url = `/bag/remove/${itemId}/`;
+        var data = {
+            'csrfmiddlewaretoken': csrfToken
+        };
+
+        $.post(url, data)
+            .done(function () {
+                location.reload();
+            });
+    })
+</script>
+{% endblock %}

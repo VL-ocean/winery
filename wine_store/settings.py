@@ -93,6 +93,8 @@ TEMPLATES = [
                 "django.template.context_processors.request",  # `allauth` needs this from django
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                "django.template.context_processors.media",  # for media if product doesn't have image
+                "bag.contexts.bag_contents",  # makes this content available to the entire application
             ],
             "builtins": [
                 "crispy_forms.templatetags.crispy_forms_tags",
@@ -101,6 +103,8 @@ TEMPLATES = [
         },
     },
 ]
+
+MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 
 AUTHENTICATION_BACKENDS = [
     # Needed to login by username in Django admin, regardless of `allauth`
@@ -189,6 +193,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Stripe
+FREE_DELIVERY_THRESHOLD = 70
+STANDARD_DELIVERY_PERCENTAGE = 10
 
 
 SUMMERNOTE_CONFIG = {

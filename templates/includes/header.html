@@ -53,7 +53,6 @@
                             {% endif %}
                             <li><a class="dropdown-item" href="#">MY PROFILE</a></li>
                             <li><a class="dropdown-item" href="#">WISHLIST</a></li>
-                            <li><a class="dropdown-item" href="{% url 'view_bag' %}">BAG</a></li>
                             <li>
                                 <hr class="dropdown-divider text-bg-light">
                             </li>
@@ -61,9 +60,11 @@
                             {% else %}
                             <li><a class="dropdown-item" href="{% url 'account_signup' %}">REGISTER</a></li>
                             <li><a class="dropdown-item" href="{% url 'account_login' %}">LOGIN</a></li>
-                            <li><a class="dropdown-item" href="{% url 'view_bag' %}">BAG</a></li>
                             {% endif %}
                         </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'view_bag' %}">CART</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search" method="GET" action="{% url 'product_search' %}">
@@ -74,6 +75,6 @@
         </div>
     </nav>
     <div id="promotion-banner" class="px-3 bg-danger text-center p-1">
-        <h4 class="my-1 text-white">EVERY FRIDAY FREE SHIPPING FOR ORDERS ABOVE 20 EUR</h4>
+        <h4 class="my-1 text-white">FREE SHIPPING FOR ORDERS ABOVE 70 EUR</h4>
     </div>
 </header>

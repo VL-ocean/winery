@@ -80,8 +80,9 @@ body {
     box-shadow: none;
 }
 
-.quantity-input {
-    width: 50px;
+.category-link.link-dark:hover,
+.category-link.link-dark:focus {
+    color: #0d6efd!important;
 }
 
 .discount-indicator,

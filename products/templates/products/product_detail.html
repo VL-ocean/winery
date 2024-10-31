@@ -43,7 +43,9 @@
                 <h4 class="menu-font text-uppercase fs-5 m-1 fw-bold">{{ product.name }} {{product.variety.friendly_name}}</h4>
                 <p class="opacity-75 m-1 text-capitalize">{{product.vintage}} | {{ product.origin }}</p>
                 <p class="m-1 text-capitalize">{{ product.bottle_size }}</p>
-                <p class="m-1 text-capitalize">{{ product.category.friendly_name }}</p>
+                <a href="{% url 'all_products' %}?category={{ product.category.id }}" class="m-1 text-capitalize text-decoration-none link-dark category-link">
+                    {{ product.category.friendly_name }}<i class="fa-solid fa-champagne-glasses ps-1"></i>
+                </a>
                 <h5 class="product-price fs-4 m-2">
                     {% if product.sale_price and product.sale_price < product.price %}
                         <!-- Sale price exists and is less than regular price -->

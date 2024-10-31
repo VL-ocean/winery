@@ -28,13 +28,14 @@
                     <img src="{{ product.image.url }}" class="img-fluid product-img" alt="{{ product.name }}">
                     <a href="{% url 'product_detail' product.id %}" class="stretched-link"></a>
                     {% else %}
-                    <img src="/media/no-image-sm.webp" class="img-fluid product-img" alt="{{ product.name }}">
+                    <img src="{{ MEDIA_URL }}no-image-sm.webp" class="img-fluid product-img" alt="{{ product.name }}">
                     <a href="{% url 'product_detail' product.id %}" class="stretched-link"></a>
                     {% endif %}
                 </div>
                 <div class="card-body text-center py-2 d-flex flex-column justify-content-evenly">
-                    <p class="card-text text-uppercase opacity-75 mb-1">{{ product.brand.friendly_name }}</p>
-                    <h4 class="card-title menu-font text-uppercase fs-5 mb-1 fw-bold">{{ product.name }}</h4>
+                    <p class="m-1 small text-uppercase">SKU: {{ product.sku }}</p>
+                    <p class="text-uppercase opacity-75 m-1">{{ product.brand.friendly_name }}</p>
+                    <h4 class="menu-font text-uppercase fs-5 m-1 fw-bold">{{ product.name }} {{product.variety.friendly_name}}</h4>
                     <p class="card-text opacity-75 mb-1 text-capitalize">{{ product.origin }}</p>
                     <h5 class="card-title product-price fs-4 m-2">
                         {% if product.sale_price and product.sale_price < product.price %}
@@ -76,13 +77,14 @@
                     <img src="{{ product.image.url }}" class="img-fluid product-img" alt="{{ product.name }}">
                     <a href="{% url 'product_detail' product.id %}" class="stretched-link"></a>
                     {% else %}
-                    <img src="/media/no-image-sm.webp" class="img-fluid product-img" alt="{{ product.name }}">
+                    <img src="{{ MEDIA_URL }}no-image-sm.webp" class="img-fluid product-img" alt="{{ product.name }}">
                     <a href="{% url 'product_detail' product.id %}" class="stretched-link"></a>
                     {% endif %}
                 </div>
                 <div class="card-body text-center py-2 d-flex flex-column justify-content-evenly">
-                    <p class="card-text text-uppercase opacity-75 mb-1">{{ product.brand.friendly_name }}</p>
-                    <h4 class="card-title menu-font text-uppercase fs-5 mb-1 fw-bold">{{ product.name }}</h4>
+                    <p class="m-1 small text-uppercase">SKU: {{ product.sku }}</p>
+                    <p class="text-uppercase opacity-75 m-1">{{ product.brand.friendly_name }}</p>
+                    <h4 class="menu-font text-uppercase fs-5 m-1 fw-bold">{{ product.name }} {{product.variety.friendly_name}}</h4>
                     <p class="card-text opacity-75 mb-1 text-capitalize">{{ product.origin }}</p>
                     <h5 class="card-title product-price fs-4 m-2">
                         {% if product.sale_price and product.sale_price < product.price %}
@@ -121,7 +123,7 @@
     </div>
     <div class="row">
         <div class="col-12 text-center text-md-end me-4">
-            <a class="btn btn-dark my-2 mb-3" href="#" role="button">SEE MORE >></a>
+            <a class="btn btn-dark btn-lg my-2 mb-3" href="#" role="button">SEE MORE >></a>
         </div>
     </div>
     <div class="row mt-2">
@@ -133,7 +135,7 @@
     <div class="row mb-3">
         <div class="col-12 col-md-6 col-lg-3 p-2">
             <div class="p-2 d-flex flex-column text-center card border-dark shadow h-100">
-                <img src="/media/icon-shipping-box.webp" alt="shipping box icon" class="img-fluid w-50 align-self-center">
+                <img src="{{ MEDIA_URL }}icon-shipping-box.webp" alt="shipping box icon" class="img-fluid w-50 align-self-center">
                 <h4 class="subtitle-font text-center">Fast Shipping for Faster Sipping</h4>
                 <p>Savor your wine sooner! Orders are processed and shipped within 1-2 business days for speedy
                     delivery.</p>
@@ -141,21 +143,21 @@
         </div>
         <div class="col-12 col-md-6 col-lg-3 p-2">
             <div class="p-2 d-flex flex-column text-center card border-dark shadow h-100">
-                <img src="/media/icon-wine-bottle.webp" alt="wine bottle icon" class="img-fluid w-50 align-self-center">
+                <img src="{{ MEDIA_URL }}icon-wine-bottle.webp" alt="wine bottle icon" class="img-fluid w-50 align-self-center">
                 <h4 class="subtitle-font">Shop Hundreds of Wines</h4>
                 <p>Choose from 250+ premium wines from 45+ wineries worldwide, known for their consistent acclaim.</p>
             </div>
         </div>
         <div class="col-12 col-md-6 col-lg-3 p-2">
             <div class="p-2 d-flex flex-column text-center card border-dark shadow h-100">
-                <img src="/media/icon-leaf.webp" alt="leaf icon" class="img-fluid w-50 align-self-center">
+                <img src="{{ MEDIA_URL }}icon-leaf.webp" alt="leaf icon" class="img-fluid w-50 align-self-center">
                 <h4 class="subtitle-font">Support Sustainable Wines</h4>
                 <p>Enjoy wines made with eco-friendly methods that support a healthier planet. Sip well. Feel good.</p>
             </div>
         </div>
         <div class="col-12 col-md-6 col-lg-3 p-2">
             <div class="p-2 d-flex flex-column text-center card border-dark shadow h-100">
-                <img src="/media/icon-cheers.webp" alt="two glasses cheers icon" class="img-fluid w-50 align-self-center">
+                <img src="{{ MEDIA_URL }}icon-cheers.webp" alt="two glasses cheers icon" class="img-fluid w-50 align-self-center">
                 <h4 class="subtitle-font">Confidence in Every Cart</h4>
                 <p>We back our wines with a 100% satisfaction guarantee. If you're not happy, we'll make it right.</p>
             </div>

@@ -1,9 +1,9 @@
 <div class="product-img-box position-relative p-2">
     {% if item.product.image %}
     <img src="{{ item.product.image.url }}" class="img-fluid product-img" alt="{{ item.product.name }}">
-    <a href="{{ item.product.image.url }}" class="stretched-link" target="_blank"></a>
+    <a href="{% url 'product_detail' item.product.id %}" class="stretched-link" target="_blank"></a>
     {% else %}
     <img src="{{ MEDIA_URL }}no-image-sm.webp" class="img-fluid product-img" alt="{{ item.product.name }}">
-    <a href="" class="stretched-link"></a>
+    <a href="{% url 'product_detail' item.product.id %}" class="stretched-link"></a>
     {% endif %}
 </div>

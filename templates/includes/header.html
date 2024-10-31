@@ -4,7 +4,7 @@
         <p class="m-0">More than a store, we're an experience.</p>
     </div>
     <nav class="navbar navbar-dark bg-dark navbar-expand-lg sticky-top">
-        <div class="container-fluid py-2">
+        <div class="container-fluid py-2 position-relative">
             <a class="navbar-brand title-font" href="{% url 'home' %}">WineStore <i class="fa-solid fa-wine-glass"></i></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -63,8 +63,15 @@
                             {% endif %}
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link link-warning" href="{% url 'view_bag' %}">BAG<i class="fa-solid fa-bag-shopping ps-1"></i></a>
+                    <li class="nav-item me-4 d-none d-lg-block">
+                        <a class="nav-link link-warning position-relative" href="{% url 'view_bag' %}" data-bs-toggle="tooltip" data-bs-placement="right"
+                            data-bs-title="Shopping bag">
+                            <i class="fa-solid fa-bag-shopping ps-1 fs-4"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-warning">
+                                {{ product_count}}
+                                <span class="visually-hidden">Bag items</span>
+                            </span>
+                        </a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search" method="GET" action="{% url 'product_search' %}">
@@ -72,6 +79,19 @@
                     <button class="btn btn-outline-light" type="submit">Search</button>
                 </form>
             </div>
+            <!-- Shopping bag icon for mobile -->
+            <ul class="navbar-nav d-inline-block d-lg-none menu-font position-absolute menu-icon-bag">
+                <li class="nav-item mx-4">
+                    <a class="nav-link link-warning position-relative" href="{% url 'view_bag' %}" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                        data-bs-title="Shopping bag">
+                        <i class="fa-solid fa-bag-shopping ps-1 fs-4"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-warning">
+                            {{ product_count}}
+                            <span class="visually-hidden">Bag items</span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
         </div>
     </nav>
     <div id="promotion-banner" class="px-3 bg-danger text-center p-1">

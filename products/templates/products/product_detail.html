@@ -12,7 +12,7 @@
                 <img src="{{ product.image.url }}" class="img-fluid" alt="{{ product.name }}">
                 <a href="{{ product.image.url }}" class="stretched-link" target="_blank"></a>
                 {% else %}
-                <img src="{{ MEDIA_URL }}no-image-sm.webp" class="img-fluid" alt="{{ product.name }}">
+                <img src="{{ MEDIA_URL }}no-image-sm.webp" class="img-fluid border border-dark rounded" alt="{{ product.name }}">
                 <a href="" class="stretched-link"></a>
                 {% endif %}
             </div>

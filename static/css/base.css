@@ -185,3 +185,9 @@ body {
 .sort-select option {
     font-size: 16px;
 }
+
+/* ~~~~~~~~~~ Shopping bag ~~~~~~~~~~ */
+
+.product-img-box .product-img-bag {
+    height: 200px;
+}

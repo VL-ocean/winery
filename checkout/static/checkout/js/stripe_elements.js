@@ -13,11 +13,11 @@ var elements = stripe.elements();
 var style = {
     base: {
         color: '#000',
-        fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+        fontFamily: '"Rubik", serif',
         fontSmoothing: 'antialiased',
         fontSize: '16px',
         '::placeholder': {
-            color: '#aab7c4'
+            color: '#6c757d'
         }
     },
     invalid: {

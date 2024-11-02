@@ -70,22 +70,20 @@
 
                     {% for item in bag_items %}
                     <tr>
-                        <td class="p-3 w-25">
-                            <div class="bg-white d-flex justify-content-center border border-dark rounded">
-                                {% include "bag/product-image.html" %}
-                            </div>
+                        <td class="p-3">
+                            {% include "bag/product-image.html" %}
                         </td>
                         <td class="py-3">
                             {% include "bag/product-info.html" %}
                         </td>
                         <td class="py-3">
-                            <p class="my-0">${{ item.product.price }}</p>
+                            <p class="my-0">€ {{ item.product.price }}</p>
                         </td>
                         <td class="py-3 w-25">
                             {% include "bag/quantity-form.html" %}
                         </td>
                         <td class="py-3">
-                            <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
+                            <p class="my-0">€ {{ item.product.price | calc_subtotal:item.quantity }}</p>
                         </td>
                         <td class="py-3">
                             <a class="btn link-danger remove-item" id="remove_{{ item.item_id }}"

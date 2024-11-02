@@ -51,7 +51,7 @@
                             {% if request.user.is_superuser %}
                             <li><a class="dropdown-item" href="#">PRODUCT MANAGEMENT</a></li>
                             {% endif %}
-                            <li><a class="dropdown-item" href="#">MY PROFILE</a></li>
+                            <li><a class="dropdown-item" href="{% url 'profile' %}">MY PROFILE</a></li>
                             <li><a class="dropdown-item" href="#">WISHLIST</a></li>
                             <li>
                                 <hr class="dropdown-divider text-bg-light">

@@ -1,4 +1,6 @@
 asgiref==3.8.1
+boto3==1.35.54
+botocore==1.35.54
 crispy-bootstrap5==2024.10
 dj-database-url==2.2.0
 Django==4.2.16
@@ -10,7 +12,9 @@ django-storages==1.14.4
 django-summernote==0.8.20.0
 django-widget-tweaks==1.5.0
 gunicorn==23.0.0
+jmespath==1.0.1
 pillow==11.0.0
 psycopg2==2.9.10
+s3transfer==0.10.3
 sqlparse==0.5.1
 stripe==11.2.0

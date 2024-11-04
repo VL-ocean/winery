@@ -1,4 +1,4 @@
-# WINERY [(*Live site*)]()
+# WINESTORE [(*Live site*)](https://wine-store-a6f954e88a3f.herokuapp.com/)
 
 
 ## Introduction 
@@ -10,7 +10,7 @@
 
 ## Table of contents
 
-- [WINERY (*Live site*)](#winery-live-site)
+- [WINESTORE (*Live site*)](#winestore-live-site)
   - [Introduction](#introduction)
   - [Table of contents](#table-of-contents)
   - [Project Rationale](#project-rationale)
@@ -609,7 +609,7 @@ Teacup Tales uses Amazon Web Services (AWS) to store static and media files secu
 1.  **Create a User Group:**
     
     -   Navigate to the IAM service and select "User Groups."
-    -   Click "Create New Group," and name it appropriately (e.g., `group-teacup-tales`).
+    -   Click "Create New Group," and name it appropriately (e.g., `group-wine-store`).
 2.  **Attach Policies to the Group:**
     
     -   Select the newly created group and go to the "Permissions" tab.
@@ -639,8 +639,8 @@ Teacup Tales uses Amazon Web Services (AWS) to store static and media files secu
 3.  **Add Users and Assign Permissions:**
     
     -   Go back to "User Groups," select your group, and click "Attach Policy."
-    -   Select your custom policy (e.g., `policy-teacup-tales`) and attach it.
-    -   Click "Add User" and name it appropriately (e.g., `user-teacup-tales`).
+    -   Select your custom policy (e.g., `policy-wine-store`) and attach it.
+    -   Click "Add User" and name it appropriately (e.g., `user-wine-store`).
     -   Select "Programmatic Access" and add the user to your group.
     -   Download the CSV file containing the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.
 
@@ -685,7 +685,7 @@ Teacup Tales utilizes Stripe as its primary payment gateway to securely process 
     -   In your Stripe dashboard:
         -   Navigate to "Developers" and select "Webhooks."
         -   Click "Add Endpoint."
-        -   Enter your endpoint URL (e.g., `https://wine-shop.herokuapp.com/checkout/wh/`).
+        -   Enter your endpoint URL (e.g., `https://wine-store-a6f954e88a3f.herokuapp.com/checkout/wh/`).
         -   Select "Receive all events" to capture all relevant payment events.
         -   Click "Add Endpoint" to complete the process.
     -   This will generate a new key:
@@ -729,7 +729,7 @@ Teacup Tales uses Gmail to manage email communications with users, including acc
     
     -   After enabling 2FA, stay on the **Security** page and select **App passwords**.
     -   Re-enter your password if prompted.
-    -   Choose **Mail** as the app type and select **Other (Custom name)** for the device type. Enter a relevant name (e.g., "Teacup Tales Django App").
+    -   Choose **Mail** as the app type and select **Other (Custom name)** for the device type. Enter a relevant name (e.g., "WineStore Django App").
     -   Click **Generate** to create a 16-character app password (API key). **Note:** This password will only be displayed once, so save it securely.
 4.  **Configure Email Settings in Your Application:**
     
@@ -745,7 +745,7 @@ Teacup Tales uses Gmail to manage email communications with users, including acc
 
 ***Summary:***
 
-By integrating Gmail, Teacup Tales can send secure and reliable emails for account verifications and purchase confirmations, enhancing communication with users and supporting overall customer engagement and satisfaction
+By integrating Gmail, WineStore can send secure and reliable emails for account verifications and purchase confirmations, enhancing communication with users and supporting overall customer engagement and satisfaction
 
 ### Deployment Process with Heroku
 

@@ -43,6 +43,12 @@
         {% for product in products %}
         <div class="col-12 col-md-6 col-lg-4 col-xl-3 p-2 mb-3">
             <div class="card border-dark shadow product-card mx-auto h-100">
+                {% if request.user.is_superuser %}
+                <div class="text-center py-2">
+                    <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                </div>
+                {% endif %}
                 <div class="p-2 align-self-center product-img-box position-relative">
                     {% if product.image %}
                     <img src="{{ product.image.url }}" class="img-fluid product-img" alt="{{ product.name }}">

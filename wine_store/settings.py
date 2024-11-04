@@ -50,12 +50,12 @@ INSTALLED_APPS = [
     "allauth",
     "allauth.account",
     # other
-    'django_summernote',
-    'django_filters',
+    "django_summernote",
+    "django_filters",
     "crispy_forms",
     "crispy_bootstrap5",
-    'widget_tweaks',
-
+    "widget_tweaks",
+    "storages",
     # apps
     "home",
     "products",
@@ -129,7 +129,7 @@ LOGIN_URL = "/accounts/login/"
 LOGIN_REDIRECT_URL = "/"
 
 WSGI_APPLICATION = "wine_store.wsgi.application"
-SITE_NAME = 'WineStore'
+SITE_NAME = "WineStore"
 
 
 # Database
@@ -207,7 +207,7 @@ DEFAULT_FROM_EMAIL = "winestore@example.com"
 
 
 SUMMERNOTE_CONFIG = {
-    'summernote': {
-        'width': '100%',
+    "summernote": {
+        "width": "100%",
     },
 }

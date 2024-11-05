@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.views.generic import ListView
 from django.db.models import Avg
 from django_filters.views import FilterView
-from profiles.models import UserProfile
+from profiles.models import  Wishlist, UserProfile
 from reviews.models import Review
 from reviews.forms import ReviewProductForm
 from checkout.models import OrderLineItem
@@ -62,11 +62,15 @@ def product_detail(request, product_id):
         product=product).order_by('-created_on')
     average_rating = reviews.aggregate(Avg('rating'))['rating__avg'] or 0
     
+    is_favourited = False
     can_review = False
 
     if request.user.is_authenticated:
 
         user_profile = UserProfile.objects.get(user=request.user)
+
+        is_favourited = Wishlist.objects.filter(
+            user=request.user, product=product).exists()
 
         user_has_purchased = OrderLineItem.objects.filter(
             order__user_profile=user_profile, product=product
@@ -92,6 +96,7 @@ def product_detail(request, product_id):
 
     context = {
         'product': product,
+        'is_favourited': is_favourited,
         'review_form': review_form,
         'reviews': reviews,
         'average_rating': round(average_rating, 1),

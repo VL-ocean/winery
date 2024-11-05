@@ -23,9 +23,9 @@
                 </form>
             </div>
         {% else %}
-            <p class="fst-italic">You can only leave a review after purchasing this product.</p>
+            <p class="fst-italic text-center">You can only leave a review after purchasing this product</p>
         {% endif %}
     {% else %}
-        <h3 class="mb-3"><a href="{% url 'account_login' %}">Log in</a> to leave a review</h3>
+        <h4 class="mb-3 text-center"><a href="{% url 'account_login' %}">Sign in</a> to leave a review</h3>
     {% endif %}
 </div>

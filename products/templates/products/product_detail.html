@@ -21,19 +21,24 @@
                 <i class="fa-solid fa-percent fs-3"></i>
             </div>
             {% endif %}
+            <!-- Manage wishlist -->
             <div
-                class="text-danger wishlist-plus position-absolute d-flex flex-column justify-content-center align-items-center">
-                <a href="#" class="link-danger" data-bs-toggle="tooltip" data-bs-placement="right"
-                    data-bs-title="Add to Wishlist">
-                    <i class="fa-solid fa-heart-circle-plus fs-2"></i>
-                </a>
-            </div>
-            <div
-                class="text-danger wishlist-minus position-absolute d-flex flex-column justify-content-center align-items-center d-none">
-                <a href="#" class="link-danger" data-bs-toggle="tooltip" data-bs-placement="right"
-                    data-bs-title="Remove from Wishlist">
-                    <i class="fa-solid fa-heart-circle-minus fs-2"></i>
-                </a>
+                class="text-danger wishlist-icons position-absolute">
+                <form method="post" action="{% url 'manage-wishlist' product.pk %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="product_id" value="{{ product.id }}">
+
+                    <button type="submit" class="btn p-0 icon text-danger fs-2"
+                        aria-label="Add this product to your wishlist">
+                        {% if is_favourited %}
+                            <i class="fa-solid fa-heart-circle-minus fs-2" data-bs-toggle="tooltip" data-bs-placement="right"
+                            data-bs-title="Remove from Wishlist"></i>
+                        {% else %}
+                            <i class="fa-solid fa-heart-circle-plus fs-2" data-bs-toggle="tooltip" data-bs-placement="right"
+                            data-bs-title="Add to Wishlist"></i>
+                        {% endif %}
+                    </button>
+                </form>
             </div>
         </div>
         <div class="col-12 col-lg-6">

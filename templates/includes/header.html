@@ -52,7 +52,7 @@
                             <li><a class="dropdown-item" href="{% url 'add_product' %}">PRODUCT MANAGEMENT</a></li>
                             {% endif %}
                             <li><a class="dropdown-item" href="{% url 'profile' %}">MY PROFILE</a></li>
-                            <li><a class="dropdown-item" href="#">WISHLIST</a></li>
+                            <li><a class="dropdown-item" href="{% url 'my-wishlist' user.userprofile.id %}">WISHLIST</a></li>
                             <li>
                                 <hr class="dropdown-divider text-bg-light">
                             </li>

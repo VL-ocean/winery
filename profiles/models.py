@@ -33,3 +33,27 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
         UserProfile.objects.create(user=instance)
     # Existing users: just save the profile
     instance.userprofile.save()
+
+
+class Wishlist(models.Model):
+    """
+    Represents a user's wishlist for products.
+    """
+
+    user = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name="wishlists",
+        blank=False,
+        null=False,
+    )
+    product = models.ForeignKey(
+        "products.Product",
+        on_delete=models.CASCADE,
+        related_name="wishlisted_by",
+        blank=False,
+        null=False,
+    )
+
+    def __str__(self):
+        return f"{self.user.username} - {self.product.name}"

@@ -136,5 +136,14 @@ class Product(models.Model):
         """
         return self.sale_price if self.sale_price else self.price
 
+    def calc_average_rating(self):
+        """
+        Calculates average rating for reviews
+        """
+        reviews = self.review_set.all()
+        if reviews:
+            return sum(review.rating for review in reviews) / len(reviews)
+        return 0
+
     def __str__(self):
         return f"{self.name}"

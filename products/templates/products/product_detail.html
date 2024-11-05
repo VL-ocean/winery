@@ -96,13 +96,31 @@
             <p>{{product.tasting_notes}}</p>
         </div>
     </div>
-    <div class="row">
-        <div class="col-12 m-2 p-3">
+    <div class="row justify-content-between">
+        <div class="col-auto m-2 p-3">
             <h5 class="text-capitalize subtitle-font"><i class="fa-solid fa-star"></i> Reviews</h5>
         </div>
-        <div class="col-12 mx-2 px-3 my-1 py-1">
-            <h6 class="text-capitalize"><i class="fa-regular fa-user"></i> username</h6>
-            <p> review text</p>
+        <div class="col-auto m-2 p-3 text-end">
+            <!-- Star Rating Display -->
+            <span class="rating-stars ms-3 d-inline-flex align-items-center">
+                {% if average_rating %}
+                    {% for i in "12345"|make_list %}
+                        {% if i|add:0 <= average_rating %}
+                            <i class="fa-solid fa-star" style="color:#f0bc00"></i>
+                        {% else %}
+                            <i class="fa-solid fa-star" style="color:#dcdcdc"></i>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            </span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-lg-6">
+            {% include 'reviews/display-reviews.html' %}
+        </div>
+        <div class="col-12 col-lg-6">
+            {% include 'reviews/add-review.html' %}
         </div>
     </div>
 </div>

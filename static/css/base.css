@@ -219,3 +219,22 @@ body {
     border-color: #dc3545;
     border-radius: 0;
 }
+
+/* ~~~~~~~~~~ Review Form ~~~~~~~~~~ */
+
+
+.review-form-container {
+    background-color: #f9f9f9;
+}
+
+.review-item {
+    background-color: #ffffff;
+}
+
+.star-filled {
+    color: #f0bc00;
+}
+
+.star-empty {
+    color: #dcdcdc;
+}

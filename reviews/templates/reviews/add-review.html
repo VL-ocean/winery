@@ -1,0 +1,31 @@
+{% load static %}
+{% load humanize %}
+{% load crispy_forms_tags %}
+
+
+<!-- Display Review Form First -->
+<div> 
+    {% if user.is_authenticated %}
+        {% if can_review %}
+            <div class="review-form-container">
+                <p class="mb-1 text-end">Add a review as <strong>{{ user.username }}</strong></p>
+                <form id="reviewForm" method="POST" class="mb-3">
+                    {% csrf_token %}
+                    {{ review_form|crispy }}
+                    {% if review_form.errors %}
+                        <div class="alert alert-danger">
+                            {{ review_form.errors }}
+                        </div>
+                    {% endif %}
+                    <button id="submitButton" type="submit" class="btn btn-dark rounded px-4 py-2">
+                        Submit Review
+                    </button>
+                </form>
+            </div>
+        {% else %}
+            <p class="fst-italic">You can only leave a review after purchasing this product.</p>
+        {% endif %}
+    {% else %}
+        <h3 class="mb-3"><a href="{% url 'account_login' %}">Log in</a> to leave a review</h3>
+    {% endif %}
+</div>

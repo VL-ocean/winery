@@ -1,0 +1,35 @@
+{% load humanize %}
+<!-- Iterate through each review -->
+{% for review in reviews %}
+<div class="review-item mb-4 p-2 border rounded">
+    <div class="d-flex justify-content-between">
+        <!-- Review User Information -->
+        <div class="d-flex align-items-center mb-3">
+            <span class="me-2"><strong>{{ review.user.username }}</strong></span> |
+            <span class="ms-2">{{ review.created_on|naturaltime }}</span> 
+            <span class="ms-2">
+                <!-- Star Rating Display -->
+                {% for i in "12345"|make_list %}
+                    {% if i|add:0 <= review.rating %}
+                        <i class="fa-solid fa-star star-filled"></i>
+                    {% else %}
+                        <i class="fa-solid fa-star star-empty"></i>
+                    {% endif %}
+                {% endfor %}
+            </span>
+        </div>
+        <!-- Edit and Delete Buttons (visible to review owner or superuser) -->
+        {% if request.user == review.user or request.user.is_superuser %}
+        <div class="d-flex flex-row justify-content-center align-items-center">
+            {% include 'reviews/delete-review.html' %}
+            <a href="{% url 'edit-review' review.pk %}" class="border-0 bg-transparent p-0 ms-2" aria-label="edit-review" title="Edit Review">
+                <i class="fa-solid fa-pen-to-square fs-4"></i>
+            </a>
+        </div>
+        {% endif %}
+    </div>
+    <div class="mb-2">{{ review.content|linebreaks }}</div>
+</div>
+{% empty %}
+<p class="m-2 pb-2 text-center">No reviews yet</p>
+{% endfor %}

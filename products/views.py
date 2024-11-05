@@ -3,7 +3,13 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 from django.views.generic import ListView
+from django.db.models import Avg
 from django_filters.views import FilterView
+from profiles.models import UserProfile
+from reviews.models import Review
+from reviews.forms import ReviewProductForm
+from checkout.models import OrderLineItem
+
 from django.db.models import Q
 from django.db.models.functions import Lower
 
@@ -52,9 +58,44 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
+    reviews = Review.objects.filter(
+        product=product).order_by('-created_on')
+    average_rating = reviews.aggregate(Avg('rating'))['rating__avg'] or 0
+    
+    can_review = False
+
+    if request.user.is_authenticated:
+
+        user_profile = UserProfile.objects.get(user=request.user)
+
+        user_has_purchased = OrderLineItem.objects.filter(
+            order__user_profile=user_profile, product=product
+        ).exists()
+
+        if user_has_purchased or request.user.is_superuser:
+            can_review = True
+        
+        if request.method == 'POST' and can_review:
+            review_form = ReviewProductForm(request.POST)
+            if review_form.is_valid():
+                review = review_form.save(commit=False)
+                review.user = request.user
+                review.product = product
+                review.save()
+                messages.success(
+                    request, "Your review has been submitted successfully")
+                return redirect('product_detail', product_id=product_id)
+        else:
+            review_form = ReviewProductForm()
+    else:
+        review_form = None
 
     context = {
         'product': product,
+        'review_form': review_form,
+        'reviews': reviews,
+        'average_rating': round(average_rating, 1),
+        'can_review': can_review,
     }
 
     return render(request, 'products/product_detail.html', context)

@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "django.contrib.sites",
+    'django.contrib.humanize',
     # allauth
     "allauth",
     "allauth.account",
@@ -62,6 +63,7 @@ INSTALLED_APPS = [
     "bag",
     "checkout",
     "profiles",
+    "reviews",
 ]
 
 MIDDLEWARE = [

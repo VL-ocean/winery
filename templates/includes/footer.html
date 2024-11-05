@@ -4,8 +4,8 @@
         <div class="row p-3">
             <div class="col-12 col-md-6 col-xl-3 my-2 p-2">
                 <h5 class="border-bottom border-warning border-2 pb-2 subtitle-font text-uppercase">Contact us</h5>
-                <p>Need help? Don't keep your questions bottled up.</p>
-                <a class="btn btn-success text-uppercase" href="#" role="button">Write us</a>
+                <p class="mb-0">Need help? Don't keep your questions bottled up.</p>
+                <p>Write us to <strong>winestore@example.com</strong></p>
                 <div class="d-flex flex-row justify-content-evenly my-3">
                     <a class="link-light fs-3 social-icon" href="https://www.facebook.com/" target="_blank" rel="noopener"
                         aria-label="Visit our Facebook page - Opens in a new tab">
@@ -63,8 +63,9 @@
                 <p>Subscribe to our newsletter for staying updated with WineStore, future releases and events.</p>
                 <div class="mb-3">
                     <label for="subscribe-email" class="visually-hidden">Email address</label>
-                    <input type="email" class="form-control mb-2 custom-focus" id="subscribe-email" placeholder="Enter your email address *">
-                    <button type="submit" class="btn btn-success text-uppercase">Subscribe</button>
+                    <input type="email" class="form-control mb-2 custom-focus" id="subscribe-email" placeholder="Enter your email address *" disabled>
+                    <button type="submit" class="btn btn-success text-uppercase disabled">Subscribe</button>
+                    <p class="text-danger opacity-75 small">* Under maintenance</p>
                 </div>
             </div>
         </div>

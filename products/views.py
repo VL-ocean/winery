@@ -3,8 +3,10 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 from django.views.generic import ListView
-from django.db.models import Avg
 from django_filters.views import FilterView
+from django.db.models import Avg
+from django.db import models
+
 from profiles.models import  Wishlist, UserProfile
 from reviews.models import Review
 from reviews.forms import ReviewProductForm
@@ -250,3 +252,27 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+
+class PromotionsView(SortingMixin, ListView):
+    """
+    View to display products with special offers or discounts.
+    """
+    model = Product
+    template_name = 'products/promotions.html'
+    context_object_name = 'products'
+    paginate_by = 12
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+
+        queryset = queryset.filter(
+            models.Q(sale_price__isnull=False) | models.Q(has_promotion=True)).order_by('-added')
+
+        queryset = self.apply_sorting(queryset)
+
+        return queryset
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context

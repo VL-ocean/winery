@@ -217,7 +217,6 @@ body {
 
 /* ~~~~~~~~~~ Review Form ~~~~~~~~~~ */
 
-
 .review-form-container {
     background-color: #f9f9f9;
 }
@@ -232,4 +231,30 @@ body {
 
 .star-empty {
     color: #dcdcdc;
+}
+
+/* ~~~~~~~~~~ Subscription Form ~~~~~~~~~~ */
+
+#mc_embed_signup {
+    clear: left;
+    font: 14px "Rubik", serif;
+    width: 100%;
+}
+
+#mc_embed_signup form {
+    margin: 0;
+}
+
+#mc_embed_signup .button {
+    color: #fff;
+    background-color: #198754;
+    border-color: #f8f9fa;
+    border-width: 1px;
+    line-height: 1.5;
+}
+
+#mc_embed_signup .button:hover {
+    border-color: #f8f9fa;
+    color: #198754;
+    background-color: #f8f9fa;
 }

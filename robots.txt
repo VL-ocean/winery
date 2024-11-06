@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /admin/              # Disallow crawling of the admin panel
+Disallow: /accounts/           # Disallow user account pages
+Disallow: /management/         # Disallow management/admin tools
+Disallow: /bag/                # Disallow shopping bag pages 
+Disallow: /checkout/           # Disallow checkout pages
+Disallow: /profile/            # Disallow user profiles
+Disallow: /summernote/         # Disallow summernote editor tools
+Disallow: /reviews/            # Disallow review submission forms
+
+Sitemap: https://wine-store-a6f954e88a3f.herokuapp.com/sitemap.xml

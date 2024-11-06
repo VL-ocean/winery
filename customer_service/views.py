@@ -9,8 +9,8 @@ def privacy_policy_view(request):
     return render(request, 'customer_service/privacy_policy.html')
 
 
-def terms_of_service_view(request):
+def terms_n_conditions_view(request):
     """
     View to render the Terms of Service page.
     """
-    return render(request, 'customer_service/terms-of-service.html')
+    return render(request, 'customer_service/terms-n-conditions.html')

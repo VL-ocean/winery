@@ -125,18 +125,6 @@ Using GitHub Projects, tasks are managed and progress tracked through project bo
 <b>Table view at planning stage</b>
 <br/><br/>
 <img src="./README-media/github-projects/iteration-1-plan.png">
-<hr>
-<b>Table view at mid-time iteration</b>
-<br/><br/>
-<img src="./README-media/github-projects/iteration-1-progress-table.png">
-<hr>
-<b>Board view at mid-time iteration</b>
-<br/><br/>
-<img src="./README-media/github-projects/iteration-1-progress-board.png">
-<hr>
-<b>Issue Sample #4</b>
-<br/><br/>
-<img src="./README-media/github-projects/issue-sample-4.png">
 </details>
 
 <details>
@@ -145,18 +133,6 @@ Using GitHub Projects, tasks are managed and progress tracked through project bo
 <b>Table view at planning stage</b>
 <br/><br/>
 <img src="./README-media/github-projects/iteration-2-plan.png">
-<hr>
-<b>Table view at mid-time iteration</b>
-<br/><br/>
-<img src="./README-media/github-projects/">
-<hr>
-<b>Board view at mid-time iteration</b>
-<br/><br/>
-<img src="./README-media/github-projects/">
-<hr>
-<b>Issue Sample #</b>
-<br/><br/>
-<img src="./README-media/github-projects/">
 </details>
 
 <details>
@@ -165,18 +141,6 @@ Using GitHub Projects, tasks are managed and progress tracked through project bo
 <b>Table view at planning stage</b>
 <br/><br/>
 <img src="./README-media/github-projects/iteration-3-plan.png">
-<hr>
-<b>Table view at mid-time iteration</b>
-<br/><br/>
-<img src="./README-media/github-projects/">
-<hr>
-<b>Board view at mid-time iteration</b>
-<br/><br/>
-<img src="./README-media/github-projects/">
-<hr>
-<b>Issue Sample #</b>
-<br/><br/>
-<img src="./README-media/github-projects/">
 </details>
 
 <details>
@@ -185,18 +149,6 @@ Using GitHub Projects, tasks are managed and progress tracked through project bo
 <b>Table view at planning stage</b>
 <br/><br/>
 <img src="./README-media/github-projects/iteration-4-plan.png">
-<hr>
-<b>Table view at mid-time iteration</b>
-<br/><br/>
-<img src="./README-media/github-projects/">
-<hr>
-<b>Board view at mid-time iteration</b>
-<br/><br/>
-<img src="./README-media/github-projects/">
-<hr>
-<b>Issue Sample #</b>
-<br/><br/>
-<img src="./README-media/github-projects/">
 </details>
 
 <details>
@@ -205,18 +157,6 @@ Using GitHub Projects, tasks are managed and progress tracked through project bo
 <b>Table view at planning stage</b>
 <br/><br/>
 <img src="./README-media/github-projects/iteration-5-plan.png">
-<hr>
-<b>Table view at mid-time iteration</b>
-<br/><br/>
-<img src="./README-media/github-projects/">
-<hr>
-<b>Board view at mid-time iteration</b>
-<br/><br/>
-<img src="./README-media/github-projects/">
-<hr>
-<b>Issue Sample #</b>
-<br/><br/>
-<img src="./README-media/github-projects/">
 </details>
 
 
@@ -378,13 +318,16 @@ The database model diagram was designed using Lucidchart:
 
 ### Colour Scheme
 
-The colours were mostly taken from bootstrap colour palette. They are:
-- `#212529` - text colour 
+The main colours are from bootstrap colour palette. They are:
+- `#DC3545` used to add accents: delivery banner, delete buttons, important information
+- `#F8F9FA` used as a main background colour and text colour for dark buttons
+- `#212529` used for navigation menu and footer as background, some buttons
+- `#FFC107` used for accents: shopping bag icon, bottom border for footer headings' sections, hover effect for links
+- `#198754` used for subscribe button and outline shadow on search input
+- `#ffffff` used for background colour on product cards and text colour
+- `#000000` used primarily as a text colour
 
-Custom colours:
-- `#e99767` - border accent colour 
-
-![Custom colour palette](./README-media/)
+![Custom colour palette](./README-media/colour-scheme.png)
 
 ### Typography
 
@@ -401,7 +344,7 @@ Custom colours:
 
 The website is responsive to different layouts depending on the size of the viewport based on the Bootstrap media queries.
 
-![media queries](./README-media/)
+![media queries](./README-media/media-queries.png)
 
 
 [Back to top](#table-of-contents)
@@ -846,6 +789,8 @@ _Any changes required to the website, they can be made, committed and pushed to 
 - [Abobe Colour](https://color.adobe.com/create/color-wheel)
 - [FontJoy](https://fontjoy.com/)
 - [Google Fonts](https://fonts.google.com/)
+- [Sitemap generator](https://www.xml-sitemaps.com/)
+- [Policy generator](https://www.termsfeed.com/privacy-policy-generator/)
 
 
 [Back to top](#table-of-contents)

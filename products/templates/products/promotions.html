@@ -3,6 +3,12 @@
 {% load widget_tweaks %}
 {% load static %}
 
+{% block metadesc %}
+    Discover WineStores latest offers and promotions. Big discounts on the finest wines.
+{% endblock %}
+
+{% block extra_title %}Promotions{% endblock %}
+
 {% block page_header %}
 <div class="container header-container">
     <div class="row mt-4">
@@ -28,7 +34,7 @@
             <div class="card border-dark shadow product-card mx-auto h-100">
                 {% if request.user.is_superuser %}
                 <div class="text-center py-2">
-                    <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                    <a href="{% url 'edit_product' product.id %}">Edit</a> |
                     <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                 </div>
                 {% endif %}
@@ -44,21 +50,23 @@
                 <div class="card-body text-center py-2 d-flex flex-column justify-content-evenly mb-3">
                     <p class="m-1 small text-uppercase">SKU: {{ product.sku }}</p>
                     <p class="text-uppercase opacity-75 m-1">{{ product.brand.friendly_name }}</p>
-                    <h4 class="menu-font text-uppercase fs-5 m-1 fw-bold">{{ product.name }} {{product.variety.friendly_name}}</h4>
+                    <h4 class="menu-font text-uppercase fs-5 m-1 fw-bold">{{ product.name }}
+                        {{product.variety.friendly_name}}</h4>
                     <p class="card-text opacity-75 mb-1 text-capitalize">{{ product.origin }}</p>
                     <h5 class="card-title product-price fs-4 m-2">
                         {% if product.sale_price and product.sale_price < product.price %}
-                            <!-- Sale price exists and is less than regular price -->
-                            <span class="text-decoration-line-through fs-5 text-muted">€ {{ product.price }}</span>
-                            <span class="text-danger">€ {{ product.sale_price }}</span>
+                        <!-- Sale price exists and is less than regular price -->
+                        <span class="text-decoration-line-through fs-5 text-muted">€ {{ product.price }}</span>
+                        <span class="text-danger">€ {{ product.sale_price }}</span>
                         {% else %}
-                            <!-- Regular price only -->
-                            € {{ product.price }}
+                        <!-- Regular price only -->
+                        € {{ product.price }}
                         {% endif %}
                     </h5>
                 </div>
                 {% if product.sale_price and product.sale_price < product.price %}
-                <div class="rounded-circle text-bg-danger discount-indicator position-absolute d-flex flex-column justify-content-center align-items-center">
+                <div
+                    class="rounded-circle text-bg-danger discount-indicator position-absolute d-flex flex-column justify-content-center align-items-center">
                     <i class="fa-solid fa-percent fs-3"></i>
                 </div>
                 {% endif %}
@@ -75,8 +83,8 @@
                     href="{% if page_obj.number > 1 %}?page={{ page_obj.previous_page_number }}{% else %}#{% endif %}">Previous</a>
             </li>
             <li class="page-item current">
-                <a class="page-link text-bg-primary disabled"
-                    href="#">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</a>
+                <a class="page-link text-bg-primary disabled" href="#">Page {{ page_obj.number }} of
+                    {{ page_obj.paginator.num_pages }}</a>
             </li>
             <li class="page-item {% if page_obj.number == page_obj.paginator.num_pages %}disabled{% endif %}">
                 <a class="page-link link-dark bg-white"

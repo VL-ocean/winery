@@ -2,14 +2,18 @@
     <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
         {% csrf_token %}
         <div class="input-group input-group-{{ product.id }}">
-            <button class="btn btn-outline-dark fw-bold fs-5 p-1 quantity-btn increment-qty increment-qty_{{ product.id }}"
+            <button
+                class="btn btn-outline-dark fw-bold fs-5 p-1 quantity-btn increment-qty increment-qty_{{ product.id }}"
                 type="button" data-item_id="{{ product.id }}">+</button>
-            <input class="form-control form-control-sm border border-dark quantity-input fw-bold qty_input id_qty_{{ product.id }}"
-                type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99" aria-label="Product quantity" data-item_id="{{ product.id }}">
-            <button class="btn btn-outline-dark fw-bold fs-5 p-1 quantity-btn decrement-qty decrement-qty_{{ product.id }}"
+            <input
+                class="form-control form-control-sm border border-dark quantity-input fw-bold qty_input id_qty_{{ product.id }}"
+                type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99" aria-label="Product quantity"
+                data-item_id="{{ product.id }}">
+            <button
+                class="btn btn-outline-dark fw-bold fs-5 p-1 quantity-btn decrement-qty decrement-qty_{{ product.id }}"
                 type="button" data-item_id="{{ product.id }}">-</button>
         </div>
     </form>
-    <a class="update-link link-danger btn" data-bs-toggle="tooltip" data-bs-placement="bottom"
-        data-bs-title="Update"><i class="fa-solid fa-rotate fs-4"></i></a>
+    <a class="update-link link-danger btn" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Update"><i
+            class="fa-solid fa-rotate fs-4"></i></a>
 </div>

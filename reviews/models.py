@@ -5,11 +5,11 @@ from products.models import Product
 
 
 RATING = (
-    (1,  "★☆☆☆☆"),
-    (2,  "★★☆☆☆"),
-    (3,  "★★★☆☆"),
-    (4,  "★★★★☆"),
-    (5,  "★★★★★"),
+    (1, "★☆☆☆☆"),
+    (2, "★★☆☆☆"),
+    (3, "★★★☆☆"),
+    (4, "★★★★☆"),
+    (5, "★★★★★"),
 )
 
 
@@ -17,6 +17,7 @@ class Review(models.Model):
     """
     Model representing product reviews by users
     """
+
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     content = models.TextField(max_length=300, blank=True)

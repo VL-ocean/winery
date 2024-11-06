@@ -6,10 +6,11 @@
     </div>
     <nav class="navbar navbar-dark bg-dark navbar-expand-lg sticky-top">
         <div class="container-fluid py-2 position-relative">
-            <a class="navbar-brand title-font" href="{% url 'home' %}">WineStore <i class="fa-solid fa-wine-glass"></i></a>
+            <a class="navbar-brand title-font" href="{% url 'home' %}">WineStore <i
+                    class="fa-solid fa-wine-glass"></i></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -26,7 +27,8 @@
                             <li><a class="dropdown-item" href="{% url 'all_products' %}?category=1">RED WINE</a></li>
                             <li><a class="dropdown-item" href="{% url 'all_products' %}?category=2">WHITE WINE</a></li>
                             <li><a class="dropdown-item" href="{% url 'all_products' %}?category=3">ROSÈ WINE</a></li>
-                            <li><a class="dropdown-item" href="{% url 'all_products' %}?category=4">SPARKLING WINE</a></li>
+                            <li><a class="dropdown-item" href="{% url 'all_products' %}?category=4">SPARKLING WINE</a>
+                            </li>
                             <li>
                                 <hr class="dropdown-divider text-bg-light">
                             </li>
@@ -43,26 +45,28 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark">
                             {% if request.user.is_authenticated %}
-                            {% if request.user.is_superuser %}
-                            <li><a class="dropdown-item" href="{% url 'add_product' %}">PRODUCT MANAGEMENT</a></li>
-                            {% endif %}
-                            <li><a class="dropdown-item" href="{% url 'profile' %}">MY PROFILE</a></li>
-                            <li><a class="dropdown-item" href="{% url 'my-wishlist' user.userprofile.id %}">WISHLIST</a></li>
-                            <li>
-                                <hr class="dropdown-divider text-bg-light">
-                            </li>
-                            <li><a class="dropdown-item" href="{% url 'account_logout' %}">LOGOUT</a></li>
+                                {% if request.user.is_superuser %}
+                                    <li><a class="dropdown-item" href="{% url 'add_product' %}">PRODUCT MANAGEMENT</a></li>
+                                {% endif %}
+                                <li><a class="dropdown-item" href="{% url 'profile' %}">MY PROFILE</a></li>
+                                <li><a class="dropdown-item" href="{% url 'my-wishlist' user.userprofile.id %}">WISHLIST</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider text-bg-light">
+                                </li>
+                                <li><a class="dropdown-item" href="{% url 'account_logout' %}">LOGOUT</a></li>
                             {% else %}
-                            <li><a class="dropdown-item" href="{% url 'account_signup' %}">REGISTER</a></li>
-                            <li><a class="dropdown-item" href="{% url 'account_login' %}">LOGIN</a></li>
+                                <li><a class="dropdown-item" href="{% url 'account_signup' %}">REGISTER</a></li>
+                                <li><a class="dropdown-item" href="{% url 'account_login' %}">LOGIN</a></li>
                             {% endif %}
                         </ul>
                     </li>
                     <li class="nav-item me-4 d-none d-lg-block">
-                        <a class="nav-link link-warning position-relative" href="{% url 'view_bag' %}" data-bs-toggle="tooltip" data-bs-placement="right"
-                            data-bs-title="Shopping bag">
+                        <a class="nav-link link-warning position-relative" href="{% url 'view_bag' %}"
+                            data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Shopping bag">
                             <i class="fa-solid fa-bag-shopping ps-1 fs-4"></i>
-                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-warning">
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-warning">
                                 {{ product_count}}
                                 <span class="visually-hidden">Bag items</span>
                             </span>
@@ -70,17 +74,19 @@
                     </li>
                 </ul>
                 <form class="d-flex" role="search" method="GET" action="{% url 'product_search' %}">
-                    <input class="form-control me-2 custom-focus" type="search" name="q" placeholder="Search" aria-label="Search">
+                    <input class="form-control me-2 custom-focus" type="search" name="q" placeholder="Search"
+                        aria-label="Search">
                     <button class="btn btn-outline-light" type="submit">Search</button>
                 </form>
             </div>
             <!-- Shopping bag icon for mobile -->
             <ul class="navbar-nav d-inline-block d-lg-none menu-font position-absolute menu-icon-bag">
                 <li class="nav-item mx-4">
-                    <a class="nav-link link-warning position-relative" href="{% url 'view_bag' %}" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                        data-bs-title="Shopping bag">
+                    <a class="nav-link link-warning position-relative" href="{% url 'view_bag' %}"
+                        data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Shopping bag">
                         <i class="fa-solid fa-bag-shopping ps-1 fs-4"></i>
-                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-warning">
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-warning">
                             {{ product_count}}
                             <span class="visually-hidden">Bag items</span>
                         </span>

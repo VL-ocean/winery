@@ -1,38 +1,38 @@
 {% load static %}
 <!-- Delete Button -->
-<button type="button" class="btn text-danger border-0 bg-transparent p-0 float-right" title="Delete Review" data-bs-toggle="modal"
-  data-bs-target="#exampleModal-{{ review.id }}">
-  <i class="fs-4 fa-solid fa-trash-can"></i>
+<button type="button" class="btn text-danger border-0 bg-transparent p-0 float-right" title="Delete Review"
+    data-bs-toggle="modal" data-bs-target="#exampleModal-{{ review.id }}">
+    <i class="fs-4 fa-solid fa-trash-can"></i>
 </button>
 
 <!-- Delete Confirmation Modal -->
-<div class="modal fade" id="exampleModal-{{ review.id }}" tabindex="-1" aria-labelledby="exampleModalLabel-{{ review.id }}"
-  aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <!-- Modal Header -->
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel-{{ review.id }}">{{ review.content }} will be deleted!</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <!-- Modal Body -->
-      <div class="modal-body">
-        This action cannot be reverted!
-      </div>
-      <!-- Modal Footer -->
-      <div class="modal-footer">
-        <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">
-          Cancel
-        </button>
-        <!-- Delete Form -->
-        <form method="post" action="{% url 'delete-review' review.pk %}">
-          {% csrf_token %}
-          <!-- Confirm Delete Button -->
-          <button class="btn btn-danger" type="submit">
-            <i class="fa-solid fa-trash"></i> Confirm Delete
-          </button>
-        </form>
-      </div>
+<div class="modal fade" id="exampleModal-{{ review.id }}" tabindex="-1"
+    aria-labelledby="exampleModalLabel-{{ review.id }}" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel-{{ review.id }}">{{ review.content }} will be deleted!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <!-- Modal Body -->
+            <div class="modal-body">
+                This action cannot be reverted!
+            </div>
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">
+                    Cancel
+                </button>
+                <!-- Delete Form -->
+                <form method="post" action="{% url 'delete-review' review.pk %}">
+                    {% csrf_token %}
+                    <!-- Confirm Delete Button -->
+                    <button class="btn btn-danger" type="submit">
+                        <i class="fa-solid fa-trash"></i> Confirm Delete
+                    </button>
+                </form>
+            </div>
+        </div>
     </div>
-  </div>
 </div>

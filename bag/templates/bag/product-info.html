@@ -1,8 +1,10 @@
 <p class="m-1 small text-uppercase">SKU: {{ item.product.sku }}</p>
 <p class="text-uppercase opacity-75 m-1">{{ item.product.brand.friendly_name }}</p>
-<h4 class="menu-font text-uppercase fs-5 m-1 fw-bold">{{ item.product.name }} {{ item.product.variety.friendly_name }}</h4>
+<h4 class="menu-font text-uppercase fs-5 m-1 fw-bold">{{ item.product.name }} {{ item.product.variety.friendly_name }}
+</h4>
 <p class="opacity-75 m-1 text-capitalize">{{ item.product.vintage}} | {{ item.product.origin }}</p>
 <p class="m-1 text-capitalize">{{ item.product.bottle_size }}</p>
-<a href="{% url 'all_products' %}?category={{ item.product.category.id }}" class="m-1 text-capitalize text-decoration-none link-dark category-link">
+<a href="{% url 'all_products' %}?category={{ item.product.category.id }}"
+    class="m-1 text-capitalize text-decoration-none link-dark category-link">
     {{ item.product.category.friendly_name }}<i class="fa-solid fa-champagne-glasses ps-1"></i>
 </a>

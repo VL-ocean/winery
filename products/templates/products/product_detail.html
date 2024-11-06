@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block page_header %}
-{% endblock %}
+
+{% block extra_title %}Product Detail{% endblock %}
+
 {% block content %}
 
 <div class="container pb-5">
@@ -9,30 +10,30 @@
         <div class="col-12 col-lg-6 d-flex flex-column position-relative">
             <div class="p-2 align-self-center product-img-box position-relative">
                 {% if product.image %}
-                <img src="{{ product.image.url }}" class="img-fluid" alt="{{ product.name }}">
-                <a href="{{ product.image.url }}" class="stretched-link" target="_blank"></a>
+                    <img src="{{ product.image.url }}" class="img-fluid" alt="{{ product.name }}">
+                    <a href="{{ product.image.url }}" class="stretched-link" target="_blank"></a>
                 {% else %}
-                <img src="{{ MEDIA_URL }}no-image-sm.webp" class="img-fluid border border-dark rounded" alt="{{ product.name }}">
-                <a href="" class="stretched-link"></a>
+                    <img src="{{ MEDIA_URL }}no-image-sm.webp" class="img-fluid border border-dark rounded"
+                        alt="{{ product.name }}">
+                    <a href="" class="stretched-link"></a>
                 {% endif %}
             </div>
             {% if product.sale_price and product.sale_price < product.price %}
-            <div class="rounded-circle text-bg-danger discount-indicator position-absolute d-flex flex-column justify-content-center align-items-center">
-                <i class="fa-solid fa-percent fs-3"></i>
-            </div>
+                <div
+                    class="rounded-circle text-bg-danger discount-indicator position-absolute d-flex flex-column justify-content-center align-items-center">
+                    <i class="fa-solid fa-percent fs-3"></i>
+                </div>
             {% endif %}
             <!-- Manage wishlist -->
-            <div
-                class="text-danger wishlist-icons position-absolute">
+            <div class="text-danger wishlist-icons position-absolute">
                 <form method="post" action="{% url 'manage-wishlist' product.pk %}">
                     {% csrf_token %}
                     <input type="hidden" name="product_id" value="{{ product.id }}">
-
                     <button type="submit" class="btn p-0 icon text-danger fs-2"
                         aria-label="Add this product to your wishlist">
                         {% if is_favourited %}
-                            <i class="fa-solid fa-heart-circle-minus fs-2" data-bs-toggle="tooltip" data-bs-placement="right"
-                            data-bs-title="Remove from Wishlist"></i>
+                            <i class="fa-solid fa-heart-circle-minus fs-2" data-bs-toggle="tooltip"
+                            data-bs-placement="right" data-bs-title="Remove from Wishlist"></i>
                         {% else %}
                             <i class="fa-solid fa-heart-circle-plus fs-2" data-bs-toggle="tooltip" data-bs-placement="right"
                             data-bs-title="Add to Wishlist"></i>
@@ -44,17 +45,19 @@
         <div class="col-12 col-lg-6">
             <div class="p-4">
                 {% if request.user.is_superuser %}
-                <div class="py-2">
-                    <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                </div>
+                    <div class="py-2">
+                        <a href="{% url 'edit_product' product.id %}">Edit</a> |
+                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                    </div>
                 {% endif %}
                 <p class="m-1 small text-uppercase">SKU: {{ product.sku }}</p>
                 <p class="text-uppercase opacity-75 m-1">{{ product.brand.friendly_name }}</p>
-                <h4 class="menu-font text-uppercase fs-5 m-1 fw-bold">{{ product.name }} {{product.variety.friendly_name}}</h4>
+                <h4 class="menu-font text-uppercase fs-5 m-1 fw-bold">{{ product.name }}
+                    {{product.variety.friendly_name}}</h4>
                 <p class="opacity-75 m-1 text-capitalize">{{product.vintage}} | {{ product.origin }}</p>
                 <p class="m-1 text-capitalize">{{ product.bottle_size }}</p>
-                <a href="{% url 'all_products' %}?category={{ product.category.id }}" class="m-1 text-capitalize text-decoration-none link-dark category-link">
+                <a href="{% url 'all_products' %}?category={{ product.category.id }}"
+                    class="m-1 text-capitalize text-decoration-none link-dark category-link">
                     {{ product.category.friendly_name }}<i class="fa-solid fa-champagne-glasses ps-1"></i>
                 </a>
                 <h5 class="product-price fs-4 m-2">
@@ -73,11 +76,15 @@
                     <div class="row my-3">
                         <div class="col-6">
                             <div class="input-group input-group-{{ product.id }}">
-                                <button class="btn btn-outline-dark fw-bold fs-5 p-1 quantity-btn increment-qty increment-qty_{{ product.id }}"
+                                <button
+                                    class="btn btn-outline-dark fw-bold fs-5 p-1 quantity-btn increment-qty increment-qty_{{ product.id }}"
                                     type="button" data-item_id="{{ product.id }}">+</button>
-                                <input class="form-control border border-dark quantity-input fw-bold qty_input id_qty_{{ product.id }}"
-                                    type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}">
-                                <button class="btn btn-outline-dark fw-bold fs-5 p-1 quantity-btn decrement-qty decrement-qty_{{ product.id }}"
+                                <input
+                                    class="form-control border border-dark quantity-input fw-bold qty_input id_qty_{{ product.id }}"
+                                    type="number" name="quantity" value="1" min="1" max="99"
+                                    data-item_id="{{ product.id }}">
+                                <button
+                                    class="btn btn-outline-dark fw-bold fs-5 p-1 quantity-btn decrement-qty decrement-qty_{{ product.id }}"
                                     type="button" data-item_id="{{ product.id }}">-</button>
                             </div>
                         </div>
@@ -129,7 +136,6 @@
         </div>
     </div>
 </div>
-
 {% endblock %}
 
 {% block postloadjs %}

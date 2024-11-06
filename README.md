@@ -86,17 +86,104 @@
 
 ## E-Commerce Business Model
 
+WineStore operates as an online wine shop, leveraging an e-commerce business model to sell wine directly to customers through its website. The model is designed to provide a seamless and personalized shopping experience while catering to a diverse audience of wine lovers.
 
+Key components of the WineStore business model include:
+
+1.  **Direct-to-Consumer Sales**: WineStore offers a wide range of wines directly to customers, bypassing intermediaries. This approach allows for competitive pricing, higher profit margins, and a more customized shopping experience.
+    
+2.  **Diverse Product Range**: The shop stocks an extensive selection of wines, including red, white, rosè, and sparkling wines.
+    
+3.  **Digital Marketing and SEO**: WineStore employs various digital marketing strategies, including search engine optimization (SEO), content marketing, social media engagement, and email campaigns, to attract and retain customers and increase online visibility.
+    
+4.  **Logistics and Fulfilment**: The business focuses on efficient inventory management, order processing, and delivery logistics to ensure prompt, reliable shipping. Strategic partnerships with shipping providers help maintain a smooth fulfilment process.
+    
+5.  **Customer Engagement and Retention**: WineStore fosters a community of wine lovers by offering wine recommendations, exclusive vineyard interviews, wine reviews, and a loyalty program, aiming to build long-term customer relationships and encourage repeat purchases.
+    
+
+This business model enables WineStore to reach a broad audience, minimize overhead costs, and provide an enjoyable, convenient shopping experience for readers around the world.
 
 [Back to top](#table-of-contents)
+
 
 ## Marketing Strategies
 
 ### Search Engine Optimisation
 
+To enhance the WineStore visibility and ranking on Google, a comprehensive SEO strategy was developed to identify relevant keywords for meta tags, alt texts, and content elements.
+
+Based on this research, a mix of short and long-tail keywords were selected to target both specific and broad search queries:
+
+-   online wine store
+-   buy wine online
+-   best online wine shop
+-   wine for sale
+-   wine gift sets
+-   red wine
+-   white wine
+-   rose wine
+-   wine recommendations
+-   wine shop for wine lovers
+
 ### SEO Strategies Implemented
 
+1.  **Effective Use of Headings:**
+    -   Strategically place `<h1>` tags with relevant keywords to enhance keyword prominence.
+    -   Incorporate heading tags for promotional keywords to improve search relevance.
+2.  **Keyword Emphasis:**
+    -   Use the `<strong>` HTML element to highlight important short and long-tail keywords throughout the content. This not only provides visual emphasis but also signals their semantic importance to search engines.
+3.  **Image Optimization:**
+    -   Apply keyword-rich and descriptive alt texts and filenames to all images, ensuring they are relevant to the content and improve searchability.
+4.  **Optimize External Links:**
+    -   Add the `rel="noopener nofollow"` attribute to social media and external links, which prevents search engines from considering these links when evaluating the site's ranking.
+  ```
+  <div class="d-flex flex-row justify-content-evenly my-3">
+      <a class="link-light fs-3 social-icon" href="https://www.facebook.com/" target="_blank"
+          rel="noopener nofollow" aria-label="Visit our Facebook page - Opens in a new tab">
+          <i class="fa-brands fa-square-facebook"></i>
+      </a>
+      <a class="link-light fs-3 social-icon" href="https://www.instagram.com/" target="_blank"
+          rel="noopener nofollow" aria-label="Visit our Instagram page - Opens in a new tab">
+          <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a class="link-light fs-3 social-icon" href="https://x.com/" target="_blank" rel="noopener nofollow"
+          aria-label="Visit our Twitter page - Opens in a new tab">
+          <i class="fa-brands fa-square-twitter"></i>
+      </a>
+  </div>
+  ```
+5.  **Sitemap Inclusion:**
+    -   Generate and include a `sitemap.xml` file to guide search engine crawlers in indexing the site effectively.
+
+6.  **Control Search Engine Crawling:**
+    -   Use of `robots.txt` file to manage and control the behavior of search engine bots while they crawl the site.
+
+7. **Template Blocks for Meta Descriptions:**
+    - Using `{% block metadesc %}` in Django templates is a good practice for maintaining a clean, organized, and SEO-friendly codebase. It balances flexibility and maintainability while providing a good structure for dynamic content.
+    
+
+These strategies will be continuously refined and improved over time, aiming to increase the wine shop's ranking on Google and attract more organic traffic to the website.
+
 ### Social Media
+
+WineStore will leverage Facebook as a primary platform for engaging with its audience and promoting its online wine shop. The strategy includes the following key components:
+
+1.  **Content Sharing:**    
+    -   Post a variety of content, including wine recommendations, new arrivals, promotions and behind-the-scenes looks at WineStore. This keeps the audience informed, adds engaged.
+2.  **Community Engagement:**    
+    -   Foster a sense of community by encouraging interactions through comments, likes, and shares. Respond promptly to customer inquiries and feedback to build relationships and trust.
+3.  **Promotional Campaigns:**    
+    -   Run targeted ad campaigns to reach potential customers based on their interests, demographics, and browsing behavior. Highlight special offers, wine sales, and exclusive events to drive traffic to the website.
+4.  **Events and Announcements:**
+    -   Use Facebook Events to highlight special events. Keep followers updated on important announcements and store news.
+5.  **User-Generated Content:**    
+    -   Encourage customers to share their experiences, reviews, and photos with WineStore products. Feature user-generated content to build credibility and create a more personal connection with the audience.
+6.  **Analytics and Insights:**    
+    -   Monitor Facebook Insights to track the performance of posts, ads, and overall engagement. Use this data to refine the strategy, optimize content, and improve outreach efforts.
+
+By focusing on these elements, WineStore will effectively utilize Facebook to enhance brand visibility, engage with readers, and drive traffic to its online wine shop.
+
+![Facebook](./README-media/facebook-mockup-1.png)
 
 ### Newsletter Marketing
 
@@ -783,6 +870,8 @@ _Any changes required to the website, they can be made, committed and pushed to 
 
 - [Close-up Photo of Wine Bottles With Cork](https://www.pexels.com/photo/close-up-photo-of-wine-bottles-with-cork-2647933/)
 - [Weinflasche](https://pixabay.com/de/illustrations/weinflasche-weinglas-wei%C3%9Fwein-8860121/)
+- [Shipping boxes](https://www.pexels.com/photo/text-6169028/)
+- [Bubbly Champagne on Glasses](https://www.pexels.com/photo/bubbly-champagne-on-glasses-6314335/)
 
 ### Tools
 

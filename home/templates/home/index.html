@@ -1,8 +1,14 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block content %}
+{% block metadesc %}
+    Discover WineStore, your go-to destination for a world of quality wine. From our vineyards to your doorstep, explore the
+    very best wines curated by our team of experts. Place an order, then relax and fill your glass.
+{% endblock metadesc %}
 
+{% block extra_title %}Best Online Shop{% endblock %}
+
+{% block content %}
 <div class="welcome-banner">
     <div class="overlay"></div>
     <div class="banner-content p-5 text-center text-dark">
@@ -25,7 +31,7 @@
             <div class="card border-dark shadow product-card mx-auto h-100">
                 {% if request.user.is_superuser %}
                 <div class="text-center py-2">
-                    <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                    <a href="{% url 'edit_product' product.id %}">Edit</a> |
                     <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                 </div>
                 {% endif %}
@@ -41,21 +47,23 @@
                 <div class="card-body text-center py-2 d-flex flex-column justify-content-evenly">
                     <p class="m-1 small text-uppercase">SKU: {{ product.sku }}</p>
                     <p class="text-uppercase opacity-75 m-1">{{ product.brand.friendly_name }}</p>
-                    <h4 class="menu-font text-uppercase fs-5 m-1 fw-bold">{{ product.name }} {{product.variety.friendly_name}}</h4>
+                    <h4 class="menu-font text-uppercase fs-5 m-1 fw-bold">{{ product.name }}
+                        {{product.variety.friendly_name}}</h4>
                     <p class="card-text opacity-75 mb-1 text-capitalize">{{ product.origin }}</p>
                     <h5 class="card-title product-price fs-4 m-2">
                         {% if product.sale_price and product.sale_price < product.price %}
-                            <!-- Sale price exists and is less than regular price -->
-                            <span class="text-decoration-line-through fs-5 text-muted">€ {{ product.price }}</span>
-                            <span class="text-danger">€ {{ product.sale_price }}</span>
+                        <!-- Sale price exists and is less than regular price -->
+                        <span class="text-decoration-line-through fs-5 text-muted">€ {{ product.price }}</span>
+                        <span class="text-danger">€ {{ product.sale_price }}</span>
                         {% else %}
-                            <!-- Regular price only -->
-                            € {{ product.price }}
+                        <!-- Regular price only -->
+                        € {{ product.price }}
                         {% endif %}
                     </h5>
                 </div>
                 {% if product.sale_price and product.sale_price < product.price %}
-                <div class="rounded-circle text-bg-danger discount-indicator position-absolute d-flex flex-column justify-content-center align-items-center">
+                <div
+                    class="rounded-circle text-bg-danger discount-indicator position-absolute d-flex flex-column justify-content-center align-items-center">
                     <i class="fa-solid fa-percent fs-3"></i>
                 </div>
                 {% endif %}
@@ -66,7 +74,7 @@
             <div class="card border-dark shadow product-card mx-auto h-100">
                 {% if request.user.is_superuser %}
                 <div class="text-center py-2">
-                    <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                    <a href="{% url 'edit_product' product.id %}">Edit</a> |
                     <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                 </div>
                 {% endif %}
@@ -82,21 +90,23 @@
                 <div class="card-body text-center py-2 d-flex flex-column justify-content-evenly">
                     <p class="m-1 small text-uppercase">SKU: {{ product.sku }}</p>
                     <p class="text-uppercase opacity-75 m-1">{{ product.brand.friendly_name }}</p>
-                    <h4 class="menu-font text-uppercase fs-5 m-1 fw-bold">{{ product.name }} {{product.variety.friendly_name}}</h4>
+                    <h4 class="menu-font text-uppercase fs-5 m-1 fw-bold">{{ product.name }}
+                        {{product.variety.friendly_name}}</h4>
                     <p class="card-text opacity-75 mb-1 text-capitalize">{{ product.origin }}</p>
                     <h5 class="card-title product-price fs-4 m-2">
                         {% if product.sale_price and product.sale_price < product.price %}
-                            <!-- Sale price exists and is less than regular price -->
-                            <span class="text-decoration-line-through fs-5 text-muted">€ {{ product.price }}</span>
-                            <span class="text-danger">€ {{ product.sale_price }}</span>
+                        <!-- Sale price exists and is less than regular price -->
+                        <span class="text-decoration-line-through fs-5 text-muted">€ {{ product.price }}</span>
+                        <span class="text-danger">€ {{ product.sale_price }}</span>
                         {% else %}
-                            <!-- Regular price only -->
-                            € {{ product.price }}
+                        <!-- Regular price only -->
+                        € {{ product.price }}
                         {% endif %}
                     </h5>
                 </div>
                 {% if product.sale_price and product.sale_price < product.price %}
-                <div class="rounded-circle text-bg-danger discount-indicator position-absolute d-flex flex-column justify-content-center align-items-center">
+                <div
+                    class="rounded-circle text-bg-danger discount-indicator position-absolute d-flex flex-column justify-content-center align-items-center">
                     <i class="fa-solid fa-percent fs-3"></i>
                 </div>
                 {% endif %}
@@ -119,7 +129,8 @@
     <div class="row mb-3">
         <div class="col-12 col-md-6 col-lg-3 p-2">
             <div class="p-2 d-flex flex-column text-center card border-dark shadow h-100">
-                <img src="{{ MEDIA_URL }}icon-shipping-box.webp" alt="shipping box icon" class="img-fluid w-50 align-self-center">
+                <img src="{{ MEDIA_URL }}icon-shipping-box.webp" alt="shipping box icon"
+                    class="img-fluid w-50 align-self-center">
                 <h4 class="subtitle-font text-center">Fast Shipping for Faster Sipping</h4>
                 <p>Savor your wine sooner! Orders are processed and shipped within 1-2 business days for speedy
                     delivery.</p>
@@ -127,7 +138,8 @@
         </div>
         <div class="col-12 col-md-6 col-lg-3 p-2">
             <div class="p-2 d-flex flex-column text-center card border-dark shadow h-100">
-                <img src="{{ MEDIA_URL }}icon-wine-bottle.webp" alt="wine bottle icon" class="img-fluid w-50 align-self-center">
+                <img src="{{ MEDIA_URL }}icon-wine-bottle.webp" alt="wine bottle icon"
+                    class="img-fluid w-50 align-self-center">
                 <h4 class="subtitle-font">Shop Hundreds of Wines</h4>
                 <p>Choose from 250+ premium wines from 45+ wineries worldwide, known for their consistent acclaim.</p>
             </div>
@@ -141,12 +153,12 @@
         </div>
         <div class="col-12 col-md-6 col-lg-3 p-2">
             <div class="p-2 d-flex flex-column text-center card border-dark shadow h-100">
-                <img src="{{ MEDIA_URL }}icon-cheers.webp" alt="two glasses cheers icon" class="img-fluid w-50 align-self-center">
+                <img src="{{ MEDIA_URL }}icon-cheers.webp" alt="two glasses cheers icon"
+                    class="img-fluid w-50 align-self-center">
                 <h4 class="subtitle-font">Confidence in Every Cart</h4>
                 <p>We back our wines with a 100% satisfaction guarantee. If you're not happy, we'll make it right.</p>
             </div>
         </div>
     </div>
 </div>
-
 {% endblock %}

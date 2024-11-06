@@ -25,18 +25,18 @@
                 <div class="col-12 col-md-6 col-lg-4 col-xl-3 p-2 mb-3">
                     <div class="card border-dark shadow product-card mx-auto h-100">
                         {% if request.user.is_superuser %}
-                        <div class="text-center py-2">
-                            <a href="{% url 'edit_product' product.id %}">Edit</a> |
-                            <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                        </div>
+                            <div class="text-center py-2">
+                                <a href="{% url 'edit_product' product.id %}">Edit</a> |
+                                <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                            </div>
                         {% endif %}
                         <div class="p-2 align-self-center product-img-box position-relative">
                             {% if product.image %}
-                            <img src="{{ product.image.url }}" class="img-fluid product-img" alt="{{ product.name }}">
-                            <a href="{% url 'product_detail' product.id %}" class="stretched-link"></a>
+                                <img src="{{ product.image.url }}" class="img-fluid product-img" alt="{{ product.name }}">
+                                <a href="{% url 'product_detail' product.id %}" class="stretched-link"></a>
                             {% else %}
-                            <img src="{{ MEDIA_URL }}no-image-sm.webp" class="img-fluid product-img" alt="{{ product.name }}">
-                            <a href="{% url 'product_detail' product.id %}" class="stretched-link"></a>
+                                <img src="{{ MEDIA_URL }}no-image-sm.webp" class="img-fluid product-img" alt="{{ product.name }}">
+                                <a href="{% url 'product_detail' product.id %}" class="stretched-link"></a>
                             {% endif %}
                         </div>
                         <div class="card-body text-center py-2 d-flex flex-column justify-content-evenly mb-3">
@@ -47,20 +47,20 @@
                             <p class="card-text opacity-75 mb-1 text-capitalize">{{ product.origin }}</p>
                             <h5 class="card-title product-price fs-4 m-2">
                                 {% if product.sale_price and product.sale_price < product.price %}
-                                <!-- Sale price exists and is less than regular price -->
-                                <span class="text-decoration-line-through fs-5 text-muted">€ {{ product.price }}</span>
-                                <span class="text-danger">€ {{ product.sale_price }}</span>
+                                    <!-- Sale price exists and is less than regular price -->
+                                    <span class="text-decoration-line-through fs-5 text-muted">€ {{ product.price }}</span>
+                                    <span class="text-danger">€ {{ product.sale_price }}</span>
                                 {% else %}
-                                <!-- Regular price only -->
-                                € {{ product.price }}
+                                    <!-- Regular price only -->
+                                    € {{ product.price }}
                                 {% endif %}
                             </h5>
                         </div>
                         {% if product.sale_price and product.sale_price < product.price %}
-                        <div
-                            class="rounded-circle text-bg-danger discount-indicator position-absolute d-flex flex-column justify-content-center align-items-center">
-                            <i class="fa-solid fa-percent fs-3"></i>
-                        </div>
+                            <div
+                                class="rounded-circle text-bg-danger discount-indicator position-absolute d-flex flex-column justify-content-center align-items-center">
+                                <i class="fa-solid fa-percent fs-3"></i>
+                            </div>
                         {% endif %}
                     </div>
                 </div>

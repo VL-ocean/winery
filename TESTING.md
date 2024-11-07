@@ -223,13 +223,52 @@ The testing results:
 </details>
 <details>
 <summary>All products page</summary>
-<img src="./README-media/wave-testing">
+<img src="./README-media/wave-testing/wave-products.png">
 </details>
 <details>
 <summary>Red wine page</summary>
-<img src="./README-media/wave-testing">
+<img src="./README-media/wave-testing/wave-red-wine.png">
 </details>
-
+<details>
+<summary>White wine page</summary>
+<img src="./README-media/wave-testing/wave-white-wine.png">
+</details>
+<details>
+<summary>Rosè wine page</summary>
+<img src="./README-media/wave-testing/wave-rose-wine.png">
+</details>
+<details>
+<summary>Sparkling wine page</summary>
+<img src="./README-media/wave-testing/wave-sparkling-wine.png">
+</details>
+<details>
+<summary>Promotions page</summary>
+<img src="./README-media/wave-testing/wave-promotions.png">
+</details>
+<details>
+<summary>Sign up page</summary>
+<img src="./README-media/wave-testing/wave-register.png">
+</details>
+<details>
+<summary>Sign in page</summary>
+<img src="./README-media/wave-testing/wave-login.png">
+</details>
+<details>
+<summary>Product detail page</summary>
+<img src="./README-media/wave-testing/wave-product-detail.png">
+</details>
+<details>
+<summary>Shopping bag page</summary>
+<img src="./README-media/wave-testing/wave-bag.png">
+</details>
+<details>
+<summary>Privacy policy page</summary>
+<img src="./README-media/wave-testing/wave-privacy-policy.png">
+</details>
+<details>
+<summary>Terms & Conditions page</summary>
+<img src="./README-media/wave-testing/wave-terms.png">
+</details>
 
 
 ## Manual Testing

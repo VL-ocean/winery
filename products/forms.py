@@ -1,6 +1,8 @@
 from django import forms
 from .widgets import CustomClearableFileInput
-from .models import Product, Category, Variety, Vintage, Country, Brand, BottleSize
+from .models import (
+    Product, Category, Variety, Vintage, Country, Brand, BottleSize
+)
 
 
 class SortForm(forms.Form):
@@ -43,9 +45,15 @@ class ProductForm(forms.ModelForm):
         brands = Brand.objects.all()
         bottle_size = BottleSize.objects.all()
         friendly_names = [(c.id, c.get_friendly_name()) for c in categories]
-        friendly_names_variety = [(c.id, c.get_friendly_name()) for c in varieties]
-        friendly_names_country = [(c.id, c.get_friendly_name()) for c in countries]
-        friendly_names_brand = [(c.id, c.get_friendly_name()) for c in brands]
+        friendly_names_variety = [(
+            c.id, c.get_friendly_name()
+        ) for c in varieties]
+        friendly_names_country = [(
+            c.id, c.get_friendly_name()
+        ) for c in countries]
+        friendly_names_brand = [(
+            c.id, c.get_friendly_name()
+        ) for c in brands]
 
         self.fields["category"].choices = friendly_names
         self.fields["variety"].choices = friendly_names_variety

@@ -74,20 +74,20 @@ Notes:
 
 | **File name** | **Pass** | **Notes** | **Result** |
 | --- | :---: | --- | --- |
-| **Bag App** |  |  |  |
-| bag.html | ✅ | No errors or warnings to show | ![add_post](./README-images/add-post.png) |
-| **Home App** |  |  |  |
-| index.html | ✅ | No errors or warnings to show | ![index](./README-images/index.png) |
-| **Profiles App** |  |  |  |
-| profile.html | ✅ | No errors or warnings to show | ![profile](./README-images/profile-html-validation.png) |
-| **AllAuth templates** |  |  |  |
-| login.html | ✅ | No errors or warnings to show | ![login](./README-images/login-html-validation.png) |
-| logout.html | ✅ | No errors or warnings to show | ![logout](./README-images/logout-html-validation.png) |
-| signup.html | ✅ | No errors or warnings to show | ![signup](./README-images/signup-html-validation.png) |
-| **Error templates** |  |  |  |
-| 403.html | ✅ | No errors or warnings to show | ![403](./README-images/403-page-html.png) |
-| 404.html | ✅ | No errors or warnings to show | ![404](./README-images/404-page-html-validation.png) |
-| 500.html | ✅ | No errors or warnings to show | ![500](./README-images/500-page-html-validation.png) |
+| bag.html | ✅ | No errors or warnings to show | ![screenshot](./README-media/html-validation/html-bag.png) |
+| checkout.html | ✅ | No errors or warnings to show | ![screenshot](./README-media/html-validation/html-checkout.png) |
+| checkout_success.html | ✅ | No errors or warnings to show | ![screenshot](./README-media/html-validation/html-success.png) |
+| privacy_policy.html | ✅ | No errors or warnings to show | ![screenshot](./README-media/html-validation/html-privacy-policy.png) |
+| terms_n_conditions.html | ✅ | No errors or warnings to show | ![screenshot](./README-media/html-validation/html-terms.png) |
+| index.html | ✅ | No errors or warnings to show | ![screenshot](./README-media/html-validation/html-home.png) |
+| products.html | ✅ | No errors or warnings to show | ![screenshot](./README-media/html-validation/html-products.png) |
+| promotions.html | ✅ | No errors or warnings to show | ![screenshot](./README-media/html-validation/html-promotions.png) |
+| search_results.html | ✅ | No errors or warnings to show | ![screenshot](./README-media/html-validation/html-search-results.png) |
+| product_detail.html | ✅ | No errors or warnings to show | ![screenshot](./README-media/html-validation/html-product-detail.png) |
+| add_product.html | ✅ | No errors or warnings to show | ![screenshot](./README-media/html-validation/html-add-product.png) |
+| edit_product.html | ✅ | No errors or warnings to show | ![screenshot](./README-media/html-validation/html-edit-product.png) |
+| profile.html | ✅ | No errors or warnings to show | ![screenshot](./README-media/html-validation/html-profile.png) |
+| wishlist.html | ✅ | No errors or warnings to show | ![screenshot](./README-media/html-validation/html-wishlist.png) |
 
 </details>
 
@@ -96,17 +96,34 @@ Notes:
 The [W3C Jigsaw](https://jigsaw.w3.org/css-validator/#validate_by_input) tool, provided by the W3C, enables to validate and verify the correctness of CSS code. It ensures that your web pages adhere to W3C standards, promoting interoperability and accessibility.
 
 
+<details>
+<summary>CSS Validation Results</summary>
+
 | **File name** | **Pass** | **Notes** | **Result** |
 | --- | :---: | --- | --- |
-| base.css | ✅ | No errors. Two warnings. First, due to imported Google Fonts: "Imported style sheets are not checked in direct input and file upload modes". Second, due to variables used to assign some fonts and colours: "Due to their dynamic nature, CSS variables are currently not statically checked" | ![css](./README-images/css-validation.png) |
+| base.css | ✅ | No errors. Two warnings about "Same color for background-color and border-color" on *.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before* and *#mc_embed_signup .button:hover*. This is a design feature. | ![screenshot](./README-media/css-validation/base-css-validation.png) |
+| profile.css | ✅ | No errors or warnings to show | ![screenshot](./README-media/css-validation/profile-css-validation.png) |
+| checkout.css | ✅ | No errors or warnings to show. Except "-webkit-transition is a vendor extension" | ![screenshot](./README-media/css-validation/checkout-css-validation.png) |
+
+</details>
+
 
 ### JavaScript
 
 No major errors were found when validating JavaScript through [Jshint](https://jshint.com/).
 
-Jshint noted that bootstrap and tooltipList variables are undefined. This can be ignored because they rely on bootstrap javascript.
+Jshint noted that bootstrap and tooltipList variables are undefined. This can be ignored because they rely on bootstrap javascript. STRIPE and Mailchimp scripts were obtained directly from the origins so no errors were taken into consideration in order to avoid interference with intended fuctionality.
 
-![jshint](./README-images/jshint-validation.png)
+<details><summary><b>Test Results</b></summary>
+
+| **File name** | **Pass** | **Result** |
+| --- | :---: | :---: |
+| countryfiels.js | ✅ | ![Result](./README-media/js-validation/countryfield-js.png) |
+| tooltips and sortform in base.html | ✅ | ![Result](./README-media/js-validation/tooltips-n-sortform.png) |
+| update quantity and remove item on click in bag.html | ✅ | ![Result](./README-media/js-validation/bag-js.png) |
+| quantity_input_script.html | ✅ | ![Result](./README-media/js-validation/quantity-input-script.png) |
+
+</details><br/>
 
 ### Python
 
@@ -116,26 +133,50 @@ The python files have all been passed through [CI Python Linter](https://pep8ci.
 
 | **File name** | **Pass** | **Result** |
 | --- | :---: | :---: |
-|  |  | **Blog App** |
-| admin.py | ✅ | ![Result](./README-images/blog-admin-py.png) |
-| forms.py | ✅ | ![Result](./README-images/blog-forms-py.png) |
-| models.py | ✅ | ![Result](./README-images/blog-models-py.png) |
-| urls.py | ✅ | ![Result](./README-images/blog-urls-py.png) |
-| views.py | ✅ | ![Result](./README-images/blog-views-py.png) |
-|  |  | **Coffee_Choco App** |
-| asgi.py | ✅ | ![Result](./README-images/main-asgi-py.png) |
-| settings.py | ✅ | ![Result](./README-images/main-settings-py.png) |
-| urls.py | ✅ | ![Result](./README-images/main-urls-py.png) |
-| wsgi.py | ✅ | ![Result](./README-images/main-wsgi-py.png) |
-|  |  | **Home App** |
-| urls.py | ✅ | ![Result](./README-images/home-urls-py.png) |
-| views.py | ✅ | ![Result](./README-images/home-views-py.png) |
-|  |  | **Profiles App** |
-| admin.py | ✅ | ![Result](./README-images/profiles-admin-py.png) |
-| forms.py | ✅ | ![Result](./README-images/profiles-forms-py.png) |
-| models.py | ✅ | ![Result](./README-images/profiles-models-py.png) |
-| urls.py | ✅ | ![Result](./README-images/profiles-urls-py.png) |
-| views.py | ✅ | ![Result](./README-images/profiles-views-py.png) |
+| **Bag App** |  |  |
+| contexts.py | ✅ | ![Result](./README-media/pep8-validation/bag-contexts.png) |
+| urls.py | ✅ | ![Result](./README-media/pep8-validation/bag-urls.png) |
+| views.py | ✅ | ![Result](./README-media/pep8-validation/bag-views.png) |
+| bag_tools.py | ✅ | ![Result](./README-media/pep8-validation/bag-tools.png) |
+| **Checkout App** |  |  |
+| admin.py | ✅ | ![Result](./README-media/pep8-validation/checkout-admin.png) |
+| forms.py | ✅ | ![Result](./README-media/pep8-validation/checkout-forms.png) |
+| models.py | ✅ | ![Result](./README-media/pep8-validation/checkout-models.png) |
+| signals.py | ✅ | ![Result](./README-media/pep8-validation/checkout-signals.png) |
+| urls.py | ✅ | ![Result](./README-media/pep8-validation/checkout-urls.png) |
+| views.py | ✅ | ![Result](./README-media/pep8-validation/checkout-views.png) |
+| webhook_handler.py | ✅ | ![Result](./README-media/pep8-validation/checkout-webhook-handler.png) |
+| webhooks.py | ✅ | ![Result](./README-media/pep8-validation/checkout-webhooks.png) |
+| **Customer_service App** |  |  |
+| urls.py | ✅ | ![Result](./README-media/pep8-validation/customer-service-urls.png) |
+| views.py | ✅ | ![Result](./README-media/pep8-validation/customer-service-views.png) |
+| **Home App** |  |  |
+| urls.py | ✅ | ![Result](./README-media/pep8-validation/home-urls.png) |
+| views.py | ✅ | ![Result](./README-media/pep8-validation/home-views.png) |
+| **Products App** |  |  |
+| query_transform.py | ✅ | ![Result](./README-media/pep8-validation/products-query-transform.png) |
+| admin.py | ✅ | ![Result](./README-media/pep8-validation/products-admin.png) |
+| filters.py | ✅ | ![Result](./README-media/pep8-validation/products-filters.png) |
+| forms.py | ✅ | ![Result](./README-media/pep8-validation/products-froms.png) |
+| mixins.py | ✅ | ![Result](./README-media/pep8-validation/products-mixins.png) |
+| models.py | ✅ | ![Result](./README-media/pep8-validation/products-models.png) |
+| urls.py | ✅ | ![Result](./README-media/pep8-validation/products-urls.png) |
+| views.py | ✅ | ![Result](./README-media/pep8-validation/products-views.png) |
+| widgets.py | ✅ | ![Result](./README-media/pep8-validation/products-widgets.png) |
+| **Profiles App** |  |  |
+| forms.py | ✅ | ![Result](./README-media/pep8-validation/profiles-froms.png) |
+| models.py | ✅ | ![Result](./README-media/pep8-validation/profiles-models.png) |
+| urls.py | ✅ | ![Result](./README-media/pep8-validation/profiles-urls.png) |
+| views.py | ✅ | ![Result](./README-media/pep8-validation/profiles-views.png) |
+| **Reviews App** |  |  |
+| forms.py | ✅ | ![Result](./README-media/pep8-validation/reviews-froms.png) |
+| models.py | ✅ | ![Result](./README-media/pep8-validation/reviews-models.png) |
+| urls.py | ✅ | ![Result](./README-media/pep8-validation/reviews-urls.png) |
+| views.py | ✅ | ![Result](./README-media/pep8-validation/reviews-views.png) |
+| **Wine_store App** |  |  |
+| settings.py | ✅ | ![Result](./README-media/pep8-validation/winestore-settings.png) |
+| urls.py | ✅ | ![Result](./README-media/pep8-validation/winestore-urls.png) |
+| views.py | ✅ | ![Result](./README-media/pep8-validation/winestore-views.png) |
 
 </details><br/>
 

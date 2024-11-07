@@ -58,11 +58,13 @@
                         </p>
                     </div>
                     <div class="col-12 col-md-8 text-md-end">
-                        <p class="mb-0">{{ item.quantity }} at € {% if item.product.sale_price %}
-                            <span class="text-danger">€ {{ item.product.sale_price }}</span> each
-                        {% else %}
-                            € {{ item.product.price }} each
-                        {% endif %}</p>
+                        <p class="mb-0">{{ item.quantity }} at 
+                            {% if item.product.sale_price %}
+                                <span class="text-danger">€ {{ item.product.sale_price }}</span> each
+                            {% else %}
+                                € {{ item.product.price }} each
+                            {% endif %}
+                        </p>
                     </div>
                 </div>
                 {% endfor %}

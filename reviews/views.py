@@ -26,14 +26,19 @@ class ReviewEditView(
         or admin can edit the review.
         """
         review = self.get_object()
-        return self.request.user == review.user or self.request.user.is_superuser
+        return (
+            self.request.user == review.user or
+            self.request.user.is_superuser
+        )
 
     def get_success_url(self):
         """
         After the review is updated, redirect to the product detail page.
         """
 
-        return reverse("product_detail", kwargs={"product_id": self.object.product.id})
+        return reverse(
+            "product_detail", kwargs={"product_id": self.object.product.id}
+        )
 
 
 class ReviewDeleteView(
@@ -52,7 +57,10 @@ class ReviewDeleteView(
         Ensure that only the review author or admin can delete the reviews.
         """
         review = self.get_object()
-        return self.request.user == review.user or self.request.user.is_superuser
+        return (
+            self.request.user == review.user or
+            self.request.user.is_superuser
+        )
 
     def get_success_url(self):
         """

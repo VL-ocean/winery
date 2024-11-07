@@ -117,7 +117,9 @@ class Product(models.Model):
     country = models.ForeignKey(
         Country, null=True, blank=True, on_delete=models.SET_NULL
     )
-    brand = models.ForeignKey(Brand, null=True, blank=True, on_delete=models.SET_NULL)
+    brand = models.ForeignKey(
+        Brand, null=True, blank=True, on_delete=models.SET_NULL
+    )
     bottle_size = models.ForeignKey(
         BottleSize, null=True, blank=True, on_delete=models.SET_NULL
     )

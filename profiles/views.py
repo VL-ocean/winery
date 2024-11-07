@@ -25,7 +25,9 @@ def profile(request):
             form.save()
             messages.success(request, "Profile updated successfully")
         else:
-            messages.error(request, "Update failed. Please ensure the form is valid.")
+            messages.error(
+                request, "Update failed. Please ensure the form is valid."
+            )
     else:
         form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
@@ -69,10 +71,14 @@ def add_remove_wishlist_items(request, pk):
     if not created:
 
         wishlist_item.delete()
-        messages.success(request, f"{product.name} has been removed from your wishlist")
+        messages.success(
+            request, f"{product.name} has been removed from your wishlist"
+        )
     else:
 
-        messages.success(request, f"{product.name} has been added to your wishlist")
+        messages.success(
+            request, f"{product.name} has been added to your wishlist"
+        )
 
     return redirect(request.META.get("HTTP_REFERER", "home"))
 
@@ -92,7 +98,9 @@ class MyWishlistView(LoginRequiredMixin, SortingMixin, ListView):
         Get the user's wishlist items and apply sorting.
         """
         profile = get_object_or_404(UserProfile, id=self.kwargs["pk"])
-        queryset = Wishlist.objects.filter(user=profile.user).select_related("product")
+        queryset = Wishlist.objects.filter(
+            user=profile.user
+        ).select_related("product")
 
         queryset = self.apply_sorting(queryset)
         return queryset

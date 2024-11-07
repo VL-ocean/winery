@@ -2,7 +2,6 @@
 
 body {
     font-family: "Rubik", serif;
-    font-optical-sizing: auto;
     font-style: normal;
     box-sizing: border-box;
 
@@ -14,12 +13,10 @@ body {
 
 .menu-font {
     font-family: "Nunito", sans-serif;
-    font-optical-sizing: auto;
 }
 
 .subtitle-font {
     font-family: "Nunito", sans-serif;
-    font-optical-sizing: auto;
     font-style: oblique;
 }
 
@@ -140,7 +137,6 @@ body {
 
 .filter-form .form-label {
     font-family: "Nunito", sans-serif;
-    font-optical-sizing: auto;
     font-style: oblique;
     font-size: 1.5rem;
     text-transform: capitalize;
@@ -161,7 +157,6 @@ body {
     width: 100%;
     text-transform: uppercase;
     font-family: "Nunito", sans-serif;
-    font-optical-sizing: auto;
     font-style: oblique;
     padding: 0.5rem 1rem;
     font-size: 1.25rem;

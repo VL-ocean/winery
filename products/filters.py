@@ -1,7 +1,9 @@
 import django_filters
 from django.db.models import Q
 from django import forms
-from .models import Category, Variety, Vintage, Country, Brand, BottleSize, Product
+from .models import (
+    Category, Variety, Vintage, Country, Brand, BottleSize, Product
+)
 
 
 class ProductFilter(django_filters.FilterSet):
@@ -37,7 +39,9 @@ class ProductFilter(django_filters.FilterSet):
         widget=forms.CheckboxSelectMultiple,
     )
     brand = django_filters.ModelMultipleChoiceFilter(
-        queryset=Brand.objects.all(), label="Brand", widget=forms.CheckboxSelectMultiple
+        queryset=Brand.objects.all(),
+        label="Brand",
+        widget=forms.CheckboxSelectMultiple,
     )
     bottle_size = django_filters.ModelMultipleChoiceFilter(
         queryset=BottleSize.objects.all(),
@@ -76,7 +80,9 @@ class ProductFilter(django_filters.FilterSet):
         """
         queries = Q()
         if "up_to_20" in value:
-            queries |= Q(sale_price__lte=20) | Q(sale_price__isnull=True, price__lte=20)
+            queries |= Q(sale_price__lte=20) | Q(
+                sale_price__isnull=True, price__lte=20
+            )
         if "20_50" in value:
             queries |= Q(sale_price__gte=20, sale_price__lte=50) | Q(
                 sale_price__isnull=True, price__gte=20, price__lte=50

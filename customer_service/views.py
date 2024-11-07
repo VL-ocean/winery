@@ -13,4 +13,4 @@ def terms_n_conditions_view(request):
     """
     View to render the Terms of Service page.
     """
-    return render(request, "customer_service/terms-n-conditions.html")
+    return render(request, "customer_service/terms_n_conditions.html")

@@ -23,7 +23,9 @@ from .mixins import SortingMixin
 
 # Create your views here.
 class ProductListView(SortingMixin, ListView):
-    """A view to show all products, including sorting and filtering functionality"""
+    """
+    A view to show all products, including sorting and filtering functionality
+    """
 
     model = Product
     template_name = "products/products.html"
@@ -33,7 +35,9 @@ class ProductListView(SortingMixin, ListView):
     def get_queryset(self):
 
         queryset = super().get_queryset()
-        product_filter = ProductFilter(self.request.GET or None, queryset=queryset)
+        product_filter = ProductFilter(
+            self.request.GET or None, queryset=queryset
+        )
         queryset = product_filter.qs
 
         queryset = self.apply_sorting(queryset)
@@ -88,7 +92,9 @@ def product_detail(request, product_id):
                 review.user = request.user
                 review.product = product
                 review.save()
-                messages.success(request, "Your review has been submitted successfully")
+                messages.success(
+                    request, "Your review has been submitted successfully"
+                )
                 return redirect("product_detail", product_id=product_id)
         else:
             review_form = ReviewProductForm()
@@ -122,7 +128,9 @@ class ProductFilterView(SortingMixin, FilterView):
     def get_queryset(self):
         queryset = super().get_queryset()
 
-        self.filterset = self.filterset_class(self.request.GET, queryset=queryset)
+        self.filterset = self.filterset_class(
+            self.request.GET, queryset=queryset
+        )
         queryset = self.filterset.qs
 
         return self.apply_sorting(queryset)
@@ -198,7 +206,8 @@ def add_product(request):
             return redirect(reverse("product_detail", args=[product.id]))
         else:
             messages.error(
-                request, "Failed to add product. Please ensure the form is valid."
+                request,
+                "Failed to add product. Please ensure the form is valid."
             )
     else:
         form = ProductForm()
@@ -228,7 +237,8 @@ def edit_product(request, product_id):
             return redirect(reverse("product_detail", args=[product.id]))
         else:
             messages.error(
-                request, "Failed to update product. Please ensure the form is valid."
+                request,
+                "Failed to update product. Please ensure the form is valid."
             )
     else:
         form = ProductForm(instance=product)

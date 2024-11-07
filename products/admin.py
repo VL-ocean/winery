@@ -1,6 +1,8 @@
 from django.contrib import admin
 from django_summernote.admin import SummernoteModelAdmin
-from .models import Category, Variety, Vintage, Country, Brand, BottleSize, Product
+from .models import (
+    Category, Variety, Vintage, Country, Brand, BottleSize, Product
+)
 
 
 class ProductAdmin(SummernoteModelAdmin):

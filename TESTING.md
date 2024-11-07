@@ -189,52 +189,26 @@ The website was tested in the [Chrome Dev Tools](https://developer.chrome.com/do
 * Best Practices - checks whether the page is built on the modern standards of web development.
 * SEO - checks if the website is optimised for search engine result rankings.
 
-<details><summary><b>Desktop Test Results</b></summary>
+<details><summary><b>Test Results</b></summary>
 
 | **Page** | **Result** |
 | --- | --- |
-| Home | ![Result](./README-media/lighthouse-testing) |
-| Home | ![Result](./README-media/lighthouse-testing) |
-| Home | ![Result](./README-media/lighthouse-testing) |
-| Home | ![Result](./README-media/lighthouse-testing) |
-| Home | ![Result](./README-media/lighthouse-testing) |
-| Home | ![Result](./README-media/lighthouse-testing) |
-| Home | ![Result](./README-media/lighthouse-testing) |
-| Home | ![Result](./README-media/lighthouse-testing) |
-| Home | ![Result](./README-media/lighthouse-testing) |
-| Home | ![Result](./README-media/lighthouse-testing) |
-| Home | ![Result](./README-media/lighthouse-testing) |
-| Home | ![Result](./README-media/lighthouse-testing) |
-| Home | ![Result](./README-media/lighthouse-testing) |
-| Home | ![Result](./README-media/lighthouse-testing) |
-| Home | ![Result](./README-media/lighthouse-testing) |
-| Home | ![Result](./README-media/lighthouse-testing) |
-| Home | ![Result](./README-media/lighthouse-testing) |
-| Home | ![Result](./README-media/lighthouse-testing) |
+| Home | ![Result](./README-media/lighthouse-testing/lighthouse-home.png) |
+| Products | ![Result](./README-media/lighthouse-testing/lighthouse-products.png) |
+| Product detail | ![Result](./README-media/lighthouse-testing/lighthouse-product-detail.png) |
+| Promotions | ![Result](./README-media/lighthouse-testing/lighthouse-promotions.png) |
+| Sign in | ![Result](./README-media/lighthouse-testing/lighthouse-login.png) |
+| Sign up | ![Result](./README-media/lighthouse-testing/lighthouse-register.png) |
+| Shopping bag | ![Result](./README-media/lighthouse-testing/lighthouse-bag.png) |
+| Privacy Policy | ![Result](./README-media/lighthouse-testing/lighthouse-privacy-policy.png) |
+| Terms & Conditions | ![Result](./README-media/lighthouse-testing/lighthouse-terms.png) |
+| Checkout | ![Result](./README-media/lighthouse-testing/lighthouse-checkout.png) |
+| Checkout Success | ![Result](./README-media/lighthouse-testing/lighthouse-checkout-success.png) |
+| Profile | ![Result](./README-media/lighthouse-testing/lighthouse-profile.png) |
+| Wishlist | ![Result](./README-media/lighthouse-testing/lighthouse-wishlist.png) |
+| Logout | ![Result](./README-media/lighthouse-testing/lighthouse-logout.png) |
 
 </details>
-
-<details><summary><b>Mobile Test Results</b></summary>
-
-| **Page** | **Role** | **Result** |
-| --- | --- | --- |
-| Home | Visitor | ![Result](./) |
-| Home | Registered User | ![Result](./) |
-| Blog | Visitor | ![Result](./) |
-| Blog | Registered User | ![Result](./) |
-| Search results (Blog) | Visitor | ![Result](./) |
-| Search results (Blog) | Registered User | ![Result](./) |
-| Post Detail | Visitor | ![Result](./) |
-| Post Detail | Registered User | ![Result](./) |
-| Add Post | Registered User | ![Result](./) |
-| Edit Post | Registered User | ![Result](./) |
-| Delete Post | Registered User | ![Result](./) |
-| Register | Visitor | ![Result](./) |
-| Profile | Registered User | ![Result](./) |
-| Login | Visitor | ![Result](./) |
-| Logout | Registered User | ![Result](./) |
-
-</details><br/>
 
 
 ## Accessibility Testing

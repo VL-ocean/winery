@@ -1,17 +1,11 @@
-# WINESTORE [(*Live site*)](https://wine-store-a6f954e88a3f.herokuapp.com/)
+# WineStore [(*Live site*)](https://wine-store-a6f954e88a3f.herokuapp.com/)
 
-
-## Introduction 
-
-. 
-
-![start screen responsive](./README-media/)
+![start screen responsive](./README-media/responsive-main-home.png)
 
 
 ## Table of contents
 
-- [WINESTORE (*Live site*)](#winestore-live-site)
-  - [Introduction](#introduction)
+- [WineStore (*Live site*)](#winestore-live-site)
   - [Table of contents](#table-of-contents)
   - [Project Rationale](#project-rationale)
     - [Website Goals and Objectives](#website-goals-and-objectives)
@@ -47,19 +41,35 @@
     - [Database Security](#database-security)
   - [Features](#features)
     - [Header](#header)
+    - [Footer](#footer)
+    - [Customer information](#customer-information)
+    - [Landing Page](#landing-page)
+    - [User Account Pages](#user-account-pages)
+    - [Profile Page](#profile-page)
+    - [Wishlist](#wishlist)
+    - [All Products](#all-products)
+    - [Product Details](#product-details)
+    - [Reviews](#reviews)
+    - [Search Results](#search-results)
+    - [Promotions](#promotions)
+    - [Shopping Bag](#shopping-bag)
+    - [Checkout](#checkout)
+    - [Order Confirmation](#order-confirmation)
+    - [Product Management](#product-management)
+    - [Custom Error Pages](#custom-error-pages)
     - [Future Features](#future-features)
   - [Testing](#testing)
   - [Deployment](#deployment)
     - [AWS Cloud Service](#aws-cloud-service)
-      - [**1. Create and Configure an S3 Bucket**](#1-create-and-configure-an-s3-bucket)
-      - [**2. Configure IAM (Identity and Access Management):**](#2-configure-iam-identity-and-access-management)
-      - [**3. Final AWS Setup and Heroku Integration:**](#3-final-aws-setup-and-heroku-integration)
+      - [1. Create and Configure an S3 Bucket](#1-create-and-configure-an-s3-bucket)
+      - [2. Configure IAM (Identity and Access Management):](#2-configure-iam-identity-and-access-management)
+      - [3. Final AWS Setup and Heroku Integration:](#3-final-aws-setup-and-heroku-integration)
     - [Stripe](#stripe)
-      - [**Steps for Stripe Integration:**](#steps-for-stripe-integration)
-      - [**Testing Stripe Payments:**](#testing-stripe-payments)
+      - [Steps for Stripe Integration:](#steps-for-stripe-integration)
+      - [Testing Stripe Payments:](#testing-stripe-payments)
     - [GMAIL](#gmail)
-      - [**Steps for Gmail Integration:**](#steps-for-gmail-integration)
-      - [**Security and Compliance:**](#security-and-compliance)
+      - [Steps for Gmail Integration:](#steps-for-gmail-integration)
+      - [Security and Compliance:](#security-and-compliance)
     - [Deployment Process with Heroku](#deployment-process-with-heroku)
     - [To fork the project](#to-fork-the-project)
     - [To clone the project](#to-clone-the-project)
@@ -509,22 +519,223 @@ The website is responsive to different layouts depending on the size of the view
 
 ### Header
 
-*Visitor view*
+The header includes slogan, logo, navigation menu, shopping bag icon and search form. For mobile it has toggle button and home link additionally. The shopping bag icon moved closer to the toggle button.
+The Shop Wine dropdown includes 4 category links and All Wine link.
+The My Account dropdown includes Register and Login links for Visitors. For Users it offers My Profile and Wishlist links along with Logout link. The superuser has access to Product Management link.
+The Shopping bag icon has a badge that displays total count of products in the cart.
 
-![Visitor view](./README-media/)
+<details><summary><b>Header - Desktop View</b></summary>
 
-*User View*
+![screenshot](./README-media/features/header-wide.png)</details>
 
-![User view](./README-media/)
+<details><summary><b>Header - Mobile View</b></summary>
 
-The header 
+![screenshot](./README-media/features/headder-mobile.png)</details><br/>
 
+
+### Footer
+
+The footer includes several sections: Contact Us, Our Location, Helpful Links, Subscription. The information for contact and location is easily visible and readable.
+The social links have a nice yellow hover effect, same as helpful links.
+The subscription form is easy to complete. The message emphasises the importance of taking advantage of this opportunity. 
+
+<details><summary><b>Footer - Desktop View</b></summary>
+
+![screenshot](./README-media/features/footer.png)</details>
+
+<details><summary><b>Footer - Tablet View</b></summary>
+
+![screenshot](./README-media/features/footer-tablet.png)</details><br/>
+
+
+### Customer information
+
+The links in the footer for "Privacy Policy," and "Terms & Conditions" provide users with important information regarding the website's policies. The Privacy Policy details how user data is collected, stored, and used, ensuring transparency about data protection. The Terms & Conditions page contains the legal agreement between the user and the site, setting out the rules and guidelines for using the website. These pages ensure a clear understanding of the site's operations and user rights.
+
+<details><summary><b>Privacy Policy</b></summary>
+
+![screenshot](./README-media/features/privacy-policy.png)</details>
+
+<details><summary><b>Terms & Conditions</b></summary>
+
+![screenshot](./README-media/features/terms.png)</details><br/>
+
+
+### Landing Page
+
+The main section of the WineStore homepage features a welcoming message and a call to explore the shop's incredible collection. It includes a four reasons section, explaining why it is best to shop here. The page highlights Best Sellers category, products with discounts.
+
+<details><summary><b>Welcome section</b></summary>
+
+![screenshot](./README-media/features/hero-part.png)</details>
+
+<details><summary><b>Best Sellers section</b></summary>
+
+![screenshot](./README-media/features/best-sellers.png)</details>
+
+<details><summary><b>Four Reasons section</b></summary>
+
+![screenshot](./README-media/features/four-reasons.png)</details><br/>
+
+
+### User Account Pages
+
+The user account pages ensure a smooth and secure process for managing user access, enhancing the overall user experience.
+
+The Sign Up page features a clean and intuitive form where users can create an account. The form uses a responsive design, ensuring accessibility and ease of use across devices. By prioritizing user-friendly design, the Sign Up page helps facilitate quick and easy registration, encouraging new users to join the community and start their journey.
+
+<details><summary><b>Sign Up</b></summary>
+
+![screenshot](./README-media/features/signup.png)</details>
+
+The Sign In page offers a straightforward and secure way for existing users to access their accounts. The page includes fields for the username and password, with clear labels and a prominent login button. The page maintains consistency with the site's overall aesthetic, ensuring a cohesive user experience.
+
+<details><summary><b>Sign In</b></summary>
+
+![screenshot](./README-media/features/login.png)</details>
+
+The Logout page provides users with confirmation of a successful logout from their account. It features a brief message indicating that the user has been logged out. The design is minimalistic, reinforcing the action taken and providing a clear path to continue exploring the site or logging in again.
+
+<details><summary><b>Logout</b></summary>
+
+![screenshot](./README-media/features/logout.png)</details><br/>
+
+
+### Profile Page
+
+The page provides user profile section for logged in user, displaying shipping information form and order history. Users can update their shipping information or visit orders confirmation. The layout is clean, with an intuitive design that makes it easy for users to manage their profiles.
+The order history functionality allows users to view a list of their previous orders, displaying key details. The detailed view includes the items purchased, quantities, prices, delivery address, order total, delivery cost, and grand total.
+
+<details><summary><b>Profile</b></summary>
+
+![screenshot](./README-media/features/profile.png)</details><br/>
+
+
+### Wishlist
+
+The Wishlist page allows users to view their saved products. It includes a "Sort By" dropdown that lets users organize items by name or price. Each product is displayed in a grid format, showing essential details like an image, name, price. There are pagination controls for navigating through multiple pages of wishlist items. 
+
+<details><summary><b>Wishlist</b></summary>
+
+![screenshot](./README-media/features/wishlist.png)</details><br/>
+
+
+### All Products
+
+All Products includes a filter for searching wines by category, variety, price range etc. Users can sort the products by name or price. Each product is presented in a grid format with images, description and pricing details. There are pagination controls to navigate through multiple pages.
+
+<details><summary><b>All Products</b></summary>
+
+![screenshot](./README-media/features/all-products.png)</details><br/>
+
+
+### Product Details
+
+The product details page provides users with comprehensive information about a specific product, including its title, category, vintage, tasting notes and a detailed description. The page features an image of the bottle, along with options to add it to the shopping cart or wishlist. Users can adjust the quantity of the item before adding it to their cart and view ratings and reviews if available.
+
+<details><summary><b>Product Details</b></summary>
+
+![screenshot](./README-media/features/product-detail.png)</details><br/>
+
+
+### Reviews
+
+The reviews section of the product details page allows users to view and submit feedback on the product. Only superusers and buyers can review the product. It displays a form for submitting a review, where users can select a star rating from 1 to 5 and provide written feedback. Once submitted, these reviews are displayed below, giving potential buyers insights into the product based on other customers' experiences. If there are no reviews, a message indicates that there are "no reviews yet." The section is designed to encourage customer engagement and provide valuable information for future buyers. The average review star rating is displayed.
+
+<details><summary><b>Reviews</b></summary>
+
+![screenshot](./README-media/features/reviews.png)</details><br/>
+
+
+### Search Results
+
+The search results page displays results of the search when submitted the search form. The results are displayed in a grid format, featuring each product's image, name, price, and other information. This layout is designed to provide a clear and organized browsing experience.
+
+
+### Promotions
+
+This page offers users currently discounted products, which can be sorted by name or price.
+
+<details><summary><b>Promotions</b></summary>
+
+![screenshot](./README-media/features/promotions.png)</details><br/>
+
+
+### Shopping Bag
+
+The shopping bag page provides a clear overview of the items a customer has added. It displays each product's image, some description, unit price, quantity (with adjustable options), and total price. Customers can easily update quantities or remove items from the cart. There's also order summary showing the total item cost, shipping fees, and the final amount to be paid. Customers are reminded of free shipping for orders over € 70. There’s also a button to proceed to checkout or keep shopping.
+
+<details><summary><b>Shopping Bag</b></summary>
+
+![screenshot](./README-media/features/shopping-bag.png)</details><br/>
+
+
+### Checkout
+
+It allows customers to review their order total, delivery fee, and grand total. The page offers users to input their delivery information and securely enter their payment details through Stripe, a payment processing service. Customers can save their delivery information for future purchases in their account or follow the link to sign up. The page integrates with various tools to ensure a smooth checkout experience, and it is designed using Bootstrap for responsive layout and styling.
+
+<details><summary><b>Checkout</b></summary>
+
+![screenshot](./README-media/features/checkout.png)</details><br/>
+
+
+### Order Confirmation
+
+Order confirmation page thanks the customer and provides a detailed summary of their order. It includes the order number, date, item details of the products purchased, and delivery address. The page also shows the order total, delivery costs, and the grand total. Lastly, it offers the customer a button to continue shopping and check out the latest offers, ensuring a smooth post-purchase experience.
+
+<details><summary><b>Order Confirmation</b></summary>
+
+![screenshot](./README-media/features/order-confirmation.png)</details><br/>
+
+
+### Product Management
+
+Superusers can use an option for managing the products on the website. It provides quick access to add a product, edit an existing product or delete it.
+
+<details><summary><b>Add a product</b></summary>
+
+![screenshot](./README-media/features/add-product.png)</details>
+
+<details><summary><b>Edit a product</b></summary>
+
+![screenshot](./README-media/features/edit-product.png)</details>
+
+
+<details><summary><b>Remove a product</b></summary>
+
+![screenshot](./README-media/features/delete-product.png)</details><br/>
+
+
+### Custom Error Pages
+
+- 400 Bad Request - WineStore cannot handle this request.
+- 403 Page Forbidden - You don't have permission to access this page.
+- 404 Page Not Found - The page you're looking for doesn't exist.
+- 500 Server Error - The server encountered an error and cannot complete your request at this time.
+
+<details><summary><b>404 Page Not Found</b></summary>
+
+![screenshot](./README-media/features/404-error.png)</details>
+
+<details><summary><b>500 Server Error</b></summary>
+
+![screenshot](./README-media/features/500-error.png)</details><br/>
 
 
 ### Future Features
 
-- 
-
+- Coupons
+- Shipping policy
+- FAQ page
+- Ability to add the product to card from all product pages
+- Filter and sort options for all product pages
+- User email verification
+- About us page
+- Contact form
+- Ability to add product to wishlist on all product pages, remove products from wishlist on Wishlist page
+- Blog page with posts, likes and comments
+- Loyalty Programm
+- Wine gift sets and gift vouchers
 
 
 [Back to top](#table-of-contents)
@@ -547,7 +758,7 @@ Teacup Tales uses Amazon Web Services (AWS) to store static and media files secu
 
 **To integrate AWS, follow steps:**
 
-#### **1. Create and Configure an S3 Bucket**
+#### 1. Create and Configure an S3 Bucket
 
 1.  **Access AWS:**
     
@@ -616,7 +827,7 @@ Teacup Tales uses Amazon Web Services (AWS) to store static and media files secu
     -   In the "Access Control List" (ACL) section, click "Edit" and enable "List" for Everyone (public access). Accept the warning prompt.
     -   If the edit option is disabled, ensure the "Object Ownership" settings have ACLs enabled.
 
-#### **2. Configure IAM (Identity and Access Management):**
+#### 2. Configure IAM (Identity and Access Management):
 
 1.  **Create a User Group:**
     
@@ -656,7 +867,7 @@ Teacup Tales uses Amazon Web Services (AWS) to store static and media files secu
     -   Select "Programmatic Access" and add the user to your group.
     -   Download the CSV file containing the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.
 
-#### **3. Final AWS Setup and Heroku Integration:**
+#### 3. Final AWS Setup and Heroku Integration:
 
 1.  **Update Heroku Configurations:**
     
@@ -679,7 +890,7 @@ These steps integrate AWS S3 with your Heroku-hosted application, enabling effic
 
 Teacup Tales utilizes Stripe as its primary payment gateway to securely process e-commerce transactions. Stripe provides a reliable and scalable solution for handling payments, ensuring a seamless checkout experience for our customers.
 
-#### **Steps for Stripe Integration:**
+#### Steps for Stripe Integration:
 
 1.  **Create a Stripe Account:**
     
@@ -703,7 +914,7 @@ Teacup Tales utilizes Stripe as its primary payment gateway to securely process 
     -   This will generate a new key:
         -   **STRIPE_WH_SECRET**: Your Webhook Signing Secret (starts with `wh`).
 
-#### **Testing Stripe Payments:**
+#### Testing Stripe Payments:
 
 1.  **Test Mode:**
     
@@ -727,7 +938,7 @@ By integrating Stripe with Teacup Tales, we provide a secure and user-friendly p
 
 Teacup Tales uses Gmail to manage email communications with users, including account verifications and purchase order confirmations. Integrating Gmail ensures reliable and secure delivery of transactional emails to enhance the customer experience.
 
-#### **Steps for Gmail Integration:**
+#### Steps for Gmail Integration:
 
 1.  **Create and Access Gmail Account:**
     
@@ -749,7 +960,7 @@ Teacup Tales uses Gmail to manage email communications with users, including acc
         -   **EMAIL_HOST_USER**: Your Gmail address (e.g., `your-email@gmail.com`)
         -   **EMAIL_HOST_PASSWORD**: The 16-character app password generated from Gmail.
 
-#### **Security and Compliance:**
+#### Security and Compliance:
 
 -   Ensure that your Gmail credentials, especially the app password, are stored securely and not hard-coded in your source code. Consider using environment variables or a secure secrets manager for this purpose.
 

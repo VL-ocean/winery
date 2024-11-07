@@ -1,6 +1,6 @@
 # Testing
 
-![Main Image](./README-media/)
+![Main Image](./README-media/responsive-main-home.png)
 
 # Contents
 
@@ -473,8 +473,8 @@ Extensive manual testing was performed on the application. Each feature was veri
 
 | **Test Case** | **Element** | **Action** | **Expected Outcome** | **Result** |
 | --- | --- | --- | --- | :---: |
-| Verify Hero Title Display | Hero Title <h1> | Check if title is displayed correctly | Title is displayed on the page | ✅ |
-| Verify Hero Subtitle Display | Hero Subtitle <h2> | Check if subtitle is displayed | Subtitle is visible | ✅ |
+| Verify Hero Title Display | Hero Title h1 | Check if title is displayed correctly | Title is displayed on the page | ✅ |
+| Verify Hero Subtitle Display | Hero Subtitle h2 | Check if subtitle is displayed | Subtitle is visible | ✅ |
 | Verify Shop Now Navigation | Shop Now button | Click on the Shop Now button | Navigates to the All Products page | ✅ |
 | Hero Image Display | Hero Image| Check if hero image loads | Hero image is displayed correctly on the page | ✅ |
 | Best Sellers Section Display | Best Sellers Wines | Check if products are displayed | Products are shown under 'Best Sellers' section and discount icon is present | ✅ |
@@ -528,49 +528,64 @@ The user role based restrictions were tested to ensure that view and functionali
 
 | **User Story** | **Notes** | **Acceptance Criteria Complete** |
 | --- | --- | :---: |
-| [Agile Methodology](https://github.com/VL-ocean/coffee-choco-prj/issues/36) | Documented in README.md, section [Agile Development Tool](https://github.com/VL-ocean/coffee-choco-prj#agile-development-tool) | ✅ |
-| [Design Database Schema](https://github.com/VL-ocean/coffee-choco-prj/issues/37) | Documented in README.md, section [Structure & Logical Flow](https://github.com/VL-ocean/coffee-choco-prj#structure--logical-flow) | ✅ |
-| [Design](https://github.com/VL-ocean/coffee-choco-prj/issues/39) | Documented in README.md, section [UX Design](https://github.com/VL-ocean/coffee-choco-prj?tab=readme-ov-file#ux-design) | ✅ |
-| [Create wireframes](https://github.com/VL-ocean/coffee-choco-prj/issues/38) | Documented in README.md, section [Wireframe](https://github.com/VL-ocean/coffee-choco-prj#wireframe) | ✅ |
-| [Create Django Project](https://github.com/VL-ocean/coffee-choco-prj/issues/40) | Git commit [025e597](https://github.com/VL-ocean/coffee-choco-prj/commit/025e597f5c0c674f28bffdce01c5cb0efd4968bf) | ✅ |
-| [Initial Deployment to Heroku](https://github.com/VL-ocean/coffee-choco-prj/issues/41) | Git commit [d3c49de](https://github.com/VL-ocean/coffee-choco-prj/commit/d3c49de5da7d0fbaa31e5acf6b05414f54618266) | ✅ |
-| [Performance Optimization](https://github.com/VL-ocean/coffee-choco-prj/issues/42) | Completed during development | ✅ |
-| [Code Validation](https://github.com/VL-ocean/coffee-choco-prj/issues/43) | Documented in TESTING.md, section [Code Validation](https://github.com/VL-ocean/coffee-choco-prj/blob/main/TESTING.md#code-validation) | ✅ |
-| [Performance and Accessibility Testing](https://github.com/VL-ocean/coffee-choco-prj/issues/44) | Documented in TESTING.md, section [Lighthouse Testing](https://github.com/VL-ocean/coffee-choco-prj/blob/main/TESTING.md#lighthouse-testing) and [Accessibility Testing](https://github.com/VL-ocean/coffee-choco-prj/blob/main/TESTING.md#accessibility-testing) | ✅ |
-| [User Story Testing](https://github.com/VL-ocean/coffee-choco-prj/issues/46) | Documented in TESTING.md, section [User Story Testing](https://github.com/VL-ocean/coffee-choco-prj/blob/main/TESTING.md#user-story-testing) | ✅ |
-| [Final Heroku Deployment](https://github.com/VL-ocean/coffee-choco-prj/issues/45) | Git commit [cd8ce2d](https://github.com/VL-ocean/coffee-choco-prj/commit/cd8ce2d9e1ad450c403b08fe72aa31dddc263fcb) | ✅ |
-| [Comprehensive Project Documentation](https://github.com/VL-ocean/coffee-choco-prj/issues/47) | Comprehensive [README.md](https://github.com/VL-ocean/coffee-choco-prj/blob/main/README.md) and [TESTING.md](https://github.com/VL-ocean/coffee-choco-prj/blob/main/TESTING.md) | ✅ |
+| [USER STORY: Agile Methodology](https://github.com/VL-ocean/winery/issues/1) | Documented in README.md | ✅ |
+| [USER STORY: Design Database Schema](https://github.com/VL-ocean/winery/issues/2) | Database design documented in README.md | ✅ |
+| [USER STORY: Design Website Visuals](https://github.com/VL-ocean/winery/issues/3) | Design process documented in README.md | ✅ |
+| [USER STORY: Create Wireframes](https://github.com/VL-ocean/winery/issues/4) | Wireframes documented in README.md | ✅ |
+| [USER STORY: Create Django Project](https://github.com/VL-ocean/winery/issues/5) | Git Commit [bab6420](https://github.com/VL-ocean/winery/commit/bab64203e39896f496a71e9c28d5130cb8e4845c) | ✅ |
+| [USER STORY: Visual Consistency](https://github.com/VL-ocean/winery/issues/29) | Summary documented in README.md | ✅ |
+| [USER STORY: Accessibility Enhancement](https://github.com/VL-ocean/winery/issues/30) | Test results documented in TESTING.md | ✅ |
+| [USER STORY: Performance Optimization](https://github.com/VL-ocean/winery/issues/31) | Results documented in TESTING.md | ✅ |
+| [USER STORY: Facebook Marketing](https://github.com/VL-ocean/winery/issues/33) | Results documented in TESTING.md | ✅ |
+| [USER STORY: SEO](https://github.com/VL-ocean/winery/issues/34) | Results documented in TESTING.md | ✅ |
+| [USER STORY: Code Validation](https://github.com/VL-ocean/winery/issues/37) | Results documented in TESTING.md | ✅ |
+| [USER STORY: Performance and Accessibility Testing](https://github.com/VL-ocean/winery/issues/38) | Results documented in TESTING.md | ✅ |
+| [USER STORY: User Story Testing](https://github.com/VL-ocean/winery/issues/39) | Results documented in TESTING.md | ✅ |
+| [USER STORY: Heroku Deployment](https://github.com/VL-ocean/winery/issues/40) | Git Commit [a14ba35](https://github.com/VL-ocean/winery/commit/a14ba3564989a181cd257b03efd65172928b720f#diff-cba54f701a90997acc9d40d073c290f580fe8994c14ee905bc7188dddcd4652e) | ✅ |
+| [USER STORY: Comprehensive Project Documentation](https://github.com/VL-ocean/winery/issues/41) | Comprehensive README.md and TESTING.md | ✅ |
 
 - ### **Visitor User Stories**
 
 | **User Story** | **Notes** | **Acceptance Criteria Complete** |
 | --- | --- | :---: |
-| [View Home page](https://github.com/VL-ocean/coffee-choco-prj/issues/1) | Git commit [283d410](https://github.com/VL-ocean/coffee-choco-prj/commit/283d4103d359362307b1a1c310f19e0268f18181) | ✅ |
-| [Sign Up feature](https://github.com/VL-ocean/coffee-choco-prj/issues/5) | Git commit [5272dbe](https://github.com/VL-ocean/coffee-choco-prj/commit/5272dbeddb9389abcb43899e51b0861f7e14255e) | ✅ |
-| [View blog posts (paginated)](https://github.com/VL-ocean/coffee-choco-prj/issues/3) | Git commit [0968a62](https://github.com/VL-ocean/coffee-choco-prj/commit/0968a62296f5ca45efcf085c72f8c988e999ea10) | ✅ |
-| [View latest posts on home page](https://github.com/VL-ocean/coffee-choco-prj/issues/2) | Git commit [283d410](https://github.com/VL-ocean/coffee-choco-prj/commit/283d4103d359362307b1a1c310f19e0268f18181) | ✅ |
+| [USER STORY: User Registration](https://github.com/VL-ocean/winery/issues/7) | <details><summary>Screenshot</summary>![screenshot](./README-media/user-story-testing/story-testing-register.png)</details> | ✅ |
+| [Implement Navigation Experience](https://github.com/VL-ocean/winery/issues/28) | Summary documented in README.md | ✅ |
+| [USER STORY: Newsletter Subscription](https://github.com/VL-ocean/winery/issues/35) | <details><summary>Screenshot</summary>![screenshot](./README-media/user-story-testing/story-testing-subscription.png)</details> | ✅ |
 
 - ### **Registered user User Stories**
 
 | **User Story** | **Notes** | **Acceptance Criteria Complete** |
 | --- | --- | :---: |
-| [Login and Logout Features](https://github.com/VL-ocean/coffee-choco-prj/issues/6) | Git commit [5272dbe](https://github.com/VL-ocean/coffee-choco-prj/commit/5272dbeddb9389abcb43899e51b0861f7e14255e) | ✅ |
-| [View blog posts (paginated)](https://github.com/VL-ocean/coffee-choco-prj/issues/3) | Git commit [0968a62](https://github.com/VL-ocean/coffee-choco-prj/commit/0968a62296f5ca45efcf085c72f8c988e999ea10) | ✅ |
-| [View latest posts on home page](https://github.com/VL-ocean/coffee-choco-prj/issues/2) | Git commit [283d410](https://github.com/VL-ocean/coffee-choco-prj/commit/283d4103d359362307b1a1c310f19e0268f18181) | ✅ |
-| [Create a recipe/article](https://github.com/VL-ocean/coffee-choco-prj/issues/18) | Git commit [faa091b](https://github.com/VL-ocean/coffee-choco-prj/commit/faa091b1cdf105a2dbea2d74e7db7e201726cce1) | ✅ |
-| [Update my recipe/article](https://github.com/VL-ocean/coffee-choco-prj/issues/19) | Git commit [eec45ea](https://github.com/VL-ocean/coffee-choco-prj/commit/eec45ea97054f227eef7c73d900487492a6f6420) | ✅ |
-| [Delete my recipe/article](https://github.com/VL-ocean/coffee-choco-prj/issues/21) | Git commit [4219837](https://github.com/VL-ocean/coffee-choco-prj/commit/4219837db4e89511934a618815f566b5b2d15997) | ✅ |
-| [View my posts in my profile](https://github.com/VL-ocean/coffee-choco-prj/issues/28) | Git commit [8bbee41](https://github.com/VL-ocean/coffee-choco-prj/commit/8bbee4118cfa7cbf22a9a78a3c6b1ea96ed5ccaf#diff-48fde33dc780b3ac8ed737a0b65e3257ff526510e7ec5a7755ac04208bccb6d5) | ✅ |
-| [Fill out / Update profile info](https://github.com/VL-ocean/coffee-choco-prj/issues/25) | Git commit [922402d](https://github.com/VL-ocean/coffee-choco-prj/commit/922402df8a94e93e90e58f81cd49d624c04734d6#diff-24d82cf2552dbb8559c90d6d4f0481d348c26a9ab90ef850c18af2b87e5098b1) | ✅ |
-| [Add comment](https://github.com/VL-ocean/coffee-choco-prj/issues/13) | Git commit [b1ee1c4](https://github.com/VL-ocean/coffee-choco-prj/commit/b1ee1c465c8d06e298b16ae8687be6e243909b22) | ✅ |
-| [Delete comment](https://github.com/VL-ocean/coffee-choco-prj/issues/16) | Git commit [7e06c84](https://github.com/VL-ocean/coffee-choco-prj/commit/7e06c843217010bb177b9cba97b415d825a5d62f) | ✅ |
+| [USER STORY: User Login and Logout Features](https://github.com/VL-ocean/winery/issues/8) | <details><summary>Screenshot</summary>![screenshot](./README-media/user-story-testing/story-testing-login.png)</details> | ✅ |
+| [USER STORY: Profile Management](https://github.com/VL-ocean/winery/issues/10) | <details><summary>Screenshot</summary>![screenshot](./README-media/user-story-testing/story-testing-profile.png)</details> | ✅ |
+
+- ### **Customer User Stories**
+
+| **User Story** | **Notes** | **Acceptance Criteria Complete** |
+| --- | --- | :---: |
+| [USER STORY: Simplify Product Selection](https://github.com/VL-ocean/winery/issues/17) | <details><summary>Screenshot</summary>![screenshot](./README-media/user-story-testing/story-testing-filter.png)</details> | ✅ |
+| [USER STORY: Streamline Adding Products to Cart](https://github.com/VL-ocean/winery/issues/18) | <details><summary>Screenshot</summary>![screenshot](./README-media/user-story-testing/story-testing-click-to-shop.png)</details> | ✅ |
+| [USER STORY: Secure and Efficient Checkout](https://github.com/VL-ocean/winery/issues/19) | <details><summary>Screenshot</summary>![screenshot](./README-media/user-story-testing/story-testing-checkout.png)</details> | ✅ |
+
+- ### **Registered Customer User Stories**
+
+| **User Story** | **Notes** | **Acceptance Criteria Complete** |
+| --- | --- | :---: |
+| [USER STORY: Integrate User Account Features into the Checkout Process](https://github.com/VL-ocean/winery/issues/20) | <details><summary>Screenshot</summary>![screenshot](./README-media/user-story-testing/story-testing-user-account.png)</details> | ✅ |
+| [USER STORY: Product rating](https://github.com/VL-ocean/winery/issues/23) | <details><summary>Screenshot</summary>![screenshot](./README-media/user-story-testing/story-testing-review-rating.png)</details> | ✅ |
+| [USER STORY: Wishlist](https://github.com/VL-ocean/winery/issues/24) | <details><summary>Screenshot</summary>![screenshot](./README-media/user-story-testing/story-testing-add-to-wishlist.png)</details> | ✅ |
+| [USER STORY: Add a Review](https://github.com/VL-ocean/winery/issues/25) | <details><summary>Screenshot</summary>![screenshot](./README-media/user-story-testing/story-testing-add-review.png)</details> | ✅ |
+| [USER STORY: Manage Reviews](https://github.com/VL-ocean/winery/issues/26) | <details><summary>Screenshot</summary>![screenshot](./README-media/user-story-testing/story-testing-edit-delete-review.png)</details> | ✅ |
+
 
 - ### **Site Admin User Stories**
 
 | **User Story** | **Notes** | **Acceptance Criteria Complete** |
 | --- | --- | :---: |
-| [Manage posts in admin panel](https://github.com/VL-ocean/coffee-choco-prj/issues/31) | Git commit [2b69960](https://github.com/VL-ocean/coffee-choco-prj/commit/2b699600c51aeddf0b4fdf571a913c554d3aa75d) | ✅ |
-| [Admin can delete user and their profile](https://github.com/VL-ocean/coffee-choco-prj/issues/34) | Git commit [922402d](https://github.com/VL-ocean/coffee-choco-prj/commit/922402df8a94e93e90e58f81cd49d624c04734d6#diff-a58172ae21173b7558fc0c745dd69b2abf2c2359635dbd32f6aecb74e6c6874c) | ✅ |
+| [USER STORY: Add Products to the Store](https://github.com/VL-ocean/winery/issues/12) | <details><summary>Screenshot</summary>![screenshot](./README-media/user-story-testing/story-testing-add-product.png)</details> | ✅ |
+| [USER STORY: Update Product Details in the Store](https://github.com/VL-ocean/winery/issues/13) | <details><summary>Screenshot</summary>![screenshot](./README-media/user-story-testing/story-testing-edit-product.png)</details> | ✅ |
+| [USER STORY: Delete Products from the Store](https://github.com/VL-ocean/winery/issues/14) | <details><summary>Screenshot</summary>![screenshot](./README-media/user-story-testing/story-testing-delete-product.png)</details> | ✅ |
+| [USER STORY: Administration Content CRUD](https://github.com/VL-ocean/winery/issues/15) | Admin Panel | ✅ |
 
 
 [Back to top](#contents)
@@ -578,14 +593,14 @@ The user role based restrictions were tested to ensure that view and functionali
 
 ## Bugs
 
-| **Description** | **Solution** | **Status** | **Notes** |
-| --- | --- | :---: | --- |
-| 'Profile' navigation item does not become active when the Profile page is opened | In header.html use 'request.resolver_match.url_name' to compare the opened url with the url name in [profiles/urls.py]. Once it matches, the active class is applied to the navigation item | ✅ | Resolved with git commit beb22da |
-| When searching a word that is not found in any blog posts, the posts.html renders the title 'Newst Posts' with no posts in it. It does not indicate that the match was not found | In posts.html added if statement to check whether 'posts' variable has anything inside. If it is empty, then the message 'No matching results' is displayed to the user | ✅ | Resolved with git commit beb22da |
-| 'Add Comment' Form can be submitted empty | In post_detail.html add 'required' attribute to the textarea of the comment body. So that the form cannot be submitted empty on the frontend | ✅ | Resolved with git commit ff9ee1b |
-| Console error displayed by CKE Editor. Due to it being no longer supported by the developers |The solution is to buy and use their secured and supported 5-th version of the Editor. Or replace it with another free editor | ❌ | Due to resolve in future fixes |
-| Modal popup displayed by CKE Editor in the forms where the widget was used. Due to it being no longer supported by the developers | The solution is to buy and use their secured and supported 5-th version of the Editor. Or replace it with another free editor | ✅ | Temporary fix by setting display to none using custom JavaScript |
-| The if statement for `updated` date in post_detail.html does not work as intended. It is supposed to be displayed only if the post has been updated after creation. However it is displayed despite the statement. The post approvement is currently considered as update too, which should not be the case | The solution is to redo the logic. Perhaps move the `approved` status to a separate database table | ❌ | Due to resolve in future fixes |
+| **Description** | **Status** | **Notes** |
+| --- | :---: | --- |
+| Console error from MailChimp: "mc-validate.js:195 Uncaught TypeError: Cannot read properties of undefined (reading 'replace'), at Object.getAjaxSubmitUrl (mc-validate.js:195:14), at mc-validate.js:351:11, at mc-validate.js:373:2" | ❌ | Due to resolve in future fixes |
+| Console error due to Sort form "Uncaught TypeError: Cannot read properties of null (reading 'addEventListener'), at (index):532:46". The javascript function for sort form should be moved into a separate file and connected to the template when the sort form is used | ❌ | Due to resolve in future fixes |
+| Checkbox labels in Filter form are displaying model names instead of their friendly names | ❌ | Due to resolve in future fixes |
+| Filter form and Sort form are not available on all pages with products | ❌ | Due to resolve in future fixes |
+| Search form performs search only on Product model, the foreing models are not available yet. Need to update search form criteria | ❌ | Due to resolve in future fixes |
+| No phone number validation on forms | ❌ | Due to resolve in future fixes |
 
 
 [Back to top](#contents)

@@ -34,9 +34,16 @@
                         </div>
                         <div class="col-12 col-sm-6 mb-2">
                             {% include "bag/product-info.html" %}
-                            <p class="m-1 fs-5 mt-3">Price: € {{ item.product.price }}</p>
+                            <p class="m-1 fs-5 mt-3">Price: 
+                                {% if item.product.sale_price %}
+                                    <span class="text-danger">€ {{ item.product.sale_price }} </span>
+                                    <small class="text-muted"><s>€ {{ item.product.price }}</s></small>
+                                {% else %}
+                                    € {{ item.product.price }}
+                                {% endif %}
+                            </p>
                             <p class="m-1 fs-5"><strong>Subtotal: </strong>
-                                € {{ item.product.price | calc_subtotal:item.quantity }}</p>
+                                € {{ item.product | calc_subtotal:item.quantity }}</p>
                         </div>
                         <div class="col-12 col-sm-6 mb-2">
                             {% include "bag/quantity-form.html" %}
@@ -71,13 +78,21 @@
                             {% include "bag/product-info.html" %}
                         </td>
                         <td class="py-3">
-                            <p class="my-0">€ {{ item.product.price }}</p>
+                            <p class="my-0">
+                                {% if item.product.sale_price %}
+                                    <span class="text-danger">€ {{ item.product.sale_price }}</span>
+                                    <br>
+                                    <small class="text-muted"><s>€ {{ item.product.price }}</s></small>
+                                {% else %}
+                                    € {{ item.product.price }}
+                                {% endif %}
+                            </p>
                         </td>
                         <td class="py-3 w-25">
                             {% include "bag/quantity-form.html" %}
                         </td>
                         <td class="py-3">
-                            <p class="my-0">€ {{ item.product.price | calc_subtotal:item.quantity }}</p>
+                            <p class="my-0">€ {{ item.product | calc_subtotal:item.quantity }}</p>
                         </td>
                         <td class="py-3">
                             <a class="btn link-danger remove-item" id="remove_{{ item.item_id }}"

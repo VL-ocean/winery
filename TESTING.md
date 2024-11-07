@@ -74,15 +74,8 @@ Notes:
 
 | **File name** | **Pass** | **Notes** | **Result** |
 | --- | :---: | --- | --- |
-| **Blog App** |  |  |  |
-| add_post.html | ✅ | No errors or warnings to show | ![add_post](./README-images/add-post.png) |
-| comment_confirm_delete.html | ✅ | No errors or warnings to show | ![comment_confirm_delete](./README-images/comment-confirm-delete.png) |
-| edit_post.html | ✅ | No errors or warnings to show | ![edit_post](./README-images/edit-post.png) |
-| post_confirm_delete.html | ✅ | No errors or warnings to show | ![post_confirm_delete](./README-images/post-confirm-delete.png) |
-| post_detail.html ("Types of Coffee Drinks") | ✅ | No errors or warnings to show | ![post_detail](./README-images/post-detail.png) |
-| post_detail.html ("Creamy Caramel Chocolate Mini Cakes") | ✅ | No errors or warnings to show. Except "Info: Trailing slash on void elements has no effect and interacts badly with unquoted attribute values". The widget renders post content using \<br/> | ![post_detail_info](./README-images/post-detail-info.png) |
-| posts.html | ✅ | No errors or warnings to show | ![posts](./README-images/posts.png) |
-| posts.html | ✅ | No errors or warnings to show | ![posts](./README-images/posts.png) |
+| **Bag App** |  |  |  |
+| bag.html | ✅ | No errors or warnings to show | ![add_post](./README-images/add-post.png) |
 | **Home App** |  |  |  |
 | index.html | ✅ | No errors or warnings to show | ![index](./README-images/index.png) |
 | **Profiles App** |  |  |  |

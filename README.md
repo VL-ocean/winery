@@ -5,7 +5,7 @@
 
 . 
 
-![start screen responsive]()
+![start screen responsive](./README-media/)
 
 
 ## Table of contents
@@ -48,9 +48,6 @@
   - [Features](#features)
     - [Header](#header)
     - [Future Features](#future-features)
-  - [Technologies Used](#technologies-used)
-    - [Coding languages used](#coding-languages-used)
-    - [Frameworks and Libraries used](#frameworks-and-libraries-used)
   - [Testing](#testing)
   - [Deployment](#deployment)
     - [AWS Cloud Service](#aws-cloud-service)
@@ -66,6 +63,9 @@
     - [Deployment Process with Heroku](#deployment-process-with-heroku)
     - [To fork the project](#to-fork-the-project)
     - [To clone the project](#to-clone-the-project)
+  - [Technologies Used](#technologies-used)
+    - [Coding languages used](#coding-languages-used)
+    - [Frameworks, Libraries and Programmes used](#frameworks-libraries-and-programmes-used)
   - [Credits](#credits)
     - [Project Inspiration](#project-inspiration)
     - [Content](#content)
@@ -79,10 +79,34 @@
 
 ### Website Goals and Objectives
 
+* **Enhance User Experience:**
+	 - Design a user-friendly interface that is intuitive, visually appealing, and easy to navigate.
+	 - Ensure the platform is fully responsive and accessible on all devices, including desktops, tablets, and smartphones.
+* **Facilitate Developer Showcase:**
+	- Enable registered users to add wine to wishlist or remove it from wishlist, and add, edit, delete a review easily.
+* **Optimize Performance and Accessibility:**
+  - Fine-tune the platform for fast loading times and quick responses to user actions.
+  - Adhere to accessibility standards to ensure an inclusive experience for all users.
+ * **Support Continuous Improvement and Scalability:**
+	- Employ Agile development methodologies to deliver high-quality features and updates continuously.
+	- Architect the database and infrastructure to efficiently handle increased traffic and user growth.
+* **Ensure Security and Reliability:**
+	- Implement strong authentication and authorization protocols to protect user data.
+	- Conduct regular code validation and security testing to maintain a stable, secure application.
+* **Streamline Payment and Checkout:**
+	- Develop a smooth and secure payment process to enhance the checkout experience.
+* **Encourage Community Engagement and Feedback:**
+	- Create channels for users to provide feedback, report issues, and suggest enhancements.
+	- Actively respond to user feedback and integrate improvements to continually refine the platform.
+
 ### Target Audience
+
+ - Casual Shoppers who are 21 years or older
+ - Wine Enthusiasts, people who are looking for a sophisticated and refined beverage choice
 
 
 [Back to top](#table-of-contents)
+
 
 ## E-Commerce Business Model
 
@@ -100,8 +124,8 @@ Key components of the WineStore business model include:
     
 5.  **Customer Engagement and Retention**: WineStore fosters a community of wine lovers by offering wine recommendations, exclusive vineyard interviews, wine reviews, and a loyalty program, aiming to build long-term customer relationships and encourage repeat purchases.
     
-
 This business model enables WineStore to reach a broad audience, minimize overhead costs, and provide an enjoyable, convenient shopping experience for readers around the world.
+
 
 [Back to top](#table-of-contents)
 
@@ -118,7 +142,7 @@ Based on this research, a mix of short and long-tail keywords were selected to t
 -   buy wine online
 -   best online wine shop
 -   wine for sale
--   wine gift sets
+-   wine gifts
 -   red wine
 -   white wine
 -   rose wine
@@ -160,7 +184,6 @@ Based on this research, a mix of short and long-tail keywords were selected to t
 
 7. **Template Blocks for Meta Descriptions:**
     - Using `{% block metadesc %}` in Django templates is a good practice for maintaining a clean, organized, and SEO-friendly codebase. It balances flexibility and maintainability while providing a good structure for dynamic content.
-    
 
 These strategies will be continuously refined and improved over time, aiming to increase the wine shop's ranking on Google and attract more organic traffic to the website.
 
@@ -187,8 +210,26 @@ By focusing on these elements, WineStore will effectively utilize Facebook to en
 
 ### Newsletter Marketing
 
+WineStore will use Mailchimp to manage and send newsletters to keep subscribers updated and engaged. Here’s how it will work:
+
+1.  **Build Subscriber List:**    
+    -   Collect email addresses through sign-up forms on the website and social media. Organize subscribers into groups for targeted messaging.
+2.  **Create Content:**    
+    -   Design newsletters with wine recommendations, special offers, and store updates using Mailchimp’s easy-to-use templates.
+3.  **Schedule Newsletters:**    
+    -   Plan regular newsletters (e.g., weekly or monthly) to keep users informed and interested.
+4.  **Automate Emails:**    
+    -   Set up automated emails to welcome new subscribers, thank customers after purchases, and send personalized wine suggestions.
+5.  **Track Results:**    
+    -   Monitor how newsletters perform with Mailchimp’s reports on open rates, clicks, and other key metrics. Use this information to improve future emails.
+6.  **Test and Personalize:**    
+    -   Test different email elements to see what works best and personalize content based on subscriber preferences.
+
+Using Mailchimp helps WineStore stay connected with users, promote products and events, and drive traffic to the online shop.
+
 
 [Back to top](#table-of-contents)
+
 
 ## Agile Methodology
 
@@ -374,7 +415,9 @@ With an emphasis on delivering a seamless user experience, the goal of this proj
 - As a Site Admin I want to be able to remove products from the store so that the inventory is relevant and any outdated or discontinued items are eliminated [( _link_ )](https://github.com/VL-ocean/winery/issues/14)
 - As a Site Admin I want to be able to perform all CRUD (Create, Read, Update, Delete) operations so that I can manually manage, control and edit content [( _link_ )](https://github.com/VL-ocean/winery/issues/15)
 
+
 [Back to top](#table-of-contents)
+
 
 ## UX/UI design
 
@@ -436,6 +479,7 @@ The website is responsive to different layouts depending on the size of the view
 
 [Back to top](#table-of-contents)
 
+
 ## Security Measures and Protective Design
 
 ### User Authentication
@@ -460,17 +504,18 @@ The website is responsive to different layouts depending on the size of the view
 
 [Back to top](#table-of-contents)
 
+
 ## Features
 
 ### Header
 
 *Visitor view*
 
-![Visitor view](./README-images/)
+![Visitor view](./README-media/)
 
 *User View*
 
-![User view](./README-images/)
+![User view](./README-media/)
 
 The header 
 
@@ -481,72 +526,9 @@ The header
 - 
 
 
-[Back to top](#table-of-contents)
-
-## Technologies Used
-
-### Coding languages used
-
-* HTML
-* CSS
-* Python
-* JavaScript
-
-### Frameworks and Libraries used
-
-**Django**
-* Framework used to build this project. Provides a built in admin panel and includes many helper template tags that make writing code quick and efficient.
-
-**Django-Allauth**
-* Used for User authenticaion (register, login and logout).
-
-**Django Crispy Forms**
-* Used to control rendering of Django forms.
-
-**PostgreSQL**
-* The database used by the deployed project on Heroku.
-  
-**psycopg2**
-* PostgreSQL database adapter for the Python programming language.
-
-**Gunicorn**
-* Python HTTP server for WSGI applications.
-
-**WhiteNoise**
-* Designed to serve static files for Django applications.
-
-**Django RichTextField**
-* A Django model field and widget that renders a customizable rich text/WYSIWYG widget.
-
-**Django Resized**
-* Resizes image origin to specified size.
-
-**Cloudinary**
-* The cloud platform used to store static media files.
-
-**Balsamic**
-* Used for the wireframes
-
-**Git**
-* Used for version control.
-
-**GitHub**
-* Used to store the project's code after being pushed from Git.
-
-**GitPod**
-* Used as a platform to develop code in a ready-to-code developer environment.
-
-**Heroku**
-* The cloud platform used to deploy the project in the live environment.
-
-**Bootstrap**
-* The front end development framework used for styling along with custom CSS.
-  
-**Lucidchart**
-* Used for the entity relationship diagram
-
 
 [Back to top](#table-of-contents)
+
 
 ## Testing
 
@@ -846,7 +828,85 @@ Forking the **GitHub** repository allows you to create a duplicate of a local re
 
 _Any changes required to the website, they can be made, committed and pushed to GitHub._
 
+
 [Back to top](#table-of-contents)
+
+
+## Technologies Used
+
+### Coding languages used
+
+- [HTML](https://developer.mozilla.org/en-US/docs/Glossary/HTML5 "HTML")
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS "CSS")
+- [JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript "JS")
+- [Python](https://www.python.org/) 
+- [Markdown](https://en.wikipedia.org/wiki/Markdown)
+
+### Frameworks, Libraries and Programmes used
+
+**Django**
+* Framework used to build this project. Provides a built in admin panel and includes many helper template tags that make writing code quick and efficient.
+
+**Django-Allauth**
+* Used for User authenticaion (register, login and logout).
+
+**Django Crispy Forms**
+* Used to control rendering of Django forms.
+
+**Django Summernote**
+* A library that integrates the Summernote WYSIWYG editor into Django forms, allowing for rich-text editing.
+
+**Django Countries**
+* Library used to provide country choices for use with forms and a country field for models.
+
+**Pillow**
+* Used to add image processing capabilities.
+
+**Humanize**
+* Used to turn a number into a fuzzy human-readable duration.
+
+**PostgreSQL**
+* The database used by the deployed project on Heroku.
+  
+**psycopg2**
+* PostgreSQL database adapter for the Python programming language.
+
+**Gunicorn**
+* Python HTTP server for WSGI applications.
+
+**Balsamic**
+* Used for the wireframes.
+
+**Git**
+* Used for version control.
+
+**GitHub**
+* Used to store the project's code after being pushed from Git.
+
+**GitPod**
+* Used as a platform to develop code in a ready-to-code developer environment.
+
+**Heroku**
+* The cloud platform used to deploy the project in the live environment.
+
+**Bootstrap**
+* The front end development framework used for styling along with custom CSS.
+  
+**Lucidchart**
+* Used for the entity relationship diagram.
+
+**Google Chrome**
+* Used for overall development and tweaking, including testing responsiveness, debugging, and performance profiling.
+
+**Stripe**
+* Integrated to handle payment processing in a secure and convenient way.
+
+**Amazon Web Service S3**
+* Used to store all static and media files in production. 
+
+
+[Back to top](#table-of-contents)
+
 
 ## Credits
 
@@ -880,13 +940,18 @@ _Any changes required to the website, they can be made, committed and pushed to 
 - [Google Fonts](https://fonts.google.com/)
 - [Sitemap generator](https://www.xml-sitemaps.com/)
 - [Policy generator](https://www.termsfeed.com/privacy-policy-generator/)
+- [Font Awesome](https://fontawesome.com/)
+- [Jshint](https://jshint.com/)
+- [PEP8 Online](http://pep8online.com/)
+- [W3C](https://www.w3.org/)
+- [WAVE](https://webaim.org/resources/contrastchecker/)
 
 
 [Back to top](#table-of-contents)
 
+
 ## Acknowledgements
 
   - [Cohort Facilitator - Marko Tot](https://github.com/tmarkec) for support in the classroom and guidance through the course.
-  - [Mentor - Dick Vlaanderen](https://github.com/dickvla) for support throughout the project, ideas and advice.
 
 [Back to top](#table-of-contents)

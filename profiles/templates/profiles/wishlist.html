@@ -42,10 +42,10 @@
                         <div class="card-body text-center py-2 d-flex flex-column justify-content-evenly mb-3">
                             <p class="m-1 small text-uppercase">SKU: {{ product.sku }}</p>
                             <p class="text-uppercase opacity-75 m-1">{{ product.brand.friendly_name }}</p>
-                            <h4 class="menu-font text-uppercase fs-5 m-1 fw-bold">{{ product.name }}
-                                {{product.variety.friendly_name}}</h4>
+                            <h3 class="menu-font text-uppercase fs-5 m-1 fw-bold">{{ product.name }}
+                                {{product.variety.friendly_name}}</h3>
                             <p class="card-text opacity-75 mb-1 text-capitalize">{{ product.origin }}</p>
-                            <h5 class="card-title product-price fs-4 m-2">
+                            <h4 class="card-title product-price fs-4 m-2">
                                 {% if product.sale_price and product.sale_price < product.price %}
                                     <!-- Sale price exists and is less than regular price -->
                                     <span class="text-decoration-line-through fs-5 text-muted">€ {{ product.price }}</span>
@@ -54,7 +54,7 @@
                                     <!-- Regular price only -->
                                     € {{ product.price }}
                                 {% endif %}
-                            </h5>
+                            </h4>
                         </div>
                         {% if product.sale_price and product.sale_price < product.price %}
                             <div

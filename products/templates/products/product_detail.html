@@ -52,15 +52,15 @@
                 {% endif %}
                 <p class="m-1 small text-uppercase">SKU: {{ product.sku }}</p>
                 <p class="text-uppercase opacity-75 m-1">{{ product.brand.friendly_name }}</p>
-                <h4 class="menu-font text-uppercase fs-5 m-1 fw-bold">{{ product.name }}
-                    {{product.variety.friendly_name}}</h4>
+                <h3 class="menu-font text-uppercase fs-5 m-1 fw-bold">{{ product.name }}
+                    {{product.variety.friendly_name}}</h3>
                 <p class="opacity-75 m-1 text-capitalize">{{product.vintage}} | {{ product.origin }}</p>
                 <p class="m-1 text-capitalize">{{ product.bottle_size }}</p>
                 <a href="{% url 'all_products' %}?category={{ product.category.id }}"
                     class="m-1 text-capitalize text-decoration-none link-dark category-link">
                     {{ product.category.friendly_name }}<i class="fa-solid fa-champagne-glasses ps-1"></i>
                 </a>
-                <h5 class="product-price fs-4 m-2">
+                <h4 class="product-price fs-4 m-2">
                     {% if product.sale_price and product.sale_price < product.price %}
                         <!-- Sale price exists and is less than regular price -->
                         <span class="text-decoration-line-through fs-5 text-muted">€ {{ product.price }}</span>
@@ -69,7 +69,7 @@
                         <!-- Regular price only -->
                         € {{ product.price }}
                     {% endif %}
-                </h5>
+                </h4>
                 <!-- Form to add product to shopping bag -->
                 <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                     {% csrf_token %}

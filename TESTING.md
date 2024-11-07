@@ -25,18 +25,18 @@
 
 The mobile-first strategy was used when developing the website. The project has been deployed at early stage to ensure best layout and effective testing. The DevTools were used during development and [Responsive Design Checker](https://responsivedesignchecker.com/ "Responsive Design Checker") along with [Am I Responsive](https://ui.dev/amiresponsive "Am I responsive") for testing.
 
-| **Size** | **Device** | **Screenshot** | **Result** |
-| --- | --- | --- | :---: |
-| 360 x 740  | Samsung Galaxy S8+ | <details><summary>View</summary>![screenshot](./README-images/samsung-galaxy-s8.png)</details> | ✅ |
-| 414 x 896  | iPhone XR | <details><summary>View</summary>![screenshot](./README-images/iphone-xr.png)</details> | ✅ |
-| 430 x 932  | iPhone 14 Pro Max | <details><summary>View</summary>![screenshot](./README-images/iphone-14.png)</details> | ✅ |
-| 768 x 1024  | iPad Mini | <details><summary>View</summary>![screenshot](./README-images/ipad-mini.png)</details> | ✅ |
-| 853 x 1280  | Asus Zenbook Fold | <details><summary>View</summary>![screenshot](./README-images/asus-zenbook.png)</details> | ✅ |
-| 912 x 1368  | Surface Pro 7 | <details><summary>View</summary>![screenshot](./README-images/surface-pro-7.png)</details> | ✅ |
-| 1024 x 1366  | iPad Pro | <details><summary>View</summary>![screenshot](./README-images/ipad-pro.png)</details> | ✅ |
-| 1440 x 900  | Desktop | <details><summary>View</summary>![screenshot](./README-images/1440-sample.png)</details> | ✅ |
-| 1680 x 1050  | Desktop | <details><summary>View</summary>![screenshot](./README-images/1680-sample.png)</details> | ✅ |
-| 1920 x 1080  | Desktop | <details><summary>View</summary>![screenshot](./README-images/1920-sample.png)</details> | ✅ |
+| **Size** | **Device** | **Result** |
+| --- | --- | :---: |
+| 360 x 740  | Samsung Galaxy S8+ | ✅ |
+| 414 x 896  | iPhone XR | ✅ |
+| 430 x 932  | iPhone 14 Pro Max | ✅ |
+| 768 x 1024  | iPad Mini | ✅ |
+| 853 x 1280  | Asus Zenbook Fold | ✅ |
+| 912 x 1368  | Surface Pro 7 | ✅ |
+| 1024 x 1366  | iPad Pro |  ✅ |
+| 1440 x 900  | Desktop | ✅ |
+| 1680 x 1050  | Desktop | ✅ |
+| 1920 x 1080  | Desktop | ✅ |
 
 
 ## Browser Compatibility
@@ -191,23 +191,26 @@ The website was tested in the [Chrome Dev Tools](https://developer.chrome.com/do
 
 <details><summary><b>Desktop Test Results</b></summary>
 
-| **Page** | **Role** | **Result** |
-| --- | --- | --- |
-| Home | Visitor | ![Result](./README-images/home-visitor-desktop.png) |
-| Home | Registered User | ![Result](./README-images/home-user-desktop.png) |
-| Blog | Visitor | ![Result](./README-images/blog-visitor-desktop.png) |
-| Blog | Registered User | ![Result](./README-images/blog-user-desktop.png) |
-| Search results (Blog) | Visitor | ![Result](./README-images/search-visitor-desktop.png) |
-| Search results (Blog) | Registered User | ![Result](./README-images/search-user-desktop.png) |
-| Post Detail | Visitor | ![Result](./README-images/post-visitor-desktop.png) |
-| Post Detail | Registered User | ![Result](./README-images/post-user-desktop.png) |
-| Add Post | Registered User | ![Result](./README-images/add-post-user-desktop.png) |
-| Edit Post | Registered User | ![Result](./README-images/edit-post-user-desktop.png) |
-| Delete Post | Registered User | ![Result](./README-images/delete-post-user-desktop.png) |
-| Register | Visitor | ![Result](./README-images/register-visitor-desktop.png) |
-| Profile | Registered User | ![Result](./README-images/profile-user-desktop.png) |
-| Login | Visitor | ![Result](./README-images/login-visitor-desktop.png) |
-| Logout | Registered User | ![Result](./README-images/logout-user-desktop.png) |
+| **Page** | **Result** |
+| --- | --- |
+| Home | ![Result](./README-media/lighthouse-testing) |
+| Home | ![Result](./README-media/lighthouse-testing) |
+| Home | ![Result](./README-media/lighthouse-testing) |
+| Home | ![Result](./README-media/lighthouse-testing) |
+| Home | ![Result](./README-media/lighthouse-testing) |
+| Home | ![Result](./README-media/lighthouse-testing) |
+| Home | ![Result](./README-media/lighthouse-testing) |
+| Home | ![Result](./README-media/lighthouse-testing) |
+| Home | ![Result](./README-media/lighthouse-testing) |
+| Home | ![Result](./README-media/lighthouse-testing) |
+| Home | ![Result](./README-media/lighthouse-testing) |
+| Home | ![Result](./README-media/lighthouse-testing) |
+| Home | ![Result](./README-media/lighthouse-testing) |
+| Home | ![Result](./README-media/lighthouse-testing) |
+| Home | ![Result](./README-media/lighthouse-testing) |
+| Home | ![Result](./README-media/lighthouse-testing) |
+| Home | ![Result](./README-media/lighthouse-testing) |
+| Home | ![Result](./README-media/lighthouse-testing) |
 
 </details>
 

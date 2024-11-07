@@ -39,6 +39,9 @@ The mobile-first strategy was used when developing the website. The project has 
 | 1920 x 1080  | Desktop | ✅ |
 
 
+[Back to top](#contents)
+
+
 ## Browser Compatibility
 
 The deployed project was tested on the most popular browsers for compatibility issues.
@@ -49,6 +52,9 @@ The deployed project was tested on the most popular browsers for compatibility i
 | Opera | No issues identified | ✅ |
 | Firefox | No issues identified | ✅ |
 | Microsoft Edge | No issues identified | ✅ |
+
+
+[Back to top](#contents)
 
 
 ## Code Validation
@@ -180,6 +186,10 @@ The python files have all been passed through [CI Python Linter](https://pep8ci.
 
 </details><br/>
 
+
+[Back to top](#contents)
+
+
 ## Lighthouse Testing
 
 The website was tested in the [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) using Lighthouse Testing tool which inspects and scores the website for the following criteria:
@@ -209,6 +219,9 @@ The website was tested in the [Chrome Dev Tools](https://developer.chrome.com/do
 | Logout | ![Result](./README-media/lighthouse-testing/lighthouse-logout.png) |
 
 </details>
+
+
+[Back to top](#contents)
 
 
 ## Accessibility Testing
@@ -282,113 +295,195 @@ The testing results:
 </details>
 
 
+[Back to top](#contents)
+
+
 ## Manual Testing
 
 Extensive manual testing was performed on the application. Each feature was verified against success criteria. Where applicable, negative testing was conducted by providing invalid or unexpected inputs to assess the application's robustness in handling errors and exceptions.
 
-<details><summary><b>Header</b></summary>
+<details><summary><b>AUTHENTICATION</b></summary>
 
-| **Test Case** | **Element** | **Action** | **Success Criteria** | **Result** |
+| **Test Case** | **Element** | **Action** | **Expected Outcome** | **Result** |
 | --- | --- | --- | --- | :---: |
-| Logo link | Logo image | Click on the Logo | The user is navigated to the home page | ✅ |
-| Home link | Home navigation item | Click on 'Home' | The user is navigated to the Home page | ✅ |
-| Blog link | Blog navigation item | Click on 'Blog' | The user is navigated to the Blog page | ✅ |
-| Add Post link | Add Post navigation item | Click on 'Add Post' | The logged in user is navigated to the Add Post page. While the visitor is asked to log in first, or sign up | ✅ |
-| Register link | Register navigation item | Click on 'Register' | The user is navigated to the Signup page | ✅ |
-| Login link | Login navigation item | Click on 'Login' | The user is navigated to the Login page | ✅ |
-| Profile link | Profile navigation item | Click on 'Profile' | The user is navigated to his Profile page. The link is only available for registered users. Registered users can see each other's profiles. It is not restricted. More details in Feature Features section | ✅ |
-| Logout link | Logout navigation item | Click on 'Logout' | The user is navigated to the Logout confirmation page. Only registered users can access Logout link | ✅ |
+| Register with Valid Credentials | Registration form fields | Fill out the form with valid credentials and submit. | User is redirected to the home page after successful registration and signed in. | ✅ |
+| Register with Blank Fields | Registration form fields | Leave one or all required fields blank and submit the form. | Registration fails with appropriate error messages for each blank field. User remains on the registration page. | ✅ |
+| Login with Valid Credentials | Login form fields | Fill out the form with valid email address/username and password and submit. | User is redirected to the home page after successful login. Success message displayed. | ✅ |
+| Login with Invalid email address/username | Login form fields | Attempt to login with an invalid email address/username. | Login fails with appropriate error message ("Please enter a correct email address and password"). User remains on the login page. | ✅ |
+| Login with Incorrect Password | Login form fields | Attempt to login with a valid email address / username but incorrect password. | Login fails with appropriate error message ("Please enter a correct email address and password"). User remains on the login page. | ✅ |
+| Login with Blank Fields | Login form fields | Leave email address / username or password field blank and submit the form. | Login fails with appropriate error messages for each blank field. User remains on the login page. | ✅ |
+| Logout | Logout link or button | Click on the logout link/button while authenticated. | User is logged out and redirected to the home page. Navigation bar updates to reflect non-authenticated state (e.g., "Login" and "Register" links). Log out notification displayed. | ✅ |
 
 </details><br/>
 
-<details><summary><b>Search bar</b></summary>
+<details><summary><b>REVIEWS</b></summary>
 
-| **Test Case** | **Element** | **Action** | **Success Criteria** | **Result** |
+| **Test Case** | **Element** | **Action** | **Expected Outcome** | **Result** |
 | --- | --- | --- | --- | :---: |
-| Empty search | Search button | Click on 'Search' button | The user is navigated to the Blog page. Since the input was empty, all posts are displayed on the page | ✅ |
-| Search available keyword | Search bar | Enter 'coffee', click on 'Search' button | The user is navigated to the Blog page. The posts, which include the keyword 'coffee' in either title, description or content are displayed on the page | ✅ |
-| Search unavailable keyword | Search bar | Enter 'ndkghf', click on 'Search' button | The user is navigated to the Blog page. The message 'No matching results' is displayed on the page | ✅ |
+| Display reviews | Reviews container | View existing reviews | All reviews associated with the post are displayed, showing author's email address and creation time. | ✅ |
+| Display Review Timestamp | Review timestamp | View review creation time | Review creation time is displayed in a human-readable format (e.g., "2 days ago"). | ✅ |
+| Edit review (Owner or Superuser) | Edit button | Click on edit button | Redirects to edit review page if user is review owner or superuser. | ✅ |
+| Delete review (Owner or Superuser) | Delete button | Click on delete button | Shows delete confirmation modal and deletes review if user confirms action. | ✅ |
+| No reviews Available | "No reviews yet" message | No reviews exist for the post  | Message "No reviews yet." is displayed. | ✅ |
+| Submit review | Review form | Enter review and submit | review is successfully added and displayed in the reviews section. | ✅ |
+| Authenticate review Submission| "Add a review as *username*" message | User is authenticated | Shows message "Add a review as *username*" above the review form. | ✅ |
+| Display Login Prompt | "Sign in" link | User is not authenticated | Shows link "Sign in to leave a review" prompting user to log in. | ✅ |
+| Form Validation Error | Submit button | Submit empty or invalid review | Displays error messages next to form fields, prompting user to correct them. | ✅ |
+| Buyer reviews | Review Container | Add Review | Container not available if the product has not been purchased by the user unless the user is a superuser. | ✅ |
 
 </details><br/>
 
-<details><summary><b>Footer</b></summary>
+<details><summary><b>ALL PRODUCTS</b></summary>
 
-| **Test Case** | **Element** | **Action** | **Success Criteria** | **Result** |
+| **Test Case** | **Element** | **Action** | **Expected Outcome** | **Result** |
 | --- | --- | --- | --- | :---: |
-| LinkedIn link | LinkedIn icon | Click on 'LinkedIn' icon | The LinkedIn website is opened in a separate tab | ✅ |
-| Facebook link | Facebook icon | Click on 'Facebook' icon | The Facebook website is opened in a separate tab | ✅ |
-| Instagram link | Instagram icon | Click on 'Instagram' icon | The Instagram website is opened in a separate tab | ✅ |
-| Twitter link | Twitter icon | Click on 'Twitter' icon | The Twitter website is opened in a separate tab | ✅ |
-| YouTube link | YouTube icon | Click on 'YouTube' icon | The YouTube website is opened in a separate tab | ✅ |
+| Toggle Filter | ToggleButton (Filter) | Click the toggle button | Filter options should expand/collapse | ✅ |
+| Filter by Category | Category Checkbox | Select one or more categories | Products should be filtered by selected categories | ✅ |
+| Filter by Variety | Variety Checkbox | Select one or more varieties| Products should be filtered by selected varieties | ✅ |
+| Filter by Vintage | Vintage Checkbox | Select one or more vintage | Products should be filtered by selected vintage | ✅ |
+| Filter by Country | Country Checkbox | Select one or more countries | Products should be filtered by selected countries | ✅ |
+| Filter by Brand | Brand Checkbox | Select one or more brands| Products should be filtered by selected brands | ✅ |
+| Filter by Bottle Size | Bottle Size Checkbox | Select one or more bottle sizes | Products should be filtered by selected bottle sizes | ✅ |
+| Filter by Price Range | Price Range Checkbox | Select a price range | Products should be filtered by selected price range | ✅ |
+| Sort by Price (low to high) | Sort Dropdown | Select 'Price (low to high)' and submit | Products should be sorted by Price in ascending order | ✅ |
+| Sort by Price (high to low) | Sort Dropdown | Select 'Price (high to low)' and submit | Products should be sorted by Price in descending order | ✅ |
+| Sort by Name (A to Z) | Sort Dropdown | Select 'Name (A to Z)' and submit | Products should be sorted by Name in ascending order | ✅ |
+| Sort by Name (Z to A) | Sort Dropdown | Select 'Name (Z to A)' and submit | Products should be sorted by Name in descending order | ✅ |
+| View a product | Product image | Click on product image | The user is navigated to the product detail view | ✅ |
 
 </details><br/>
 
-<details><summary><b>Home App</b></summary>
+<details><summary><b>PRODUCT DETAIL</b></summary>
 
-| **Test Case** | **Element** | **Action** | **Success Criteria** | **Result** |
+| **Test Case** | **Element** | **Action** | **Expected Outcome** | **Result** |
 | --- | --- | --- | --- | :---: |
-| Display hero image and welcome text | Home page | Navigate through Logo or 'Home' navigation item | The Home page displays the hero image with welcome text on it. The purpose of the website is clearly visible and the text is easy to read | ✅ |
-| Display the latest posts (3) | 'Latest Posts' section | Navigate through Logo or 'Home' navigation item | Beneath the hero image the user can find three latest posts (published and approved posts only) | ✅ |
-| View any latest post to read | Latest Post card | Click on the post card on the Home page | The user is navigated to the post detail view | ✅ |
+| Add Product to Wishlist | Heart Plus icon | Click on the icon | The product is added to the user's wishlist. Success message displayed to the user | ✅ |
+| Remove Product from Wishlist | Heart Minus icon | Click on the icon | The product is removed from user's wishlist. Success message displayed to the user | ✅ |
+| Add Product to Cart | Add to Cart Button | Click on the 'Add to Cart' button | The product is added to the shopping cart. Success message displayed to the user | ✅ |
 
 </details><br/>
 
-<details><summary><b>Blog App</b></summary>
+<details><summary><b>PROMOTIONS</b></summary>
 
-| **Test Case** | **Element** | **Action** | **Success Criteria** | **Result** |
+| **Test Case** | **Element** | **Action** | **Expected Outcome** | **Result** |
 | --- | --- | --- | --- | :---: |
-| View paginated list of posts | Blog page | Navigate through 'Blog' navigation item | The approved and published posts are displayed by 6, with pagination. Sorted by the date | ✅ |
-| View next page of posts | 'Next' button | Click on 'Next' button | The user is navigated to the next page | ✅ |
-| View previous page of posts | 'Previous' button | Click on 'Previous' button | The user is navigated to the previous page | ✅ |
-| View first page of posts | 'First' button | Click on 'First' button | The user is navigated to the first page | ✅ |
-| View last page of posts | 'Last' button | Click on 'Last' button | The user is navigated to the last page | ✅ |
-| View 2-nd page of posts | '2' page button | Click on '2' page button | The user is navigated to the 2-nd page | ✅ |
-| View a post to read | Post card | Click on the post card | The user is navigated to the post detail view | ✅ |
+| Sort by Price (low to high) | Sort Dropdown | Select 'Price (low to high)' and submit | Products should be sorted by Price in ascending order | ✅ |
+| Sort by Price (high to low) | Sort Dropdown | Select 'Price (high to low)' and submit | Products should be sorted by Price in descending order | ✅ |
+| Sort by Name (A to Z) | Sort Dropdown | Select 'Name (A to Z)' and submit | Products should be sorted by Name in ascending order | ✅ |
+| Sort by Name (Z to A) | Sort Dropdown | Select 'Name (Z to A)' and submit | Products should be sorted by Name in descending order | ✅ |
+| View a product | Product image | Click on product image | The user is navigated to the product detail view | ✅ |
 
 </details><br/>
 
-<details><summary><b>Post CRUD</b></summary>
+<details><summary><b>SHOPPING BAG</b></summary>
 
-| **Test Case** | **Element** | **Action** | **Success Criteria** | **Result** |
+| **Test Case** | **Element** | **Action** | **Expected Outcome** | **Result** |
 | --- | --- | --- | --- | :---: |
-| 'Add Post' link | 'Add Post' navigation item | Click on 'Add Post' | The user is navigated to the Add Post page with the form. Only registered users have access to the form | ✅ |
-| 'Add Post' Form validation | 'Add Post' Form | Leave some fields empty | The error message is displayed. The user is asked to fill in the empty fields | ✅ |
-| 'Create Post' Form action | 'Create Post' button in 'Add Post' Form | After filling out all the fields correctly, click on 'Create Post' button under the form | The user is navigated to the Blog page. The post has been created. If the Post status is 'published', then it is awaiting approval. The user can find it in his profile with the message 'awaiting approval' displayed. If the Post status is 'draft', it can be found in user profile for further editing | ✅ |
-| 'Edit' link | 'Edit' button under the post | Click on 'Edit' button under your post | The user is navigated to the edit post view. Only the post author has access to the button and the form to edit the post | ✅ |
-| 'Edit Post' Form validation | 'Edit Post' Form | Remove the text and leave some fields empty | The error message is displayed. The user is asked to fill in the empty fields | ✅ |
-| 'Edit Post' Form action | 'Edit Post' button in 'Edit Post' Form | After editing the fields, click on 'Edit Post' button under the form | The user is navigated to the Blog page. The post has been updated. If the Post has been published and approved before, then it will be displayed on the Blog page with all other posts. If the Post status is 'published' but it was not previously approved, then it is awaiting approval. The user can find it in his profile with the message 'awaiting approval' displayed. If the Post status is 'draft', it can be found in user profile for further editing | ✅ |
-| 'Delete' link | 'Delete' button under the post | Click on 'Delete' button under your post | The user is navigated to the delete post confirmation. Only the post author has access to the button and can confirm deletion | ✅ |
-| Deletion confirmation | 'Confirm' button on delete post confirmation view | Click on 'Confirm' button | The user is navigated to the Blog page. The post has been successfully deleted from the database and is no longer displayed. Only the post author can confirm deletion | ✅ |
-| Cancel post deletion | 'Cancel' button on delete post confirmation view | Click on 'Cancel' button | The user is navigated back to the post detail page. The post has not been deleted | ✅ |
+| Display Product in Cart | Product Image and description | View the product image and description in the cart | Product details should be displayed correctly in the cart | ✅ |
+| Update Quantity | Quantity Selector | Change the quantity value and submit | The quantity should update and reflect in the total price | ✅ |
+| Decrease Quantity | Decrement Button | Click the decrement button to reduce quantity | The quantity should decrease and update the total price | ✅ |
+| Increase Quantity | Increment Button | Click the increment button to increase quantity | The quantity should increase and update the total price | ✅ |
+| Remove Product from Cart | Remove Button | Click the remove button to delete the product | The product should be removed from the cart and the cart total should update | ✅ |
+| Checkout Process | Checkout Button | Click the 'Secure Checkout' button | User should be redirected to the checkout page | ✅ |
+| Display Order Summary | Order Summary  | View the total price in the order summary | Order summary should be displayed correctly | ✅ |
+| Verify Total Price with Shipping | Order Total | Verify total price calculation with shipping costs | Total price should include product price and shipping cost | ✅ |
+| Update Quantity with Invalid Number (Failure) | Quantity Input Field | Enter a negative or zero value and submit | An error message should be displayed, and quantity should not update | ✅ |
 
 </details><br/>
 
-<details><summary><b>Comments section</b></summary>
+<details><summary><b>CHECKOUT</b></summary>
 
-| **Test Case** | **Element** | **Action** | **Success Criteria** | **Result** |
+| **Test Case** | **Element** | **Action** | **Expected Outcome** | **Result** |
 | --- | --- | --- | --- | :---: |
-| View post comments | Comments section | Click on post card, scroll down to the comments section | The comments are displayed. Only approved comments are visible for all users. Not approved comments are visible to the comment author | ✅ |
-| 'Add Comment' link | 'Add Comment' button in comments section | Click on 'Add Comment' | The modal with form is displayed to the user. Only registered users have access to the button and form | ✅ |
-| 'Add Comment' Form validation | 'Add Comment' Form | Leave empty | The error message is displayed. The user is asked to fill in the empty field | ✅ |
-| 'Add Comment' Form action | 'Save changes' button in 'Add Comment' Form | After inputting some text, click on 'Save changes' button | The user is navigated to the post detail page he commented. The comment has been created. It is awaiting approval. The proper message is displayed | ✅ |
-| 'Delete' link | 'Delete' icon at top right corner of the comment | Click on 'Delete' icon on your comment | The user is navigated to the delete comment confirmation. Only the comment author has access to the button | ✅ |
-| Deletion confirmation | 'Confirm' button on delete comment confirmation view | Click on 'Confirm' button | The user is navigated to the Blog page. The comment has been successfully deleted from the database and is no longer displayed. Only the comment author can confirm deletion | ✅ |
-| Cancel comment deletion | 'Cancel' button on delete comment confirmation view | Click on 'Cancel' button | The user is navigated back to the post detail page. The comment has not been deleted | ✅ |
+| Verify Total Price | Order Total | Check if total price matches product price and shipping cost | Total price should include item price and delivery fee | ✅ |
+| Fill out Delivery Information | Delivery Information Form | Fill in all required delivery information fields | Delivery information should be validated and accepted | ✅ |
+| Complete Payment | Payment Form | Enter payment details and submit the form | Payment should be processed successfully, and the order completed | ✅ |
+| Proceed to Checkout | Checkout Button | Click the 'Complete Order' button to proceed | User should be redirected to the confirmation page | ✅ |
+| Save Delivery Information | Save Info Checkbox | Select the checkbox to save delivery information to profile | Delivery information should be saved to the user's profile | ✅ |
+| Missing Required Fields in Delivery Info (Failure) | Delivery Information Form | Leave required fields (e.g., Full Name, Email) empty | An error message should appear, indicating missing fields | ✅ |
+| Invalid Payment Details (Failure) | Payment Details Field | Enter invalid or incomplete payment information | Payment should be rejected, and an error message should be displayed | ✅ |
 
 </details><br/>
 
-<details><summary><b>Profile App</b></summary>
+<details><summary><b>PROFILE</b></summary>
 
-| **Test Case** | **Element** | **Action** | **Success Criteria** | **Result** |
+| **Test Case** | **Element** | **Action** | **Expected Outcome** | **Result** |
 | --- | --- | --- | --- | :---: |
-| View my profile | Profile page | Navigate through 'Profile' navigation item | The profile is displayed with picture, username, date joined, amount of posts and bio if available. Only registered users can view each other's profile | ✅ |
-| 'Edit' profile | 'Edit' button under the profile | Click on 'Edit' button under your profile | The modal is displayed with a form to update a profile picture and bio. The bio can be left blank. The avatar can be either changed or unchanged (the default image will be displayed). Only the profile's owner has access to the button and the form to edit it | ✅ |
-| 'Edit profile' Form action | 'Save changes' button in 'Edit profile' Form | After updating bio or changing the picture, click on 'Save changes' button under the form | The user is navigated to his profile. The profile has been successfully updated. Only the profile's owner can update his profile | ✅ |
-| Cancel the editing | 'Close' button in 'Edit profile' form | Click on 'Close' button | The user is navigated back to the profile. The profile has not been updated | ✅ |
-| View my posts | Profile page | Navigate through 'Profile' navigation item | Beneath the profile, the user's posts can be found, including the title, description and creation date. Only the post author can see drafts and unapproved posts. Other registered users can see only approved and published posts | ✅ |
-| View my post to edit or delete it | Post card in profile | Click on post card in your profile | The user is navigated to the post detail view. The post author can access edit and delete buttons to work on the post.  | ✅ |
+| Update Shipping Information | Profile form| Enter shipping address and submit | Information is successfully updated. | ✅ |
+| View Items in Wishlist | Wishlist navingation item | Click on Wishlist menu item | The products added to the wishlist are displayed. | ✅ |
+| View order history | Visit My Profile page | Click on My Profile menu item | The orders history is displayed. | ✅ |
+| View past order confirmation | Order number link | Click on order number | User redirected to past order confirmation page. | ✅ |
 
 </details><br/>
+
+<details><summary><b>PRODUCT MANAGEMENT</b></summary>
+
+| **Test Case** | **Element** | **Action** | **Expected Outcome** | **Result** |
+| --- | --- | --- | --- | :---: |
+| Add a product | Add product form | Fill out necessary information, then submit | The product is successfully added and displayed on All Products page. | ✅ |
+| Edit a product | Edit product form | Click on Edit button, change the product description/price etc, then submit | The product is successfully updated. The changes are displayed right away in product description. | ✅ |
+| Delete a product | Delete button | Click on Delete button | The product is successfully deleted. | ✅ |
+
+</details><br/>
+
+<details><summary><b>HEADER</b></summary>
+
+| **Test Case** | **Element** | **Action** | **Expected Outcome** | **Result** |
+| --- | --- | --- | --- | :---: |
+| Verify Page Logo Navigation| Logo | Click on the logo | Navigates to the homepage | ✅ |
+| Verify Shop Wine Dropdown | Shop Wine Dropdown | Click on the Shop Wine dropdown | Dropdown menu is displayed | ✅ |
+| Verify Red Wine Navigation | Red Wine link | Click on the Red Wine link | Navigates to the page filtered by Red Wine category | ✅ |
+| Verify White Wine Navigation | White Wine link | Click on the White Wine link | Navigates to the page filtered by White Wine category | ✅ |
+| Verify Rosè Wine Navigation | Rosè Wine link | Click on the Rosè Wine link | Navigates to the page filtered by Rosè Wine category | ✅ |
+| Verify Sparkling Wine Navigation | Sparkling Wine link | Click on the Sparkling Wine link | Navigates to the page filtered by Sparkling Wine category | ✅ |
+| Verify All Wine Navigation | All Wine link | Click on the All Wine link | Navigates to the all products page | ✅ |
+| Verify Promotions Navigation | Promotions link | Click on the Promotions link | Navigates to the Promotions page | ✅ |
+| Verify My Account Dropdown | My Account Dropdown | Click on the My Account dropdown | Dropdown menu is displayed | ✅ |
+| Verify Product Management Navigation | Product Management link | Click on the Product Management link | Navigates to the Add Product page | ✅ |
+| Verify My Profile Navigation | My Profile link | Click on the My Profile link | Navigates to the My Profile page | ✅ |
+| Verify Wishlist Navigation | Wishlist link | Click on the wishlist link | Navigates to the wishlist page | ✅ |
+| Verify Shopping Bag Navigation | Shopping Bag Icon | Click on the Shopping Bag icon | Navigates to the Shopping Bag page | ✅ |
+| Verify Register Navigation | Register link | Click on the Register link | Navigates to the Sign up page | ✅ |
+| Verify Login Navigation | Login link | Click on the Login link | Navigates to the Sign in page | ✅ |
+| Verify Logout Functionality | Logout Link | Click on 'Logout' | Logs out the user | ✅ |
+| Verify Main Navigation Bar | Main Navigation Bar | View navigation bar | Navigation bar is displayed with correct links | ✅ |
+| Verify Navbar Toggle in Mobile View | Navbar Toggle | Click on the navbar toggle button in mobile view | Expands the navigation bar | ✅ |
+| Search available keyword | Search form | Enter keyword and submit | Search results should be filtered by the specified keyword | ✅ |
+| Empty search | Search form | Click on 'Search' button | User redirected to all products page. Message displayed "No keywords entered" | ✅ |
+| Search unavailable keyword | Search form | Enter a very long string or special characters, then submit | Message displayed "No products found matching your criteria" | ✅ |
+
+</details><br/>
+
+<details><summary><b>FOOTER</b></summary>
+
+| **Test Case** | **Element** | **Action** | **Expected Outcome** | **Result** |
+| --- | --- | --- | --- | :---: |
+| Test Contact Us Section Visibility | Contact Us Section | Verify the visibility of the text and social links | The text and social links should be visible and readable | ✅ |
+| Test Social Media Links Functionality | Social Media Links | Click each social media link (Facebook, Instagram, Twitter) and verify they open correctly | Each social media link should open the correct platform | ✅ |
+| Test Our Location Section Visibility | Our Location Section | Verify the visibility of the text | The text should be visible and readable | ✅ |
+| Test Helpful Links Navigation | Helpful Links | Click each link (Privacy Policy, Terms and Conditions) and check navigation | User should be navigated to the correct pages for each link | ✅ |
+| Test Newsletter Subscription Input | Newsletter Email Input | Enter email address in the input box | User should be able to enter an email address | ✅ |
+| Test Newsletter Subscription Button | Newsletter Subscription Button | Click the 'Subscribe' button after entering an email | Button click should trigger a subscription process | ✅ |
+| Test Newsletter Error Response for Invalid Email | Newsletter Subscription Error | Enter an invalid email and click the 'Subscribe' button | User should see an error message about invalid email | ✅ |
+| Test Newsletter Success Response for Valid Email | Newsletter Subscription Success | Enter a valid email and click the 'Subscribe' button | User should see a success message confirming subscription | ✅ |
+
+</details><br/>
+
+<details><summary><b>LANDING PAGE</b></summary>
+
+| **Test Case** | **Element** | **Action** | **Expected Outcome** | **Result** |
+| --- | --- | --- | --- | :---: |
+| Verify Hero Title Display | Hero Title <h1> | Check if title is displayed correctly | Title is displayed on the page | ✅ |
+| Verify Hero Subtitle Display | Hero Subtitle <h2> | Check if subtitle is displayed | Subtitle is visible | ✅ |
+| Verify Shop Now Navigation | Shop Now button | Click on the Shop Now button | Navigates to the All Products page | ✅ |
+| Hero Image Display | Hero Image| Check if hero image loads | Hero image is displayed correctly on the page | ✅ |
+| Best Sellers Section Display | Best Sellers Wines | Check if products are displayed | Products are shown under 'Best Sellers' section and discount icon is present | ✅ |
+| Verify See More Navigation | See More button | Click on the See More button | Navigates to the Promotions page | ✅ |
+| Verify Four Reasons Section Display | Four Reasons section | Check if title and text are displayed correctly | All text is visible and readable | ✅ |
+
+</details><br/>
+
+[Back to top](#contents)
 
 
 ## Role-based Restrictions
@@ -403,26 +498,28 @@ The user role based restrictions were tested to ensure that view and functionali
 | CRUD on all elements | ✅ |
 | Manage user roles and restrictions | ✅ |
 | Access to admin dashboard and settings | ✅ |
+| Can view all users data | ✅ |
 
 - ### **Registered User**
 
 | **Functionality** | **Result** |
 | --- | :---: |
-| CRUD on their own content (post) | ✅ |
-| No access to change another user's content | ✅ |
-| Create and delete comments | ✅ |
-| Update profile | ✅ |
-| Read all published and approved posts | ✅ |
-| Read all approved comments | ✅ |
-| View another user's profile (if shared a link) | ✅ |
+| CRUD on their own content | ✅ |
+| Cannot manage content created by other users | ✅ |
+| Can update profile information | ✅ |
+| Can purchase products | ✅ |
+| Can manage their own wishlist | ✅ |
 
 - ### **Visitor**
 
 | **Functionality** | **Result** |
 | --- | :---: |
-| View published and approved content (post) | ✅ |
-| No CRUD on any elements | ✅ |
-| No access to view another user's profile | ✅ |
+| Can purchase products | ✅ |
+| No access to profile | ✅ |
+| Cannot manage reviews and wishlist | ✅ |
+
+
+[Back to top](#contents)
 
 
 ## User Story Testing
@@ -476,6 +573,9 @@ The user role based restrictions were tested to ensure that view and functionali
 | [Admin can delete user and their profile](https://github.com/VL-ocean/coffee-choco-prj/issues/34) | Git commit [922402d](https://github.com/VL-ocean/coffee-choco-prj/commit/922402df8a94e93e90e58f81cd49d624c04734d6#diff-a58172ae21173b7558fc0c745dd69b2abf2c2359635dbd32f6aecb74e6c6874c) | ✅ |
 
 
+[Back to top](#contents)
+
+
 ## Bugs
 
 | **Description** | **Solution** | **Status** | **Notes** |
@@ -486,3 +586,6 @@ The user role based restrictions were tested to ensure that view and functionali
 | Console error displayed by CKE Editor. Due to it being no longer supported by the developers |The solution is to buy and use their secured and supported 5-th version of the Editor. Or replace it with another free editor | ❌ | Due to resolve in future fixes |
 | Modal popup displayed by CKE Editor in the forms where the widget was used. Due to it being no longer supported by the developers | The solution is to buy and use their secured and supported 5-th version of the Editor. Or replace it with another free editor | ✅ | Temporary fix by setting display to none using custom JavaScript |
 | The if statement for `updated` date in post_detail.html does not work as intended. It is supposed to be displayed only if the post has been updated after creation. However it is displayed despite the statement. The post approvement is currently considered as update too, which should not be the case | The solution is to redo the logic. Perhaps move the `approved` status to a separate database table | ❌ | Due to resolve in future fixes |
+
+
+[Back to top](#contents)

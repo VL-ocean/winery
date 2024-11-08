@@ -76,7 +76,7 @@ Notes:
 
 
 <details>
-<summary>HTML Validation Results</summary>
+<summary><b>Test Results</b></summary>
 
 | **File name** | **Pass** | **Notes** | **Result** |
 | --- | :---: | --- | --- |
@@ -95,7 +95,7 @@ Notes:
 | profile.html | ✅ | No errors or warnings to show | ![screenshot](./README-media/html-validation/html-profile.png) |
 | wishlist.html | ✅ | No errors or warnings to show | ![screenshot](./README-media/html-validation/html-wishlist.png) |
 
-</details>
+</details><br/>
 
 ### CSS
 
@@ -103,7 +103,7 @@ The [W3C Jigsaw](https://jigsaw.w3.org/css-validator/#validate_by_input) tool, p
 
 
 <details>
-<summary>CSS Validation Results</summary>
+<summary><b>Test Results</b></summary>
 
 | **File name** | **Pass** | **Notes** | **Result** |
 | --- | :---: | --- | --- |
@@ -111,7 +111,7 @@ The [W3C Jigsaw](https://jigsaw.w3.org/css-validator/#validate_by_input) tool, p
 | profile.css | ✅ | No errors or warnings to show | ![screenshot](./README-media/css-validation/profile-css-validation.png) |
 | checkout.css | ✅ | No errors or warnings to show. Except "-webkit-transition is a vendor extension" | ![screenshot](./README-media/css-validation/checkout-css-validation.png) |
 
-</details>
+</details><br/>
 
 
 ### JavaScript
@@ -218,7 +218,7 @@ The website was tested in the [Chrome Dev Tools](https://developer.chrome.com/do
 | Wishlist | ![Result](./README-media/lighthouse-testing/lighthouse-wishlist.png) |
 | Logout | ![Result](./README-media/lighthouse-testing/lighthouse-logout.png) |
 
-</details>
+</details><br/>
 
 
 [Back to top](#contents)
@@ -233,9 +233,9 @@ There are several repeatable errors explained below:
 
 | **Notes** | **Screenshot** |
 | --- | --- |
-| **1 X Missing form label** on the mailchimp subscription form. It is a neccessary hidden input and label is not required for the form to function. | ![result](./README-media/wave-testing/missing-label-input.png) |
-| **4 X Empty link** errors are due to usage of streched link class from bootstrap which uses position relative to connect the link to the container with product image. | ![result](./README-media/wave-testing/empty-link-error.png) |
-| **2 X Very low contrast** on asterisks on the mailchimp subscription form. They are red and visible on the dark background enough. | ![result](./README-media/wave-testing/low-contrast-asterisks.png) |
+| **1 X Missing form label** on the mailchimp subscription form. It is a neccessary hidden input and label is not required for the form to function. |  <details><summary>View</summary><img src="./README-media/wave-testing/missing-label-input.png"></details>  |
+| **4 X Empty link** errors are due to usage of streched link class from bootstrap which uses position relative to connect the link to the container with product image. |  <details><summary>View</summary><img src="./README-media/wave-testing/empty-link-error.png"></details>  |
+| **2 X Very low contrast** on asterisks on the mailchimp subscription form. They are red and visible on the dark background enough. |  <details><summary>View</summary><img src="./README-media/wave-testing/low-contrast-asterisks.png"></details>  |
 
 Whenever there are product images on the page or footer with subscription form, these errors will popup. There are no other errors identified.
 
@@ -292,7 +292,7 @@ The testing results:
 <details>
 <summary>Terms & Conditions page</summary>
 <img src="./README-media/wave-testing/wave-terms.png">
-</details>
+</details><br/>
 
 
 [Back to top](#contents)

@@ -650,6 +650,7 @@ The reviews section of the product details page allows users to view and submit 
 ### Search Results
 
 The search results page displays results of the search when submitted the search form. The results are displayed in a grid format, featuring each product's image, name, price, and other information. This layout is designed to provide a clear and organized browsing experience.
+<br/><br/>
 
 
 ### Promotions

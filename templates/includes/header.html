@@ -1,11 +1,13 @@
 {% load static %}
 
 <header>
+    <!-- Slogan -->
     <div class="bg-success text-white text-center p-2">
         <p class="m-0">More than a store, we're an experience.</p>
     </div>
     <nav class="navbar navbar-dark bg-dark navbar-expand-lg sticky-top">
         <div class="container-fluid py-2 position-relative">
+            <!-- Brand logo -->
             <a class="navbar-brand title-font" href="{% url 'home' %}">WineStore <i
                     class="fa-solid fa-wine-glass"></i></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -15,6 +17,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 menu-font">
+                    <!-- Home link only for mobile navigation -->
                     <li class="nav-item d-block d-lg-none">
                         <a class="nav-link" aria-current="page" href="{% url 'home' %}">HOME</a>
                     </li>
@@ -23,6 +26,7 @@
                             aria-expanded="false">
                             SHOP WINE
                         </a>
+                        <!-- Products by categories dropdown -->
                         <ul class="dropdown-menu dropdown-menu-dark">
                             <li><a class="dropdown-item" href="{% url 'all_products' %}?category=1">RED WINE</a></li>
                             <li><a class="dropdown-item" href="{% url 'all_products' %}?category=2">WHITE WINE</a></li>
@@ -35,6 +39,7 @@
                             <li><a class="dropdown-item" href="{% url 'all_products' %}">ALL WINE</a></li>
                         </ul>
                     </li>
+                    <!-- Link to discounted products -->
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'promotions' %}">PROMOTIONS</a>
                     </li>
@@ -43,6 +48,7 @@
                             aria-expanded="false">
                             MY ACCOUNT
                         </a>
+                        <!-- Account options dropdown -->
                         <ul class="dropdown-menu dropdown-menu-dark">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
@@ -61,6 +67,7 @@
                             {% endif %}
                         </ul>
                     </li>
+                    <!-- Shopping bag icon for desktop -->
                     <li class="nav-item me-4 d-none d-lg-block">
                         <a class="nav-link link-warning position-relative" href="{% url 'view_bag' %}"
                             data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Shopping bag">
@@ -73,6 +80,7 @@
                         </a>
                     </li>
                 </ul>
+                <!-- Search form -->
                 <form class="d-flex" role="search" method="GET" action="{% url 'product_search' %}">
                     <input class="form-control me-2 custom-focus" type="search" name="q" placeholder="Search"
                         aria-label="Search">
@@ -95,6 +103,7 @@
             </ul>
         </div>
     </nav>
+    <!-- Delivery banner -->
     <div id="promotion-banner" class="px-3 bg-danger text-center p-1">
         <h4 class="my-1 text-white">FREE SHIPPING FOR ORDERS ABOVE 70 EUR</h4>
     </div>

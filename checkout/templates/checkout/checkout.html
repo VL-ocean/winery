@@ -15,6 +15,7 @@
             <h2 class="title-font">Checkout</h2>
         </div>
     </div>
+    <!-- Order Summary -->
     <div class="row justify-content-center">
         <div class="col-auto offset-2 subtitle-font m-2">
             <p class="my-0">Order Total:</p>
@@ -30,6 +31,7 @@
     <div class="row">
         <div class="col-12 col-lg-6 mx-auto">
             <p class="text-body-secondary text-center">Please fill out the form below to complete your order</p>
+            <!-- Delivery Form -->
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                 {% csrf_token %}
                 <fieldset class="rounded px-3 mb-5">
@@ -47,6 +49,7 @@
                     {{ order_form.postcode | as_crispy_field }}
                     {{ order_form.country | as_crispy_field }}
                     <div class="form-check form-check-inline float-end me-0">
+                        <!-- Save info checkbox -->
                         {% if user.is_authenticated %}
                             <label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
                             <input class="form-check-input ms-2 me-0" type="checkbox" id="id-save-info" name="save-info" checked>
@@ -90,6 +93,7 @@
         </div>
     </div>
 </div>
+<!-- Loading Spinner -->
 <div id="loading-overlay">
     <h1 class="text-light loading-spinner">
         <span class="icon">

@@ -5,12 +5,14 @@
 
 {% block content %}
 <div class="container mb-4">
+    <!-- Page header -->
     <div class="row justify-content-center">
         <div class="col-12 col-md-6 my-4 text-center">
             <h2 class="title-font mb-4">Product Management</h2>
             <h5 class="text-body-secondary subtitle-font">Add a Product</h5>
         </div>
     </div>
+    <!-- Form to add a product -->
     <div class="row justify-content-center">
         <div class="col-12 col-md-6">
             <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">

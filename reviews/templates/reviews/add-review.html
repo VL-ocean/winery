@@ -9,6 +9,7 @@
         {% if can_review %}
             <div class="review-form-container">
                 <p class="mb-1 text-end">Add a review as <strong>{{ user.username }}</strong></p>
+                <!-- Add review form -->
                 <form id="reviewForm" method="POST" class="mb-3">
                     {% csrf_token %}
                     {{ review_form|crispy }}
@@ -23,9 +24,11 @@
                 </form>
             </div>
         {% else %}
+        <!-- Disclaimer to registered users -->
             <p class="fst-italic text-center">You can only leave a review after purchasing this product</p>
         {% endif %}
     {% else %}
+    <!-- Disclaimer to visitors -->
         <h4 class="mb-3 text-center"><a href="{% url 'account_login' %}">Sign in</a> to leave a review</h4>
     {% endif %}
 </div>

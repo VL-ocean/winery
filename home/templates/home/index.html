@@ -11,6 +11,7 @@
 {% block content %}
 <div class="welcome-banner">
     <div class="overlay"></div>
+    <!-- Welcome section -->
     <div class="banner-content p-5 text-center text-dark">
         <h1 class="title-font fw-bold">DISCOVER WINES AT BEST PRICE</h1>
         <h2 class="subtitle-font fw-bold">Start browsing our collection of incredible wines</h2>
@@ -18,6 +19,7 @@
     </div>
 </div>
 <div class="container my-4">
+    <!-- Best sellers Section -->
     <div class="row">
         <div class="col text-center">
             <h3 class="subtitle-font fw-bold">Best Sellers</h3>
@@ -29,12 +31,14 @@
         {% if forloop.counter|divisibleby:4 %}
         <div class="col-12 col-md-6 d-lg-none col-xl-3 p-2 mb-3 d-xl-flex">
             <div class="card border-dark shadow product-card mx-auto h-100">
+                <!-- Admin links -->
                 {% if request.user.is_superuser %}
                 <div class="text-center py-2">
                     <a href="{% url 'edit_product' product.id %}">Edit</a> |
                     <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                 </div>
                 {% endif %}
+                <!-- Product image with fallback -->
                 <div class="p-2 align-self-center product-img-box position-relative">
                     {% if product.image %}
                     <img src="{{ product.image.url }}" class="img-fluid product-img" alt="{{ product.name }}">
@@ -44,6 +48,7 @@
                     <a href="{% url 'product_detail' product.id %}" class="stretched-link"></a>
                     {% endif %}
                 </div>
+                <!-- Product details -->
                 <div class="card-body text-center py-2 d-flex flex-column justify-content-evenly">
                     <p class="m-1 small text-uppercase">SKU: {{ product.sku }}</p>
                     <p class="text-uppercase opacity-75 m-1">{{ product.brand.friendly_name }}</p>
@@ -61,6 +66,7 @@
                         {% endif %}
                     </h4>
                 </div>
+                <!-- Discount icon -->
                 {% if product.sale_price and product.sale_price < product.price %}
                 <div
                     class="rounded-circle text-bg-danger discount-indicator position-absolute d-flex flex-column justify-content-center align-items-center">
@@ -72,12 +78,14 @@
         {% else %}
         <div class="col-12 col-md-6 col-lg-4 col-xl-3 p-2 mb-3">
             <div class="card border-dark shadow product-card mx-auto h-100">
+                <!-- Admin links -->
                 {% if request.user.is_superuser %}
                 <div class="text-center py-2">
                     <a href="{% url 'edit_product' product.id %}">Edit</a> |
                     <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                 </div>
                 {% endif %}
+                <!-- Product image with fallback -->
                 <div class="p-2 align-self-center product-img-box position-relative">
                     {% if product.image %}
                     <img src="{{ product.image.url }}" class="img-fluid product-img" alt="{{ product.name }}">
@@ -87,6 +95,7 @@
                     <a href="{% url 'product_detail' product.id %}" class="stretched-link"></a>
                     {% endif %}
                 </div>
+                <!-- Product details -->
                 <div class="card-body text-center py-2 d-flex flex-column justify-content-evenly">
                     <p class="m-1 small text-uppercase">SKU: {{ product.sku }}</p>
                     <p class="text-uppercase opacity-75 m-1">{{ product.brand.friendly_name }}</p>
@@ -104,6 +113,7 @@
                         {% endif %}
                     </h4>
                 </div>
+                <!-- Discount icon -->
                 {% if product.sale_price and product.sale_price < product.price %}
                 <div
                     class="rounded-circle text-bg-danger discount-indicator position-absolute d-flex flex-column justify-content-center align-items-center">
@@ -120,6 +130,7 @@
             <a class="btn btn-dark btn-lg my-2 mb-3" href="{% url 'promotions' %}" role="button">SEE MORE >></a>
         </div>
     </div>
+    <!-- Four Reasons Section -->
     <div class="row mt-2">
         <div class="col text-center">
             <h3 class="subtitle-font fw-bold">Four Reasons to Buy Wine Online From Us</h3>

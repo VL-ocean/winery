@@ -7,6 +7,7 @@
 
 {% block content %}
 <div class="container">
+    <!-- Page header -->
     <div class="row mt-3">
         <div class="col">
             <h1 class="title-font fw-bold">Shop Wine</h1>
@@ -27,7 +28,7 @@
         <div class="col">
             <div class="collapse" id="collapseFilter">
                 <div class="card card-body text-bg-light border-0">
-                    <!-- Include the search bar -->
+                    <!-- Include the filter section -->
                     {% include 'components/filterbox.html' %}
                 </div>
             </div>
@@ -37,12 +38,14 @@
         {% for product in products %}
             <div class="col-12 col-md-6 col-lg-4 col-xl-3 p-2 mb-3">
                 <div class="card border-dark shadow product-card mx-auto h-100">
+                    <!-- Admin links -->
                     {% if request.user.is_superuser %}
                         <div class="text-center py-2">
                             <a href="{% url 'edit_product' product.id %}">Edit</a> |
                             <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                         </div>
                     {% endif %}
+                    <!-- Product image with fallback -->
                     <div class="p-2 align-self-center product-img-box position-relative">
                         {% if product.image %}
                             <img src="{{ product.image.url }}" class="img-fluid product-img" alt="{{ product.name }}">
@@ -52,6 +55,7 @@
                             <a href="{% url 'product_detail' product.id %}" class="stretched-link"></a>
                         {% endif %}
                     </div>
+                    <!-- Product details -->
                     <div class="card-body text-center py-2 d-flex flex-column justify-content-evenly">
                         <p class="m-1 small text-uppercase">SKU: {{ product.sku }}</p>
                         <p class="text-uppercase opacity-75 m-1">{{ product.brand.friendly_name }}</p>
@@ -69,6 +73,7 @@
                             {% endif %}
                         </h4>
                     </div>
+                    <!-- Discount icon -->
                     {% if product.sale_price and product.sale_price < product.price %}
                         <div
                             class="rounded-circle text-bg-danger discount-indicator position-absolute d-flex flex-column justify-content-center align-items-center">

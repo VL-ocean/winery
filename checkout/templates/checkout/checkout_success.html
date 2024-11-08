@@ -9,6 +9,7 @@
 
 {% block content %}
 <div class="container mb-4">
+    <!-- Success Message Header -->
     <div class="row">
         <div class="col my-4 text-center">
             <h2 class="title-font">Thank You</h2>
@@ -16,7 +17,7 @@
                 <strong>{{ order.email }}</strong>.</p>
         </div>
     </div>
-
+    <!-- Order Information and Details -->
     <div class="row">
         <div class="col-12 col-lg-7 mx-auto">
             <div class="order-confirmation-wrapper p-2">
@@ -44,6 +45,7 @@
                     </div>
                 </div>
 
+                <!-- Order Details -->
                 <div class="row">
                     <div class="col py-2">
                         <small class="text-body-secondary fw-bold">Order Details:</small>
@@ -69,6 +71,7 @@
                 </div>
                 {% endfor %}
 
+                <!-- Delivery Address Section -->
                 <div class="row">
                     <div class="col py-2">
                         <small class="text-body-secondary fw-bold">Delivering To:</small>
@@ -153,6 +156,7 @@
                     </div>
                 </div>
 
+                <!-- Billing Info -->
                 <div class="row">
                     <div class="col py-2">
                         <small class="text-body-secondary fw-bold">Billing Info:</small>
@@ -189,6 +193,7 @@
         </div>
     </div>
 
+    <!-- Back to Profile or Continue Shopping -->
     <div class="row justify-content-center">
         <div class="col-12 col-lg-7 text-center">
             {% if from_profile %}

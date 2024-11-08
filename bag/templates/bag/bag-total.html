@@ -1,5 +1,8 @@
+<!-- Items total price -->
 <h6><strong>Bag Total: € {{ total|floatformat:2 }}</strong></h6>
+<!-- Shipping cost -->
 <h6>Delivery: € {{ delivery|floatformat:2 }}</h6>
+<!-- Final total to pay -->
 <h4 class="mt-4"><strong>Grand Total: € {{ grand_total|floatformat:2 }}</strong></h4>
 {% if free_delivery_delta > 0 %}
 <p class="mb-1 text-danger">

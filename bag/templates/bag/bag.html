@@ -14,6 +14,7 @@
     <div class="row">
         <div class="col">
             {% if bag_items %}
+            <!-- Mobile view of shopping bag -->
             <div class="d-block d-lg-none">
                 <div class="row">
                     <div class="col m-2">
@@ -26,14 +27,18 @@
                         <p class="text-body-secondary text-center p-1 my-3">A summary of your bag contents is below</p>
                     </div>
                 </div>
+                <!-- Loop through cart items -->
                 {% for item in bag_items %}
                 <div class="card border border-dark my-2 p-2">
                     <div class="row">
+                        <!-- Product image with fallback -->
                         <div class="col-12 col-sm-6 mb-2 d-flex justify-content-center">
                             {% include "bag/product-image.html" %}
                         </div>
+                        <!-- Product details -->
                         <div class="col-12 col-sm-6 mb-2">
                             {% include "bag/product-info.html" %}
+                            <!-- Unit price, showing sale price if available -->
                             <p class="m-1 fs-5 mt-3">Price: 
                                 {% if item.product.sale_price %}
                                     <span class="text-danger">€ {{ item.product.sale_price }} </span>
@@ -42,12 +47,15 @@
                                     € {{ item.product.price }}
                                 {% endif %}
                             </p>
+                            <!-- Total price per item (price * quantity) -->
                             <p class="m-1 fs-5"><strong>Subtotal: </strong>
                                 € {{ item.product | calc_subtotal:item.quantity }}</p>
                         </div>
+                        <!-- Quantity selector form -->
                         <div class="col-12 col-sm-6 mb-2">
                             {% include "bag/quantity-form.html" %}
                         </div>
+                        <!-- Remove item button -->
                         <div class="col-12 col-sm-6 mb-2 text-center">
                             <a class="btn btn-danger remove-item" id="remove_{{ item.item_id }}">Remove
                                 <i class="fa-solid fa-trash fs-5 ps-1"></i></a>
@@ -56,9 +64,11 @@
                 </div>
                 {% endfor %}
             </div>
+            <!-- Desktop view of shopping bag -->
             <div class="table-responsive rounded d-none d-lg-block">
                 <table class="table table-sm table-borderless">
                     <thead class="subtitle-font fs-4">
+                        <!-- Table headers -->
                         <tr>
                             <th scope="col">Item</th>
                             <th scope="col"></th>
@@ -69,15 +79,19 @@
                         </tr>
                     </thead>
 
+                    <!-- Loop through cart items -->
                     {% for item in bag_items %}
                     <tr>
+                        <!-- Product image with fallback -->
                         <td class="p-3">
                             {% include "bag/product-image.html" %}
                         </td>
+                        <!-- Product details -->
                         <td class="py-3">
                             {% include "bag/product-info.html" %}
                         </td>
                         <td class="py-3">
+                            <!-- Unit price, showing sale price if available -->
                             <p class="my-0">
                                 {% if item.product.sale_price %}
                                     <span class="text-danger">€ {{ item.product.sale_price }}</span>
@@ -88,12 +102,15 @@
                                 {% endif %}
                             </p>
                         </td>
+                        <!-- Quantity selector form -->
                         <td class="py-3 w-25">
                             {% include "bag/quantity-form.html" %}
                         </td>
+                        <!-- Total price per item (price * quantity) -->
                         <td class="py-3">
                             <p class="my-0">€ {{ item.product | calc_subtotal:item.quantity }}</p>
                         </td>
+                        <!-- Remove item button -->
                         <td class="py-3">
                             <a class="btn link-danger remove-item" id="remove_{{ item.item_id }}"
                                 data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Remove"><i
@@ -101,6 +118,7 @@
                         </td>
                     </tr>
                     {% endfor %}
+                    <!-- Order Summary -->
                     <tr>
                         <td colspan="5" class="pt-5 text-end">
                             {% include "bag/bag-total.html" %}
@@ -114,6 +132,7 @@
                 </table>
             </div>
             {% else %}
+            <!-- Empty Bag Section -->
             <div class="text-center">
                 <p class="lead mb-5">Your bag is empty.</p>
             </div>
